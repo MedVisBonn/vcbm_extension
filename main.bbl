@@ -1,0 +1,2385 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{anyt/global//global/global}
+    \entry{Ankele:CARS2017}{article}{}
+      \name{author}{4}{}{%
+        {{hash=5131df83d4dd3411d566fccce8b2a3e2}{%
+           family={Ankele},
+           familyi={A\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=ac349e947c11a9dd6873f210e5a87fcb}{%
+           family={Lim},
+           familyi={L\bibinitperiod},
+           given={L.-H.},
+           giveni={L\bibinithyphendelim H\bibinitperiod}}}%
+        {{hash=b40fc9f2f3f9050806f5ca0bba829fb7}{%
+           family={Groeschel},
+           familyi={G\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=2c709f9b53c9db15fd50792148d76530}{%
+           family={Schultz},
+           familyi={S\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{ecad001a3fd1ad70761622a183eed7f6}
+      \strng{fullhash}{ecad001a3fd1ad70761622a183eed7f6}
+      \strng{bibnamehash}{ecad001a3fd1ad70761622a183eed7f6}
+      \strng{authorbibnamehash}{ecad001a3fd1ad70761622a183eed7f6}
+      \strng{authornamehash}{ecad001a3fd1ad70761622a183eed7f6}
+      \strng{authorfullhash}{ecad001a3fd1ad70761622a183eed7f6}
+      \field{labelalpha}{ALGS17}
+      \field{sortinit}{A}
+      \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Int'l J.~of Computer Assisted Radiology and Surgery}
+      \field{number}{8}
+      \field{title}{Versatile, Robust, and Efficient Tractography With Constrained Higher-Order Tensor {fODFs}}
+      \field{volume}{12}
+      \field{year}{2017}
+      \field{pages}{1257\bibrangedash 1270}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1007/s11548-017-1593-6
+      \endverb
+    \endentry
+    \entry{Armijo:1966}{article}{}
+      \name{author}{1}{}{%
+        {{hash=9b247b523635a52cd440b2d7f421b150}{%
+           family={Armijo},
+           familyi={A\bibinitperiod},
+           given={Larry},
+           giveni={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{9b247b523635a52cd440b2d7f421b150}
+      \strng{fullhash}{9b247b523635a52cd440b2d7f421b150}
+      \strng{bibnamehash}{9b247b523635a52cd440b2d7f421b150}
+      \strng{authorbibnamehash}{9b247b523635a52cd440b2d7f421b150}
+      \strng{authornamehash}{9b247b523635a52cd440b2d7f421b150}
+      \strng{authorfullhash}{9b247b523635a52cd440b2d7f421b150}
+      \field{labelalpha}{Arm66}
+      \field{sortinit}{A}
+      \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Pacific Journal of Mathematics}
+      \field{number}{1}
+      \field{title}{Minimization of Functions having Lipschitz continuous first partial derivatives}
+      \field{volume}{16}
+      \field{year}{1966}
+      \field{pages}{1\bibrangedash 3}
+      \range{pages}{3}
+      \verb{doi}
+      \verb pjm/1102995080
+      \endverb
+    \endentry
+    \entry{BEHRENS2007144}{article}{}
+      \name{author}{5}{}{%
+        {{hash=ac97fc6893afa89ed9ecfbfb5188af0d}{%
+           family={Behrens},
+           familyi={B\bibinitperiod},
+           given={T.E.J.},
+           giveni={T\bibinitperiod}}}%
+        {{hash=6269eaf4cdadcb7c7889b437cf58882e}{%
+           family={Berg},
+           familyi={B\bibinitperiod},
+           given={H.\bibnamedelimi Johansen},
+           giveni={H\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=5e38900b1f7fe7e28a304f397cb7ec19}{%
+           family={Jbabdi},
+           familyi={J\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=15c10f614a2ab43b638c27b1ba51c394}{%
+           family={Rushworth},
+           familyi={R\bibinitperiod},
+           given={M.F.S.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=83af69842b83c66794ad1be0172eddc2}{%
+           family={Woolrich},
+           familyi={W\bibinitperiod},
+           given={M.W.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{c95c11a6ddbdc83d225f7f5278d7d060}
+      \strng{fullhash}{5205bb2a6bdd69e3d86d44b7250df9b9}
+      \strng{bibnamehash}{c95c11a6ddbdc83d225f7f5278d7d060}
+      \strng{authorbibnamehash}{c95c11a6ddbdc83d225f7f5278d7d060}
+      \strng{authornamehash}{c95c11a6ddbdc83d225f7f5278d7d060}
+      \strng{authorfullhash}{5205bb2a6bdd69e3d86d44b7250df9b9}
+      \field{labelalpha}{BBJ*07}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We present a direct extension of probabilistic diffusion tractography to the case of multiple fibre orientations. Using automatic relevance determination, we are able to perform online selection of the number of fibre orientations supported by the data at each voxel, simplifying the problem of tracking in a multi-orientation field. We then apply the identical probabilistic algorithm to tractography in the multi- and single-fibre cases in a number of example systems which have previously been tracked successfully or unsuccessfully with single-fibre tractography. We show that multi-fibre tractography offers significant advantages in sensitivity when tracking non-dominant fibre populations, but does not dramatically change tractography results for the dominant pathways.}
+      \field{issn}{1053-8119}
+      \field{journaltitle}{NeuroImage}
+      \field{number}{1}
+      \field{title}{Probabilistic diffusion tractography with multiple fibre orientations: What can we gain?}
+      \field{volume}{34}
+      \field{year}{2007}
+      \field{pages}{144\bibrangedash 155}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1016/j.neuroimage.2006.09.018
+      \endverb
+    \endentry
+    \entry{BunseGerstner1993}{article}{}
+      \name{author}{3}{}{%
+        {{hash=72e0411f80fd534de0b1a9d19af18931}{%
+           family={Bunse-Gerstner},
+           familyi={B\bibinithyphendelim G\bibinitperiod},
+           given={Angelika},
+           giveni={A\bibinitperiod}}}%
+        {{hash=e999d08ccccc41b024ae088cebf99396}{%
+           family={Byers},
+           familyi={B\bibinitperiod},
+           given={Ralph},
+           giveni={R\bibinitperiod}}}%
+        {{hash=9ea3694a4f993cf0fe21281abf196b87}{%
+           family={Mehrmann},
+           familyi={M\bibinitperiod},
+           given={Volker},
+           giveni={V\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Society for Industrial {\&} Applied Mathematics ({SIAM})}%
+      }
+      \strng{namehash}{bb2635bd61fbbff5ae6f34960883536e}
+      \strng{fullhash}{bb2635bd61fbbff5ae6f34960883536e}
+      \strng{bibnamehash}{bb2635bd61fbbff5ae6f34960883536e}
+      \strng{authorbibnamehash}{bb2635bd61fbbff5ae6f34960883536e}
+      \strng{authornamehash}{bb2635bd61fbbff5ae6f34960883536e}
+      \strng{authorfullhash}{bb2635bd61fbbff5ae6f34960883536e}
+      \field{labelalpha}{BBM93}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{{SIAM} Journal on Matrix Analysis and Applications}
+      \field{number}{4}
+      \field{title}{Numerical Methods for Simultaneous Diagonalization}
+      \field{volume}{14}
+      \field{year}{1993}
+      \field{pages}{927\bibrangedash 949}
+      \range{pages}{23}
+      \verb{doi}
+      \verb 10.1137/0614062
+      \endverb
+    \endentry
+    \entry{BASSER1994247}{article}{}
+      \name{author}{3}{}{%
+        {{hash=f6bb45b474171a2b3a5998520c6ab976}{%
+           family={Basser},
+           familyi={B\bibinitperiod},
+           given={P.J.},
+           giveni={P\bibinitperiod}}}%
+        {{hash=8eb8f848171ce66d1e99e3492d41a178}{%
+           family={Mattiello},
+           familyi={M\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=ec69e89c7a983eb5b8dad8e7f2ae38b9}{%
+           family={Lebihan},
+           familyi={L\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{9b781863682743a52be90f803aaea7f4}
+      \strng{fullhash}{9b781863682743a52be90f803aaea7f4}
+      \strng{bibnamehash}{9b781863682743a52be90f803aaea7f4}
+      \strng{authorbibnamehash}{9b781863682743a52be90f803aaea7f4}
+      \strng{authornamehash}{9b781863682743a52be90f803aaea7f4}
+      \strng{authorfullhash}{9b781863682743a52be90f803aaea7f4}
+      \field{labelalpha}{BML94}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The diagonal and off-diagonal elements of the effective self-diffusion tensor, Deff, are related to the echo intensity in an NMR spin-echo experiment. This relationship is used to design experiments from which Deff is estimated. This estimate is validated using isotropic and anisotropic media, i.e., water and skeletal muscle. It is shown that significant errors are made in diffusion NMR spectroscopy and imaging of anisotropic skeletal muscle when off-diagonal elements of Deff are ignored, most notably the loss of information needed to determine fiber orientation. Estimation of Deff provides the theoretical basis for a new MRI modality, diffusion tensor imaging, which provides information about tissue microstructure and its physiologic state not contained in scalar quantities such as T1, T2, proton density, or the scalar apparent diffusion constant.}
+      \field{issn}{1064-1866}
+      \field{journaltitle}{Journal of Magnetic Resonance, Series B}
+      \field{number}{3}
+      \field{title}{Estimation of the Effective Self-Diffusion Tensor from the NMR Spin Echo}
+      \field{volume}{103}
+      \field{year}{1994}
+      \field{pages}{247\bibrangedash 254}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1006/jmrb.1994.1037
+      \endverb
+    \endentry
+    \entry{Brecheisen:2013}{article}{}
+      \name{author}{4}{}{%
+        {{hash=90f2e3f4d56c491772c59fb62f7e627d}{%
+           family={Brecheisen},
+           familyi={B\bibinitperiod},
+           given={Ralph},
+           giveni={R\bibinitperiod}}}%
+        {{hash=286f0727796b45682ba3f3d4dbb74a21}{%
+           family={Platel},
+           familyi={P\bibinitperiod},
+           given={Bram},
+           giveni={B\bibinitperiod}}}%
+        {{hash=8a9f9f6e949823722bd48accd2796b98}{%
+           family={Haar\bibnamedelima Romenij},
+           familyi={H\bibinitperiod\bibinitdelim R\bibinitperiod},
+           given={B.\bibnamedelimi M.},
+           giveni={B\bibinitperiod\bibinitdelim M\bibinitperiod},
+           prefix={ter},
+           prefixi={t\bibinitperiod}}}%
+        {{hash=5e52b66f309bd96508636a1aa62bb2ba}{%
+           family={Vilanova},
+           familyi={V\bibinitperiod},
+           given={Anna},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{e9cef4a4d993d4c6ae7a9c000e644e04}
+      \strng{fullhash}{e9cef4a4d993d4c6ae7a9c000e644e04}
+      \strng{bibnamehash}{e9cef4a4d993d4c6ae7a9c000e644e04}
+      \strng{authorbibnamehash}{e9cef4a4d993d4c6ae7a9c000e644e04}
+      \strng{authornamehash}{e9cef4a4d993d4c6ae7a9c000e644e04}
+      \strng{authorfullhash}{e9cef4a4d993d4c6ae7a9c000e644e04}
+      \field{labelalpha}{BPtHV13}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Visual Computer}
+      \field{number}{4}
+      \field{title}{Illustrative uncertainty visualization of {DTI} fiber pathways}
+      \field{volume}{29}
+      \field{year}{2013}
+      \field{pages}{297\bibrangedash 309}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1007/s00371-012-0733-9
+      \endverb
+    \endentry
+    \entry{Brecheisen:2009}{article}{}
+      \name{author}{4}{}{%
+        {{hash=90f2e3f4d56c491772c59fb62f7e627d}{%
+           family={Brecheisen},
+           familyi={B\bibinitperiod},
+           given={Ralph},
+           giveni={R\bibinitperiod}}}%
+        {{hash=5e52b66f309bd96508636a1aa62bb2ba}{%
+           family={Vilanova},
+           familyi={V\bibinitperiod},
+           given={Anna},
+           giveni={A\bibinitperiod}}}%
+        {{hash=286f0727796b45682ba3f3d4dbb74a21}{%
+           family={Platel},
+           familyi={P\bibinitperiod},
+           given={Bram},
+           giveni={B\bibinitperiod}}}%
+        {{hash=8a9f9f6e949823722bd48accd2796b98}{%
+           family={Haar\bibnamedelima Romenij},
+           familyi={H\bibinitperiod\bibinitdelim R\bibinitperiod},
+           given={B.\bibnamedelimi M.},
+           giveni={B\bibinitperiod\bibinitdelim M\bibinitperiod},
+           prefix={ter},
+           prefixi={t\bibinitperiod}}}%
+      }
+      \strng{namehash}{48a7e33abdb6416099ed49ab78664464}
+      \strng{fullhash}{48a7e33abdb6416099ed49ab78664464}
+      \strng{bibnamehash}{48a7e33abdb6416099ed49ab78664464}
+      \strng{authorbibnamehash}{48a7e33abdb6416099ed49ab78664464}
+      \strng{authornamehash}{48a7e33abdb6416099ed49ab78664464}
+      \strng{authorfullhash}{48a7e33abdb6416099ed49ab78664464}
+      \field{labelalpha}{BVPtH09}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Trans.\ on Visualization and Computer Graphics}
+      \field{number}{6}
+      \field{title}{Parameter Sensitivity Visualization for {DTI} Fiber Tracking}
+      \field{volume}{15}
+      \field{year}{2009}
+      \field{pages}{1441\bibrangedash 1448}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1109/TVCG.2009.170
+      \endverb
+    \endentry
+    \entry{Comon:2008}{article}{}
+      \name{author}{4}{}{%
+        {{hash=73bf39ece81b49202cadbf8c4752dec9}{%
+           family={Comon},
+           familyi={C\bibinitperiod},
+           given={Pierre},
+           giveni={P\bibinitperiod}}}%
+        {{hash=23923ccfdde2f6663af778e44cdfb81f}{%
+           family={Golub},
+           familyi={G\bibinitperiod},
+           given={Gene},
+           giveni={G\bibinitperiod}}}%
+        {{hash=12750b991b9d711549fd3537dfdff320}{%
+           family={Lim},
+           familyi={L\bibinitperiod},
+           given={Lek-Heng},
+           giveni={L\bibinithyphendelim H\bibinitperiod}}}%
+        {{hash=24f8e238c85b6e5927f77d304907135b}{%
+           family={Mourrain},
+           familyi={M\bibinitperiod},
+           given={Bernard},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{7933823caadd761038231f5b3e4fc495}
+      \strng{fullhash}{7933823caadd761038231f5b3e4fc495}
+      \strng{bibnamehash}{7933823caadd761038231f5b3e4fc495}
+      \strng{authorbibnamehash}{7933823caadd761038231f5b3e4fc495}
+      \strng{authornamehash}{7933823caadd761038231f5b3e4fc495}
+      \strng{authorfullhash}{7933823caadd761038231f5b3e4fc495}
+      \field{labelalpha}{CGLM08}
+      \field{sortinit}{C}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{SIAM Journal on Matrix Analysis and Applications}
+      \field{number}{3}
+      \field{title}{Symmetric Tensors and Symmetric Tensor Rank}
+      \field{volume}{30}
+      \field{year}{2008}
+      \field{pages}{1254\bibrangedash 1279}
+      \range{pages}{26}
+      \verb{doi}
+      \verb 10.1137/060661569
+      \endverb
+    \endentry
+    \entry{Dalamagkas}{article}{}
+      \name{author}{12}{}{%
+        {{hash=5bb1d6daf079e76ffe002a66a88e96e2}{%
+           family={Dalamagkas},
+           familyi={D\bibinitperiod},
+           given={Kyriakos},
+           giveni={K\bibinitperiod}}}%
+        {{hash=f9612e7fad36ef6c3d3aab97de6da96f}{%
+           family={Tsintou},
+           familyi={T\bibinitperiod},
+           given={Magda},
+           giveni={M\bibinitperiod}}}%
+        {{hash=fd364c78a99d71da4a55bef4a04e5b20}{%
+           family={Rathi},
+           familyi={R\bibinitperiod},
+           given={Yogesh},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=7640527fb13df0a1737a28ac5cd1415a}{%
+           family={O'Donnell},
+           familyi={O\bibinitperiod},
+           given={Lauren},
+           giveni={L\bibinitperiod}}}%
+        {{hash=bcd203a0819b65ccb5a419a39948bad9}{%
+           family={Pasternak},
+           familyi={P\bibinitperiod},
+           given={Ofer},
+           giveni={O\bibinitperiod}}}%
+        {{hash=557df2d7eda5bf3cf806b95a92936819}{%
+           family={Gong},
+           familyi={G\bibinitperiod},
+           given={Xue},
+           giveni={X\bibinitperiod}}}%
+        {{hash=3096c68f690917e7f0f1708b5800bc4d}{%
+           family={Zhu},
+           familyi={Z\bibinitperiod},
+           given={Anne},
+           giveni={A\bibinitperiod}}}%
+        {{hash=26627ee2a80a0a7138cca85e4229f3f2}{%
+           family={Savadjiev},
+           familyi={S\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+        {{hash=917a80b2c065209d1ecca9736a60e3c2}{%
+           family={Papadimitriou},
+           familyi={P\bibinitperiod},
+           given={George},
+           giveni={G\bibinitperiod}}}%
+        {{hash=55743d9d793aef0722e3cffa8b8c781b}{%
+           family={Kubicki},
+           familyi={K\bibinitperiod},
+           given={Marek},
+           giveni={M\bibinitperiod}}}%
+        {{hash=5666b6435f923f24acea6336a5cb609c}{%
+           family={Yeterian},
+           familyi={Y\bibinitperiod},
+           given={Edward},
+           giveni={E\bibinitperiod}}}%
+        {{hash=6e79315f4dc5ab4627e92ba4a137644c}{%
+           family={Makris},
+           familyi={M\bibinitperiod},
+           given={Nikos},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{ce509f1ecf6b55b948230ee0f667e177}
+      \strng{fullhash}{8e87b19a78d8328eb7c5ca4064f4b85d}
+      \strng{bibnamehash}{ce509f1ecf6b55b948230ee0f667e177}
+      \strng{authorbibnamehash}{ce509f1ecf6b55b948230ee0f667e177}
+      \strng{authornamehash}{ce509f1ecf6b55b948230ee0f667e177}
+      \strng{authorfullhash}{8e87b19a78d8328eb7c5ca4064f4b85d}
+      \field{labelalpha}{DTR*20}
+      \field{sortinit}{D}
+      \field{sortinithash}{c438b3d5d027251ba63f5ed538d98af5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Brain Imaging and Behavior}
+      \field{month}{06}
+      \field{title}{Individual variations of the human corticospinal tract and its hand-related motor fibers using diffusion MRI tractography}
+      \field{volume}{14}
+      \field{year}{2020}
+      \verb{doi}
+      \verb 10.1007/s11682-018-0006-y
+      \endverb
+    \endentry
+    \entry{Graumann2016}{incollection}{}
+      \name{author}{4}{}{%
+        {{hash=52c9da63e235a12a8690797d3b9cccba}{%
+           family={Graumann},
+           familyi={G\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod}}}%
+        {{hash=6473fbf2e6c5e7e25852ea09979e40ea}{%
+           family={Richter},
+           familyi={R\bibinitperiod},
+           given={Mirco},
+           giveni={M\bibinitperiod}}}%
+        {{hash=9e92eb7346264cabbf7b856ed6e7a8df}{%
+           family={Nimsky},
+           familyi={N\bibinitperiod},
+           given={Christopher},
+           giveni={C\bibinitperiod}}}%
+        {{hash=4fcf624be7eb96a0e7abd34cf8e0b7f8}{%
+           family={Merhof},
+           familyi={M\bibinitperiod},
+           given={Dorit},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{539bb79a38020f0479d2ae37263c2257}
+      \strng{fullhash}{539bb79a38020f0479d2ae37263c2257}
+      \strng{bibnamehash}{539bb79a38020f0479d2ae37263c2257}
+      \strng{authorbibnamehash}{539bb79a38020f0479d2ae37263c2257}
+      \strng{authornamehash}{539bb79a38020f0479d2ae37263c2257}
+      \strng{authorfullhash}{539bb79a38020f0479d2ae37263c2257}
+      \field{labelalpha}{GRNM16}
+      \field{sortinit}{G}
+      \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Visualization in Medicine and Life Sciences {III}}
+      \field{title}{Exploring Crossing Fibers of the Brain's White Matter Using Directional Regions of Interest}
+      \field{year}{2016}
+      \field{pages}{179\bibrangedash 194}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1007/978-3-319-24523-2_8
+      \endverb
+    \endentry
+    \entry{Gruen:2021}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=fc1d5b2aca769316beeba55485a6ac8a}{%
+           family={Gr{ü}n},
+           familyi={G\bibinitperiod},
+           given={Johannes},
+           giveni={J\bibinitperiod}}}%
+        {{hash=28324112bad303734e9b7b5bef0a6eb2}{%
+           family={Voort},
+           familyi={V\bibinitperiod},
+           given={Gemma},
+           giveni={G\bibinitperiod},
+           prefix={van\bibnamedelima der},
+           prefixi={v\bibinitperiod\bibinitdelim d\bibinitperiod}}}%
+        {{hash=ae998176c84d7a6a58b893bd9cb337ae}{%
+           family={Schultz},
+           familyi={S\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{754a534f7207b01735970b1c65fb522c}
+      \strng{fullhash}{754a534f7207b01735970b1c65fb522c}
+      \strng{bibnamehash}{754a534f7207b01735970b1c65fb522c}
+      \strng{authorbibnamehash}{754a534f7207b01735970b1c65fb522c}
+      \strng{authornamehash}{754a534f7207b01735970b1c65fb522c}
+      \strng{authorfullhash}{754a534f7207b01735970b1c65fb522c}
+      \field{labelalpha}{GvdVS21}
+      \field{sortinit}{G}
+      \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{series}{Proc.\ EG Workshop on Visual Computing for Biology and Medicine (VCBM)}
+      \field{title}{Reducing Model Uncertainty in Crossing Fiber Tractography}
+      \field{year}{2021}
+      \field{pages}{55\bibrangedash 64}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.2312/vcbm.20211345
+      \endverb
+    \endentry
+    \entry{Hlawitschka:2005}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=3a97782579bdcf3be1dff86182786a22}{%
+           family={Hlawitschka},
+           familyi={H\bibinitperiod},
+           given={Mario},
+           giveni={M\bibinitperiod}}}%
+        {{hash=ee8eeb8e8be0f2b6963ffb9c3c0f254c}{%
+           family={Scheuermann},
+           familyi={S\bibinitperiod},
+           given={Gerik},
+           giveni={G\bibinitperiod}}}%
+      }
+      \name{editor}{3}{}{%
+        {{hash=726ce3f3b9613bc186bd0fa5d461a12d}{%
+           family={Silva},
+           familyi={S\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+        {{hash=207157697f2ecd8fb4aafd781df70241}{%
+           family={Gr{ö}ller},
+           familyi={G\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod}}}%
+        {{hash=45b7f2fcee3d53814392db453b519437}{%
+           family={Rushmeier},
+           familyi={R\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{ebb448555d5863b345810d72c99eedc5}
+      \strng{fullhash}{ebb448555d5863b345810d72c99eedc5}
+      \strng{bibnamehash}{ebb448555d5863b345810d72c99eedc5}
+      \strng{authorbibnamehash}{ebb448555d5863b345810d72c99eedc5}
+      \strng{authornamehash}{ebb448555d5863b345810d72c99eedc5}
+      \strng{authorfullhash}{ebb448555d5863b345810d72c99eedc5}
+      \strng{editorbibnamehash}{5700a4963d2080157e7efbaffffb087f}
+      \strng{editornamehash}{5700a4963d2080157e7efbaffffb087f}
+      \strng{editorfullhash}{5700a4963d2080157e7efbaffffb087f}
+      \field{labelalpha}{HS05}
+      \field{sortinit}{H}
+      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proc.\ IEEE Visualization}
+      \field{title}{{HOT}-Lines: Tracking Lines in Higher Order Tensor Fields}
+      \field{year}{2005}
+      \field{pages}{27\bibrangedash 34}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1109/VISUAL.2005.1532773
+      \endverb
+    \endentry
+    \entry{FSL}{article}{}
+      \name{author}{4}{}{%
+        {{hash=02d16eb5d8b0d0af1320675587ee5db5}{%
+           family={Jenkinson},
+           familyi={J\bibinitperiod},
+           given={Mark},
+           giveni={M\bibinitperiod}}}%
+        {{hash=7d477f03e32a47258db6ba86a01337d5}{%
+           family={Bannister},
+           familyi={B\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+        {{hash=b543ac15de34fc7c831ff5619b340256}{%
+           family={Brady},
+           familyi={B\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=c0335390e6dcad77f0091d57516ec815}{%
+           family={Smith},
+           familyi={S\bibinitperiod},
+           given={Stephen},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{a656a2144802aa4111fb7685f5753ae0}
+      \strng{fullhash}{a656a2144802aa4111fb7685f5753ae0}
+      \strng{bibnamehash}{a656a2144802aa4111fb7685f5753ae0}
+      \strng{authorbibnamehash}{a656a2144802aa4111fb7685f5753ae0}
+      \strng{authornamehash}{a656a2144802aa4111fb7685f5753ae0}
+      \strng{authorfullhash}{a656a2144802aa4111fb7685f5753ae0}
+      \field{labelalpha}{JBBS02}
+      \field{sortinit}{J}
+      \field{sortinithash}{c45040a764d616897e7f5b30174d7b92}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Linear registration and motion correction are important components of structural and functional brain image analysis. Most modern methods optimize some intensity-based cost function to determine the best registration. To date, little attention has been focused on the optimization method itself, even though the success of most registration methods hinges on the quality of this optimization. This paper examines the optimization process in detail and demonstrates that the commonly used multiresolution local optimization methods can, and do, get trapped in local minima. To address this problem, two approaches are taken: (1) to apodize the cost function and (2) to employ a novel hybrid global–local optimization method. This new optimization method is specifically designed for registering whole brain images. It substantially reduces the likelihood of producing misregistrations due to being trapped by local minima. The increased robustness of the method, compared to other commonly used methods, is demonstrated by a consistency test. In addition, the accuracy of the registration is demonstrated by a series of experiments with motion correction. These motion correction experiments also investigate how the results are affected by different cost functions and interpolation methods.}
+      \field{issn}{1053-8119}
+      \field{journaltitle}{NeuroImage}
+      \field{number}{2}
+      \field{title}{Improved Optimization for the Robust and Accurate Linear Registration and Motion Correction of Brain Images}
+      \field{volume}{17}
+      \field{year}{2002}
+      \field{pages}{825\bibrangedash 841}
+      \range{pages}{17}
+      \verb{doi}
+      \verb 10.1006/nimg.2002.1132
+      \endverb
+      \keyw{accuracy,affine transformation,global optimization,motion correction,multimodal registration,multiresolution search,robustness}
+    \endentry
+    \entry{Jeurissen:2018}{article}{}
+      \name{author}{4}{}{%
+        {{hash=378919797b2011a509062a1b88ce508b}{%
+           family={Jeurissen},
+           familyi={J\bibinitperiod},
+           given={Ben},
+           giveni={B\bibinitperiod}}}%
+        {{hash=40a0f5eaa96f93cee51c143158223658}{%
+           family={Descoteaux},
+           familyi={D\bibinitperiod},
+           given={Maxime},
+           giveni={M\bibinitperiod}}}%
+        {{hash=7c1373e40d611a11dc19fa305c79e50b}{%
+           family={Mori},
+           familyi={M\bibinitperiod},
+           given={Susumu},
+           giveni={S\bibinitperiod}}}%
+        {{hash=744a2d0842d4b3adb7fe02007e7d1783}{%
+           family={Leemans},
+           familyi={L\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{11b5e960fd162c707c1d2712f9018c84}
+      \strng{fullhash}{11b5e960fd162c707c1d2712f9018c84}
+      \strng{bibnamehash}{11b5e960fd162c707c1d2712f9018c84}
+      \strng{authorbibnamehash}{11b5e960fd162c707c1d2712f9018c84}
+      \strng{authornamehash}{11b5e960fd162c707c1d2712f9018c84}
+      \strng{authorfullhash}{11b5e960fd162c707c1d2712f9018c84}
+      \field{labelalpha}{JDML19}
+      \field{sortinit}{J}
+      \field{sortinithash}{c45040a764d616897e7f5b30174d7b92}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{NMR in Biomedicine}
+      \field{number}{4}
+      \field{title}{Diffusion {MRI} fiber tractography of the brain}
+      \field{volume}{32}
+      \field{year}{2019}
+      \field{pages}{e3785}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1002/nbm.3785
+      \endverb
+    \endentry
+    \entry{Jeurissen:2012}{article}{}
+      \name{author}{5}{}{%
+        {{hash=378919797b2011a509062a1b88ce508b}{%
+           family={Jeurissen},
+           familyi={J\bibinitperiod},
+           given={Ben},
+           giveni={B\bibinitperiod}}}%
+        {{hash=744a2d0842d4b3adb7fe02007e7d1783}{%
+           family={Leemans},
+           familyi={L\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod}}}%
+        {{hash=1ba8f047eed52fea90b594febb63b215}{%
+           family={Tournier},
+           familyi={T\bibinitperiod},
+           given={Jacques-Donald},
+           giveni={J\bibinithyphendelim D\bibinitperiod}}}%
+        {{hash=966909c5018b267a5c300be3ba452ffa}{%
+           family={Jones},
+           familyi={J\bibinitperiod},
+           given={Derek\bibnamedelima K.},
+           giveni={D\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=4583d8b6e63d511d6acc0d511ec58dff}{%
+           family={Sijbers},
+           familyi={S\bibinitperiod},
+           given={Jan},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{a602f8692ffb10e753901345da5e77fc}
+      \strng{fullhash}{f8d472b90a11dac5dbd897a1cd36fe08}
+      \strng{bibnamehash}{a602f8692ffb10e753901345da5e77fc}
+      \strng{authorbibnamehash}{a602f8692ffb10e753901345da5e77fc}
+      \strng{authornamehash}{a602f8692ffb10e753901345da5e77fc}
+      \strng{authorfullhash}{f8d472b90a11dac5dbd897a1cd36fe08}
+      \field{labelalpha}{JLT*12}
+      \field{sortinit}{J}
+      \field{sortinithash}{c45040a764d616897e7f5b30174d7b92}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Human Brain Mapping}
+      \field{number}{11}
+      \field{title}{Investigating the prevalence of complex fiber configurations in white matter tissue with diffusion magnetic resonance imaging}
+      \field{volume}{34}
+      \field{year}{2012}
+      \field{pages}{2747\bibrangedash 2766}
+      \range{pages}{20}
+      \verb{doi}
+      \verb 10.1002/hbm.22099
+      \endverb
+    \endentry
+    \entry{Kreher2008}{article}{}
+      \name{author}{3}{}{%
+        {{hash=251068ce0b7b1624f6f1bbcb93aa26b1}{%
+           family={Kreher},
+           familyi={K\bibinitperiod},
+           given={B.W.},
+           giveni={B\bibinitperiod}}}%
+        {{hash=92e096763e67442910a6005a6a4d8709}{%
+           family={Mader},
+           familyi={M\bibinitperiod},
+           given={I.},
+           giveni={I\bibinitperiod}}}%
+        {{hash=efbdbc27199a13679d4249e4b25aeaf9}{%
+           family={Kiselev},
+           familyi={K\bibinitperiod},
+           given={V.G.},
+           giveni={V\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Wiley}%
+      }
+      \strng{namehash}{57e903a77b769f5692373840f7999f6d}
+      \strng{fullhash}{57e903a77b769f5692373840f7999f6d}
+      \strng{bibnamehash}{57e903a77b769f5692373840f7999f6d}
+      \strng{authorbibnamehash}{57e903a77b769f5692373840f7999f6d}
+      \strng{authornamehash}{57e903a77b769f5692373840f7999f6d}
+      \strng{authorfullhash}{57e903a77b769f5692373840f7999f6d}
+      \field{labelalpha}{KMK08}
+      \field{sortinit}{K}
+      \field{sortinithash}{d3edc18d54b9438a72c24c925bfb38f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Magnetic Resonance in Medicine}
+      \field{number}{4}
+      \field{title}{Gibbs tracking: A novel approach for the reconstruction of neuronal pathways}
+      \field{volume}{60}
+      \field{year}{2008}
+      \field{pages}{953\bibrangedash 963}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1002/mrm.21749
+      \endverb
+    \endentry
+    \entry{LeBihan:1986}{article}{}
+      \name{author}{6}{}{%
+        {{hash=2830be5097028ba9e9c1c35906ec832a}{%
+           family={Le\bibnamedelima Bihan},
+           familyi={L\bibinitperiod\bibinitdelim B\bibinitperiod},
+           given={Denis},
+           giveni={D\bibinitperiod}}}%
+        {{hash=4cb9ee9d3be0fce542667a1d8ba5df3f}{%
+           family={Breton},
+           familyi={B\bibinitperiod},
+           given={Eric},
+           giveni={E\bibinitperiod}}}%
+        {{hash=1534295295ed2d4f81aadbb2502ed058}{%
+           family={Lallemand},
+           familyi={L\bibinitperiod},
+           given={Denis},
+           giveni={D\bibinitperiod}}}%
+        {{hash=a678d73fa4c5b84be83d0f24cc0e45ad}{%
+           family={Grenier},
+           familyi={G\bibinitperiod},
+           given={Philippe},
+           giveni={P\bibinitperiod}}}%
+        {{hash=f7139b966c47434907a614677d94bb66}{%
+           family={Cabanis},
+           familyi={C\bibinitperiod},
+           given={Emmanuel},
+           giveni={E\bibinitperiod}}}%
+        {{hash=dbfed84f59c951762f96c5cd922fce8d}{%
+           family={Laval-Jeantet},
+           familyi={L\bibinithyphendelim J\bibinitperiod},
+           given={Maurice},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{57ab0f0466c80923fa4de6cdf06287a8}
+      \strng{fullhash}{9847ba3dedab024fde703f1f9a7f7dcf}
+      \strng{bibnamehash}{57ab0f0466c80923fa4de6cdf06287a8}
+      \strng{authorbibnamehash}{57ab0f0466c80923fa4de6cdf06287a8}
+      \strng{authornamehash}{57ab0f0466c80923fa4de6cdf06287a8}
+      \strng{authorfullhash}{9847ba3dedab024fde703f1f9a7f7dcf}
+      \field{labelalpha}{LBL*86}
+      \field{sortinit}{L}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Radiology}
+      \field{number}{2}
+      \field{title}{{MR} Imaging of Intravoxel Incoherent Motions: Application to Diffusion and Perfusion in Neurologic Disorders}
+      \field{volume}{161}
+      \field{year}{1986}
+      \field{pages}{401\bibrangedash 407}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1148/radiology.161.2.3763909
+      \endverb
+    \endentry
+    \entry{MaierHein:2017}{article}{}
+      \name{author}{77}{}{%
+        {{hash=f673cd141cf85e311274bfdcd9fd11f6}{%
+           family={Maier-Hein},
+           familyi={M\bibinithyphendelim H\bibinitperiod},
+           given={Klaus\bibnamedelima H.},
+           giveni={K\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=c4a0bce94a62daedd552bfd4c7884a65}{%
+           family={Neher},
+           familyi={N\bibinitperiod},
+           given={Peter\bibnamedelima F.},
+           giveni={P\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=ed8b339c921e96208586ad89c3902895}{%
+           family={Houde},
+           familyi={H\bibinitperiod},
+           given={Jean-Christophe},
+           giveni={J\bibinithyphendelim C\bibinitperiod}}}%
+        {{hash=90f75a481318c6e2f4d938116479e00f}{%
+           family={C{ô}t{é}},
+           familyi={C\bibinitperiod},
+           given={Marc-Alexandre},
+           giveni={M\bibinithyphendelim A\bibinitperiod}}}%
+        {{hash=3bc0e9c1e8a2e07e842b9da60db9e2e4}{%
+           family={Garyfallidis},
+           familyi={G\bibinitperiod},
+           given={Eleftherios},
+           giveni={E\bibinitperiod}}}%
+        {{hash=60af2617c9c3cead7c106bfe677b2a7d}{%
+           family={Zhong},
+           familyi={Z\bibinitperiod},
+           given={Jidan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=0343fb18a6c36f4064dbe8ad80106a92}{%
+           family={Chamberland},
+           familyi={C\bibinitperiod},
+           given={Maxime},
+           giveni={M\bibinitperiod}}}%
+        {{hash=16966b2b93a8a3180f4dba3c032f627f}{%
+           family={Yeh},
+           familyi={Y\bibinitperiod},
+           given={Fang-Cheng},
+           giveni={F\bibinithyphendelim C\bibinitperiod}}}%
+        {{hash=2560248210429be75154af2794bb5346}{%
+           family={Lin},
+           familyi={L\bibinitperiod},
+           given={Ying-Chia},
+           giveni={Y\bibinithyphendelim C\bibinitperiod}}}%
+        {{hash=fb40e867d3a2488db378395f665b5af7}{%
+           family={Ji},
+           familyi={J\bibinitperiod},
+           given={Qing},
+           giveni={Q\bibinitperiod}}}%
+        {{hash=1ff4a5bac4034e6441bbc3497138757b}{%
+           family={Reddick},
+           familyi={R\bibinitperiod},
+           given={Wilburn\bibnamedelima E.},
+           giveni={W\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=b9a19f2d069479faacdfe4260b83a116}{%
+           family={Glass},
+           familyi={G\bibinitperiod},
+           given={John\bibnamedelima O.},
+           giveni={J\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+        {{hash=d683364f61982b54c91cbb5dc2913b97}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={David\bibnamedelima Qixiang},
+           giveni={D\bibinitperiod\bibinitdelim Q\bibinitperiod}}}%
+        {{hash=40366bafae96449f5b92bd34665fb9c9}{%
+           family={Feng},
+           familyi={F\bibinitperiod},
+           given={Yuanjing},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=1e89b1ed462174d52cb757dbf8bd6ca2}{%
+           family={Gao},
+           familyi={G\bibinitperiod},
+           given={Chengfeng},
+           giveni={C\bibinitperiod}}}%
+        {{hash=949e686607ca733fc6bc0abad053305b}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Ye},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=49cb680448393ce4c24bbbb8aa121055}{%
+           family={Ma},
+           familyi={M\bibinitperiod},
+           given={Jieyan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=67079908929f394f6891ad9b150284c2}{%
+           family={He},
+           familyi={H\bibinitperiod},
+           given={Renjie},
+           giveni={R\bibinitperiod}}}%
+        {{hash=f495cdda14989886bcfdb65c02b7a19d}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Qiang},
+           giveni={Q\bibinitperiod}}}%
+        {{hash=76218cec1e023e7c10ed02c2f8abe450}{%
+           family={Westin},
+           familyi={W\bibinitperiod},
+           given={Carl-Fredrik},
+           giveni={C\bibinithyphendelim F\bibinitperiod}}}%
+        {{hash=fb82b1b73bfa55cac88063f1a619a203}{%
+           family={Deslauriers-Gauthier},
+           familyi={D\bibinithyphendelim G\bibinitperiod},
+           given={Samuel},
+           giveni={S\bibinitperiod}}}%
+        {{hash=18d22b69976dacebea95c0002433ea1d}{%
+           family={Gonz{á}lez},
+           familyi={G\bibinitperiod},
+           given={J.\bibnamedelimi Omar\bibnamedelima Ocegueda},
+           giveni={J\bibinitperiod\bibinitdelim O\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+        {{hash=7c169e718d5cc83b76f05605c4a38838}{%
+           family={Paquette},
+           familyi={P\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=d74323afe4aacb98ff4df690e6f43a75}{%
+           family={St-Jean},
+           familyi={S\bibinithyphendelim J\bibinitperiod},
+           given={Samuel},
+           giveni={S\bibinitperiod}}}%
+        {{hash=1fb99698ecb3b1a8821b590633751682}{%
+           family={Girard},
+           familyi={G\bibinitperiod},
+           given={Gabriel},
+           giveni={G\bibinitperiod}}}%
+        {{hash=3b025e6409bdcfb97003a29302966e88}{%
+           family={Rheault},
+           familyi={R\bibinitperiod},
+           given={Fran{ç}ois},
+           giveni={F\bibinitperiod}}}%
+        {{hash=aad6c12f63fb44c81e72160b3381749f}{%
+           family={Sidhu},
+           familyi={S\bibinitperiod},
+           given={Jasmeen},
+           giveni={J\bibinitperiod}}}%
+        {{hash=0c8d9fd9021471f77af039d49e9ca038}{%
+           family={Tax},
+           familyi={T\bibinitperiod},
+           given={Chantal\bibnamedelimb M.\bibnamedelimi W.},
+           giveni={C\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=c81aad509ffb26c4aa1d2d22791ec84c}{%
+           family={Guo},
+           familyi={G\bibinitperiod},
+           given={Fenghua},
+           giveni={F\bibinitperiod}}}%
+        {{hash=e18398c4ed61e00ab7610527745b6a9e}{%
+           family={Mesri},
+           familyi={M\bibinitperiod},
+           given={Hamed\bibnamedelima Y.},
+           giveni={H\bibinitperiod\bibinitdelim Y\bibinitperiod}}}%
+        {{hash=a7e2270a0395f77abdb4b9382eb33fc2}{%
+           family={D{á}vid},
+           familyi={D\bibinitperiod},
+           given={Szabolcs},
+           giveni={S\bibinitperiod}}}%
+        {{hash=479cb5320337540ef31e97eaa1f4888d}{%
+           family={Froeling},
+           familyi={F\bibinitperiod},
+           given={Martijn},
+           giveni={M\bibinitperiod}}}%
+        {{hash=44d04818aed3a1a35107efc7250d4732}{%
+           family={Heemskerk},
+           familyi={H\bibinitperiod},
+           given={Anneriet\bibnamedelima M.},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=744a2d0842d4b3adb7fe02007e7d1783}{%
+           family={Leemans},
+           familyi={L\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod}}}%
+        {{hash=6fd412d3250d11b5775e723e6ce3fe1d}{%
+           family={Bor{é}},
+           familyi={B\bibinitperiod},
+           given={Arnaud},
+           giveni={A\bibinitperiod}}}%
+        {{hash=23a87decad68d6c3d9a6584835af2068}{%
+           family={Pinsard},
+           familyi={P\bibinitperiod},
+           given={Basile},
+           giveni={B\bibinitperiod}}}%
+        {{hash=7c864d3f3136c21bce0731cbea61b6b0}{%
+           family={Bedetti},
+           familyi={B\bibinitperiod},
+           given={Christophe},
+           giveni={C\bibinitperiod}}}%
+        {{hash=f0010f372c17748647f05fd40177effa}{%
+           family={Desrosiers},
+           familyi={D\bibinitperiod},
+           given={Matthieu},
+           giveni={M\bibinitperiod}}}%
+        {{hash=f923a37b9b745119f898fbedbb413804}{%
+           family={Brambati},
+           familyi={B\bibinitperiod},
+           given={Simona},
+           giveni={S\bibinitperiod}}}%
+        {{hash=c6b2a3f700d8311df01f93460f74f814}{%
+           family={Doyon},
+           familyi={D\bibinitperiod},
+           given={Julien},
+           giveni={J\bibinitperiod}}}%
+        {{hash=7c7a03977e11d9083b24b3bb5e7e9779}{%
+           family={Sarica},
+           familyi={S\bibinitperiod},
+           given={Alessia},
+           giveni={A\bibinitperiod}}}%
+        {{hash=2542f0aae5174603934c31fffeaabbc5}{%
+           family={Vasta},
+           familyi={V\bibinitperiod},
+           given={Roberta},
+           giveni={R\bibinitperiod}}}%
+        {{hash=e880b846646c1a0375201a7149028d68}{%
+           family={Cerasa},
+           familyi={C\bibinitperiod},
+           given={Antonio},
+           giveni={A\bibinitperiod}}}%
+        {{hash=fea4d00d65f380631a13787cdba88043}{%
+           family={Quattrone},
+           familyi={Q\bibinitperiod},
+           given={Aldo},
+           giveni={A\bibinitperiod}}}%
+        {{hash=accf3149c11e969a4988604948d23b35}{%
+           family={Yeatman},
+           familyi={Y\bibinitperiod},
+           given={Jason},
+           giveni={J\bibinitperiod}}}%
+        {{hash=9188fa0f2231f7a05937b12921d071cf}{%
+           family={Khan},
+           familyi={K\bibinitperiod},
+           given={Ali\bibnamedelima R.},
+           giveni={A\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=f2a1cf6a1b0ec4d11a4d1753290bd74a}{%
+           family={Hodges},
+           familyi={H\bibinitperiod},
+           given={Wes},
+           giveni={W\bibinitperiod}}}%
+        {{hash=715935764bf80324d45ba705685253ab}{%
+           family={Alexander},
+           familyi={A\bibinitperiod},
+           given={Simon},
+           giveni={S\bibinitperiod}}}%
+        {{hash=0159be04c4479c1e5fda1bb4053ad008}{%
+           family={Romascano},
+           familyi={R\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=b4586b75916bf81e9ed1911520fbe932}{%
+           family={Barakovic},
+           familyi={B\bibinitperiod},
+           given={Muhamed},
+           giveni={M\bibinitperiod}}}%
+        {{hash=4d38744c9f609c1c638a18a9314e664f}{%
+           family={Aur{ı́}a},
+           familyi={A\bibinitperiod},
+           given={Anna},
+           giveni={A\bibinitperiod}}}%
+        {{hash=bad82335174e52244c1c45aa43507b06}{%
+           family={Esteban},
+           familyi={E\bibinitperiod},
+           given={Oscar},
+           giveni={O\bibinitperiod}}}%
+        {{hash=0129ab19bd33dd1ab079d11543c51a45}{%
+           family={Lemkaddem},
+           familyi={L\bibinitperiod},
+           given={Alia},
+           giveni={A\bibinitperiod}}}%
+        {{hash=f906ea076b497b7a36b6330a10d6d98f}{%
+           family={Thiran},
+           familyi={T\bibinitperiod},
+           given={Jean-Philippe},
+           giveni={J\bibinithyphendelim P\bibinitperiod}}}%
+        {{hash=2832284b89510b5cc04ba560630ce58b}{%
+           family={Cetingul},
+           familyi={C\bibinitperiod},
+           given={H.\bibnamedelimi Ertan},
+           giveni={H\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=777a1d6848b6297b597ed4d35a43b4b3}{%
+           family={Odry},
+           familyi={O\bibinitperiod},
+           given={Benjamin\bibnamedelima L.},
+           giveni={B\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=44b7f5672e8475384ba218aefe081c54}{%
+           family={Mailhe},
+           familyi={M\bibinitperiod},
+           given={Boris},
+           giveni={B\bibinitperiod}}}%
+        {{hash=3bd20dff6f6bce64f78c2f957c92774f}{%
+           family={Nadar},
+           familyi={N\bibinitperiod},
+           given={Mariappan\bibnamedelima S.},
+           giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=c8660b15afecdcb11324ef48b17c1598}{%
+           family={Pizzagalli},
+           familyi={P\bibinitperiod},
+           given={Fabrizio},
+           giveni={F\bibinitperiod}}}%
+        {{hash=9500661fe78e382b86daae72a21f8a99}{%
+           family={Prasad},
+           familyi={P\bibinitperiod},
+           given={Gautam},
+           giveni={G\bibinitperiod}}}%
+        {{hash=eae9fe09ee50c55274c2c126779d09b9}{%
+           family={Villalon-Reina},
+           familyi={V\bibinithyphendelim R\bibinitperiod},
+           given={Julio\bibnamedelima E.},
+           giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=5e5603ea954da8bbdb6c87e00180098b}{%
+           family={Galvis},
+           familyi={G\bibinitperiod},
+           given={Justin},
+           giveni={J\bibinitperiod}}}%
+        {{hash=6c178ecb1fd78730cd5cfcefec6f896c}{%
+           family={Thompson},
+           familyi={T\bibinitperiod},
+           given={Paul\bibnamedelima M.},
+           giveni={P\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=6b413e5900ab1c7a5924fed15082ce33}{%
+           family={Requejo},
+           familyi={R\bibinitperiod},
+           given={Francisco\bibnamedelimb De\bibnamedelima Santiago},
+           giveni={F\bibinitperiod\bibinitdelim D\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=b4ef56a732c4bf3b3e0491f0e1ce2e84}{%
+           family={Laguna},
+           familyi={L\bibinitperiod},
+           given={Pedro\bibnamedelima Luque},
+           giveni={P\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=02a452b4ddcd3abbeee8f957a3484f40}{%
+           family={Lacerda},
+           familyi={L\bibinitperiod},
+           given={Luis\bibnamedelima Miguel},
+           giveni={L\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=4ce46e4486972cec0887c586c70cd2fb}{%
+           family={Barrett},
+           familyi={B\bibinitperiod},
+           given={Rachel},
+           giveni={R\bibinitperiod}}}%
+        {{hash=1d66a05890813c52649273455b111c24}{%
+           family={Dell'Acqua},
+           familyi={D\bibinitperiod},
+           given={Flavio},
+           giveni={F\bibinitperiod}}}%
+        {{hash=59bec13858f7856c1bbd7712c73ba27f}{%
+           family={Catani},
+           familyi={C\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod}}}%
+        {{hash=db0bd811222ab5cde66b8d4841487959}{%
+           family={Petit},
+           familyi={P\bibinitperiod},
+           given={Laurent},
+           giveni={L\bibinitperiod}}}%
+        {{hash=6df429265a6f9877e27b7df511bc22b3}{%
+           family={Caruyer},
+           familyi={C\bibinitperiod},
+           given={Emmanuel},
+           giveni={E\bibinitperiod}}}%
+        {{hash=d8b9212d462ca9a2dd7091fa468400a6}{%
+           family={Daducci},
+           familyi={D\bibinitperiod},
+           given={Alessandro},
+           giveni={A\bibinitperiod}}}%
+        {{hash=e490c24c87bb0b18165bf237324a5f0e}{%
+           family={Dyrby},
+           familyi={D\bibinitperiod},
+           given={Tim\bibnamedelima B.},
+           giveni={T\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=d962929274a7380db6b84a9fca03325c}{%
+           family={Holland-Letz},
+           familyi={H\bibinithyphendelim L\bibinitperiod},
+           given={Tim},
+           giveni={T\bibinitperiod}}}%
+        {{hash=15c5612e1d5b88c9f943b9e88c6c2519}{%
+           family={Hilgetag},
+           familyi={H\bibinitperiod},
+           given={Claus\bibnamedelima C.},
+           giveni={C\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=96e99b242ceb111e97c6be8d19c75212}{%
+           family={Stieltjes},
+           familyi={S\bibinitperiod},
+           given={Bram},
+           giveni={B\bibinitperiod}}}%
+        {{hash=40a0f5eaa96f93cee51c143158223658}{%
+           family={Descoteaux},
+           familyi={D\bibinitperiod},
+           given={Maxime},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{31200a3517d0c824a3b28a9e1b876b81}
+      \strng{fullhash}{b9c3d80e490467c4b2d7d7620514e2ae}
+      \strng{bibnamehash}{31200a3517d0c824a3b28a9e1b876b81}
+      \strng{authorbibnamehash}{31200a3517d0c824a3b28a9e1b876b81}
+      \strng{authornamehash}{31200a3517d0c824a3b28a9e1b876b81}
+      \strng{authorfullhash}{b9c3d80e490467c4b2d7d7620514e2ae}
+      \field{labelalpha}{MNH*17}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature Communications}
+      \field{number}{1}
+      \field{title}{The challenge of mapping the human connectome based on diffusion tractography}
+      \field{volume}{8}
+      \field{year}{2017}
+      \verb{doi}
+      \verb 10.1038/s41467-017-01285-x
+      \endverb
+    \endentry
+    \entry{filteredMultiTensor}{article}{}
+      \name{author}{3}{}{%
+        {{hash=000f2a185c4b0609ab942d5e46b06d78}{%
+           family={Malcolm},
+           familyi={M\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod}}}%
+        {{hash=aa055353464c7ef240342255e730d5f3}{%
+           family={Shenton},
+           familyi={S\bibinitperiod},
+           given={Martha},
+           giveni={M\bibinitperiod}}}%
+        {{hash=fd364c78a99d71da4a55bef4a04e5b20}{%
+           family={Rathi},
+           familyi={R\bibinitperiod},
+           given={Yogesh},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{4c9d964f5b3127ce8b72288b23c7a3c1}
+      \strng{fullhash}{4c9d964f5b3127ce8b72288b23c7a3c1}
+      \strng{bibnamehash}{4c9d964f5b3127ce8b72288b23c7a3c1}
+      \strng{authorbibnamehash}{4c9d964f5b3127ce8b72288b23c7a3c1}
+      \strng{authornamehash}{4c9d964f5b3127ce8b72288b23c7a3c1}
+      \strng{authorfullhash}{4c9d964f5b3127ce8b72288b23c7a3c1}
+      \field{labelalpha}{MSR10}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE transactions on medical imaging}
+      \field{month}{09}
+      \field{title}{Filtered multitensor tractography. IEEE Trans Med Imaging}
+      \field{volume}{29}
+      \field{year}{2010}
+      \field{pages}{1664\bibrangedash 75}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1109/TMI.2010.2048121
+      \endverb
+    \endentry
+    \entry{Neher:2015}{article}{}
+      \name{author}{5}{}{%
+        {{hash=c4a0bce94a62daedd552bfd4c7884a65}{%
+           family={Neher},
+           familyi={N\bibinitperiod},
+           given={Peter\bibnamedelima F.},
+           giveni={P\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=40a0f5eaa96f93cee51c143158223658}{%
+           family={Descoteaux},
+           familyi={D\bibinitperiod},
+           given={Maxime},
+           giveni={M\bibinitperiod}}}%
+        {{hash=ed8b339c921e96208586ad89c3902895}{%
+           family={Houde},
+           familyi={H\bibinitperiod},
+           given={Jean-Christophe},
+           giveni={J\bibinithyphendelim C\bibinitperiod}}}%
+        {{hash=96e99b242ceb111e97c6be8d19c75212}{%
+           family={Stieltjes},
+           familyi={S\bibinitperiod},
+           given={Bram},
+           giveni={B\bibinitperiod}}}%
+        {{hash=f673cd141cf85e311274bfdcd9fd11f6}{%
+           family={Maier-Hein},
+           familyi={M\bibinithyphendelim H\bibinitperiod},
+           given={Klaus\bibnamedelima H.},
+           giveni={K\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \strng{namehash}{12055fe42592416277018a67292f2232}
+      \strng{fullhash}{921130c2112c40edc1e1f152834249c4}
+      \strng{bibnamehash}{12055fe42592416277018a67292f2232}
+      \strng{authorbibnamehash}{12055fe42592416277018a67292f2232}
+      \strng{authornamehash}{12055fe42592416277018a67292f2232}
+      \strng{authorfullhash}{921130c2112c40edc1e1f152834249c4}
+      \field{labelalpha}{NDH*15}
+      \field{sortinit}{N}
+      \field{sortinithash}{98cf339a479c0454fe09153a08675a15}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Medical Image Analysis}
+      \field{number}{1}
+      \field{title}{Strengths and weaknesses of state of the art fiber tractography pipelines. A comprehensive in-vivo and phantom evaluation study using Tractometer}
+      \field{volume}{26}
+      \field{year}{2015}
+      \field{pages}{287\bibrangedash 305}
+      \range{pages}{19}
+      \verb{doi}
+      \verb 10.1016/j.media.2015.10.011
+      \endverb
+    \endentry
+    \entry{filteredMutliTensor2}{inproceedings}{}
+      \name{author}{6}{}{%
+        {{hash=fd364c78a99d71da4a55bef4a04e5b20}{%
+           family={Rathi},
+           familyi={R\bibinitperiod},
+           given={Yogesh},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=8ccf64de0981f83a50ae505ded6c11bc}{%
+           family={Gagoski},
+           familyi={G\bibinitperiod},
+           given={Borjan},
+           giveni={B\bibinitperiod}}}%
+        {{hash=40738f74f3359442eb7cd059e203fe7d}{%
+           family={Setsompop},
+           familyi={S\bibinitperiod},
+           given={Kawin},
+           giveni={K\bibinitperiod}}}%
+        {{hash=5ae0632209f74c11e641b92d273e02ee}{%
+           family={Michailovich},
+           familyi={M\bibinitperiod},
+           given={Oleg},
+           giveni={O\bibinitperiod}}}%
+        {{hash=7f1930f87499af5f6d0abf2681190160}{%
+           family={Grant},
+           familyi={G\bibinitperiod},
+           given={Patricia},
+           giveni={P\bibinitperiod}}}%
+        {{hash=76218cec1e023e7c10ed02c2f8abe450}{%
+           family={Westin},
+           familyi={W\bibinitperiod},
+           given={Carl-Fredrik},
+           giveni={C\bibinithyphendelim F\bibinitperiod}}}%
+      }
+      \strng{namehash}{edde86d0c84fab6cce5352019609adc7}
+      \strng{fullhash}{7ba35f220aa1f0a2c0f1b5b4aad0ef60}
+      \strng{bibnamehash}{edde86d0c84fab6cce5352019609adc7}
+      \strng{authorbibnamehash}{edde86d0c84fab6cce5352019609adc7}
+      \strng{authornamehash}{edde86d0c84fab6cce5352019609adc7}
+      \strng{authorfullhash}{7ba35f220aa1f0a2c0f1b5b4aad0ef60}
+      \field{labelalpha}{RGS*13}
+      \field{sortinit}{R}
+      \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Medical image computing and computer-assisted intervention : MICCAI ... International Conference on Medical Image Computing and Computer-Assisted Intervention}
+      \field{month}{09}
+      \field{title}{Diffusion Propagator Estimation from Sparse Measurements in a Tractography Framework}
+      \field{volume}{16}
+      \field{year}{2013}
+      \field{pages}{510\bibrangedash 7}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1007/978-3-642-40760-4_64
+      \endverb
+    \endentry
+    \entry{Reisert:2011}{article}{}
+      \name{author}{6}{}{%
+        {{hash=263e3d727ab02278f154caedf69eda64}{%
+           family={Reisert},
+           familyi={R\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod}}}%
+        {{hash=50ba14e854fb344466898114ef029b29}{%
+           family={Mader},
+           familyi={M\bibinitperiod},
+           given={Irina},
+           giveni={I\bibinitperiod}}}%
+        {{hash=0bb1771a1e9c15996718e5bdb7b48f1a}{%
+           family={Anastasopoulos},
+           familyi={A\bibinitperiod},
+           given={Constantin},
+           giveni={C\bibinitperiod}}}%
+        {{hash=fa947fcb01d8f6e7312e2b8684bec2fd}{%
+           family={Weigel},
+           familyi={W\bibinitperiod},
+           given={Matthias},
+           giveni={M\bibinitperiod}}}%
+        {{hash=e47b23190b67653458ec0428dfc4b6bd}{%
+           family={Schnell},
+           familyi={S\bibinitperiod},
+           given={Susanne},
+           giveni={S\bibinitperiod}}}%
+        {{hash=5f22019e478ac4644f446eb9eae4d8c3}{%
+           family={Kiselev},
+           familyi={K\bibinitperiod},
+           given={Valerij},
+           giveni={V\bibinitperiod}}}%
+      }
+      \strng{namehash}{69d70bef04d9ce6774763ac5304c6b02}
+      \strng{fullhash}{296c890e7a3fdba3c986fd70ed4acdc8}
+      \strng{bibnamehash}{69d70bef04d9ce6774763ac5304c6b02}
+      \strng{authorbibnamehash}{69d70bef04d9ce6774763ac5304c6b02}
+      \strng{authornamehash}{69d70bef04d9ce6774763ac5304c6b02}
+      \strng{authorfullhash}{296c890e7a3fdba3c986fd70ed4acdc8}
+      \field{labelalpha}{RMA*11}
+      \field{sortinit}{R}
+      \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{NeuroImage}
+      \field{number}{2}
+      \field{title}{Global fiber reconstruction becomes practical}
+      \field{volume}{54}
+      \field{year}{2011}
+      \field{pages}{955\bibrangedash 962}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1016/j.neuroimage.2010.09.016
+      \endverb
+    \endentry
+    \entry{SCHILLING2019194}{article}{}
+      \name{author}{9}{}{%
+        {{hash=5b64c373151016601c1cb0ccf945f66e}{%
+           family={Schilling},
+           familyi={S\bibinitperiod},
+           given={Kurt\bibnamedelima G.},
+           giveni={K\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=d8b9212d462ca9a2dd7091fa468400a6}{%
+           family={Daducci},
+           familyi={D\bibinitperiod},
+           given={Alessandro},
+           giveni={A\bibinitperiod}}}%
+        {{hash=114f1f4d61f0bb02e9a8b368c52702bc}{%
+           family={Maier-Hein},
+           familyi={M\bibinithyphendelim H\bibinitperiod},
+           given={Klaus},
+           giveni={K\bibinitperiod}}}%
+        {{hash=8869c1ad62ea270bded3da4fac887120}{%
+           family={Poupon},
+           familyi={P\bibinitperiod},
+           given={Cyril},
+           giveni={C\bibinitperiod}}}%
+        {{hash=ed8b339c921e96208586ad89c3902895}{%
+           family={Houde},
+           familyi={H\bibinitperiod},
+           given={Jean-Christophe},
+           giveni={J\bibinithyphendelim C\bibinitperiod}}}%
+        {{hash=d0968ce3719368d26817f02301e44c29}{%
+           family={Nath},
+           familyi={N\bibinitperiod},
+           given={Vishwesh},
+           giveni={V\bibinitperiod}}}%
+        {{hash=4748f68ce0a4997346ee0f63e73d55c1}{%
+           family={Anderson},
+           familyi={A\bibinitperiod},
+           given={Adam\bibnamedelima W.},
+           giveni={A\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=97f6985f9c2acc2c5cb994b321131d1e}{%
+           family={Landman},
+           familyi={L\bibinitperiod},
+           given={Bennett\bibnamedelima A.},
+           giveni={B\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=40a0f5eaa96f93cee51c143158223658}{%
+           family={Descoteaux},
+           familyi={D\bibinitperiod},
+           given={Maxime},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{d1360047b8b2a5c3f92c6ca7fcc24d74}
+      \strng{fullhash}{2bad75307d0e97cd9c0f5c0c26f54e0d}
+      \strng{bibnamehash}{d1360047b8b2a5c3f92c6ca7fcc24d74}
+      \strng{authorbibnamehash}{d1360047b8b2a5c3f92c6ca7fcc24d74}
+      \strng{authornamehash}{d1360047b8b2a5c3f92c6ca7fcc24d74}
+      \strng{authorfullhash}{2bad75307d0e97cd9c0f5c0c26f54e0d}
+      \field{labelalpha}{SDM*19}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Diffusion MRI (dMRI) fiber tractography has become a pillar of the neuroimaging community due to its ability to noninvasively map the structural connectivity of the brain. Despite widespread use in clinical and research domains, these methods suffer from several potential drawbacks or limitations. Thus, validating the accuracy and reproducibility of techniques is critical for sound scientific conclusions and effective clinical outcomes. Towards this end, a number of international benchmark competitions, or challenges, has been organized by the diffusion MRI community in order to investigate the reliability of the tractography process by providing a platform to compare algorithms and results in a fair manner, and evaluate common and emerging algorithms in an effort to advance the state of the field. In this paper, we summarize the lessons from a decade of challenges in tractography, and give perspective on the past, present, and future challenges that the field of diffusion tractography faces.}
+      \field{issn}{0730-725X}
+      \field{journaltitle}{Magnetic Resonance Imaging}
+      \field{title}{Challenges in diffusion MRI tractography Lessons learned from international benchmark competitions}
+      \field{volume}{57}
+      \field{year}{2019}
+      \field{pages}{194\bibrangedash 209}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1016/j.mri.2018.11.014
+      \endverb
+      \keyw{Diffusion MRI,Challenges,Tractography,Validation,Algorithms,Accuracy}
+    \endentry
+    \entry{Siddiqui:2021}{article}{}
+      \name{author}{3}{}{%
+        {{hash=2a41e812535fce60b9b745926ca9b709}{%
+           family={Siddiqui},
+           familyi={S\bibinitperiod},
+           given={Faizan},
+           giveni={F\bibinitperiod}}}%
+        {{hash=9580089622c29f7ec38c7b5886f71293}{%
+           family={H{ö}llt},
+           familyi={H\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+        {{hash=5e52b66f309bd96508636a1aa62bb2ba}{%
+           family={Vilanova},
+           familyi={V\bibinitperiod},
+           given={Anna},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{7661cd019541f28aefb0ac5c084907f9}
+      \strng{fullhash}{7661cd019541f28aefb0ac5c084907f9}
+      \strng{bibnamehash}{7661cd019541f28aefb0ac5c084907f9}
+      \strng{authorbibnamehash}{7661cd019541f28aefb0ac5c084907f9}
+      \strng{authornamehash}{7661cd019541f28aefb0ac5c084907f9}
+      \strng{authorfullhash}{7661cd019541f28aefb0ac5c084907f9}
+      \field{labelalpha}{SHV21}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Computer Graphics Forum}
+      \field{number}{3}
+      \field{title}{A Progressive Approach for Uncertainty Visualization in Diffusion Tensor Imaging}
+      \field{volume}{40}
+      \field{year}{2021}
+      \field{pages}{411\bibrangedash 422}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1111/cgf.14317
+      \endverb
+    \endentry
+    \entry{Sotiropoulos:2013}{article}{}
+      \name{author}{16}{}{%
+        {{hash=ae87a1f05e389fe715a4aced17610fc2}{%
+           family={Sotiropoulos},
+           familyi={S\bibinitperiod},
+           given={Stamatios\bibnamedelima N.},
+           giveni={S\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=aae1b7c172350ebaa2caa537f57b2348}{%
+           family={Jbabdi},
+           familyi={J\bibinitperiod},
+           given={Saad},
+           giveni={S\bibinitperiod}}}%
+        {{hash=6bb63bc502a86aef25fd7a3b2cd3a7fc}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Junqian},
+           giveni={J\bibinitperiod}}}%
+        {{hash=584fdec8f108f7b709dae816700a1b6a}{%
+           family={Andersson},
+           familyi={A\bibinitperiod},
+           given={Jesper\bibnamedelima L.},
+           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=6b828678a9dc0778e98786c7a4a75626}{%
+           family={Moeller},
+           familyi={M\bibinitperiod},
+           given={Steen},
+           giveni={S\bibinitperiod}}}%
+        {{hash=81a627bae7445bb4aa7ac9f4c91c0553}{%
+           family={Auerbach},
+           familyi={A\bibinitperiod},
+           given={Edward\bibnamedelima J.},
+           giveni={E\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=3e131be5ae50424f2b0d802e59264fe1}{%
+           family={Glasser},
+           familyi={G\bibinitperiod},
+           given={Matthew\bibnamedelima F.},
+           giveni={M\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=b8531a66f6adb1c29fd2ebc7995da8d4}{%
+           family={Hernandez},
+           familyi={H\bibinitperiod},
+           given={Moises},
+           giveni={M\bibinitperiod}}}%
+        {{hash=c8b95715cbbf5962b79737d877773fee}{%
+           family={Sapiro},
+           familyi={S\bibinitperiod},
+           given={Guillermo},
+           giveni={G\bibinitperiod}}}%
+        {{hash=02d16eb5d8b0d0af1320675587ee5db5}{%
+           family={Jenkinson},
+           familyi={J\bibinitperiod},
+           given={Mark},
+           giveni={M\bibinitperiod}}}%
+        {{hash=99c37c7764c8c798c860149fbd084da2}{%
+           family={Feinberg},
+           familyi={F\bibinitperiod},
+           given={David\bibnamedelima A.},
+           giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=138795d93758afeaa2a0a01bb6bfb4df}{%
+           family={Yacoub},
+           familyi={Y\bibinitperiod},
+           given={Essa},
+           giveni={E\bibinitperiod}}}%
+        {{hash=5c0d2a4f790c45720c729d84ede2492c}{%
+           family={Lenglet},
+           familyi={L\bibinitperiod},
+           given={Christophe},
+           giveni={C\bibinitperiod}}}%
+        {{hash=6f7e9f92f83d761d252ab56d38bfe109}{%
+           family={Essen},
+           familyi={E\bibinitperiod},
+           given={David\bibnamedelimb C.\bibnamedelimi Van},
+           giveni={D\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=bc462df9ca0202de54413b81d77da857}{%
+           family={Ugurbil},
+           familyi={U\bibinitperiod},
+           given={Kamil},
+           giveni={K\bibinitperiod}}}%
+        {{hash=c946e197e64894a34f519dac9275ae75}{%
+           family={Behrens},
+           familyi={B\bibinitperiod},
+           given={Timothy\bibnamedelima E.J.},
+           giveni={T\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \strng{namehash}{7977eece31e4f90103b24348bb4a504e}
+      \strng{fullhash}{4018bebc37451e8f15b809b04b673bc3}
+      \strng{bibnamehash}{7977eece31e4f90103b24348bb4a504e}
+      \strng{authorbibnamehash}{7977eece31e4f90103b24348bb4a504e}
+      \strng{authornamehash}{7977eece31e4f90103b24348bb4a504e}
+      \strng{authorfullhash}{4018bebc37451e8f15b809b04b673bc3}
+      \field{labelalpha}{SJX*13}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{NeuroImage}
+      \field{title}{Advances in diffusion {MRI} acquisition and processing in the Human Connectome Project}
+      \field{volume}{80}
+      \field{year}{2013}
+      \field{pages}{125\bibrangedash 143}
+      \range{pages}{19}
+      \verb{doi}
+      \verb 10.1016/j.neuroimage.2013.05.057
+      \endverb
+    \endentry
+    \entry{lowrank}{article}{}
+      \name{author}{2}{}{%
+        {{hash=ae998176c84d7a6a58b893bd9cb337ae}{%
+           family={Schultz},
+           familyi={S\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+        {{hash=6b938df454dbec178f38949254e4a9b0}{%
+           family={Seidel},
+           familyi={S\bibinitperiod},
+           given={Hans-Peter},
+           giveni={H\bibinithyphendelim P\bibinitperiod}}}%
+      }
+      \strng{namehash}{327d8a70da80778ba432f935ffada256}
+      \strng{fullhash}{327d8a70da80778ba432f935ffada256}
+      \strng{bibnamehash}{327d8a70da80778ba432f935ffada256}
+      \strng{authorbibnamehash}{327d8a70da80778ba432f935ffada256}
+      \strng{authornamehash}{327d8a70da80778ba432f935ffada256}
+      \strng{authorfullhash}{327d8a70da80778ba432f935ffada256}
+      \field{labelalpha}{SS08}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Visualization and Computer Graphics}
+      \field{number}{6}
+      \field{title}{Estimating Crossing Fibers: A Tensor Decomposition Approach}
+      \field{volume}{14}
+      \field{year}{2008}
+      \field{pages}{1635\bibrangedash 1642}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1109/TVCG.2008.128
+      \endverb
+    \endentry
+    \entry{Schultz:SciVisBook2014}{incollection}{}
+      \name{author}{4}{}{%
+        {{hash=ae998176c84d7a6a58b893bd9cb337ae}{%
+           family={Schultz},
+           familyi={S\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+        {{hash=5e52b66f309bd96508636a1aa62bb2ba}{%
+           family={Vilanova},
+           familyi={V\bibinitperiod},
+           given={Anna},
+           giveni={A\bibinitperiod}}}%
+        {{hash=90f2e3f4d56c491772c59fb62f7e627d}{%
+           family={Brecheisen},
+           familyi={B\bibinitperiod},
+           given={Ralph},
+           giveni={R\bibinitperiod}}}%
+        {{hash=1e1ed2ddd6023b2c085d5e3eb9f40f0a}{%
+           family={Kindlmann},
+           familyi={K\bibinitperiod},
+           given={Gordon},
+           giveni={G\bibinitperiod}}}%
+      }
+      \name{editor}{5}{}{%
+        {{hash=8f5f4e3c6f2527b89aad8891de49fa36}{%
+           family={Hansen},
+           familyi={H\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+        {{hash=802879972afa5bd206c5988365d10ca8}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=3ab34db904b7dbbd29c0c325a354a5ab}{%
+           family={Johnson},
+           familyi={J\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+        {{hash=296f77183213eccb150d05576435878c}{%
+           family={Kaufman},
+           familyi={K\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=4b40034f817082318ec511a5da0e5b6e}{%
+           family={Hagen},
+           familyi={H\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{d8ed76d8a48f1f221be6ba86d1910465}
+      \strng{fullhash}{d8ed76d8a48f1f221be6ba86d1910465}
+      \strng{bibnamehash}{d8ed76d8a48f1f221be6ba86d1910465}
+      \strng{authorbibnamehash}{d8ed76d8a48f1f221be6ba86d1910465}
+      \strng{authornamehash}{d8ed76d8a48f1f221be6ba86d1910465}
+      \strng{authorfullhash}{d8ed76d8a48f1f221be6ba86d1910465}
+      \strng{editorbibnamehash}{5a2f38877cedced5f498307c24b770e0}
+      \strng{editornamehash}{5a2f38877cedced5f498307c24b770e0}
+      \strng{editorfullhash}{82c9856f2110765163b5ed5e94725896}
+      \field{labelalpha}{SVBK14}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Scientific Visualization: Uncertainty, Multifield, Biomedical, and Scalable Visualization}
+      \field{title}{Fuzzy Fibers: Uncertainty in dMRI Tractography}
+      \field{year}{2014}
+      \field{pages}{79\bibrangedash 92}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1007/978-1-4471-6497-5_8
+      \endverb
+    \endentry
+    \entry{TOURNIER20071459}{article}{}
+      \name{author}{3}{}{%
+        {{hash=f408c4f4cf978ac937e66c2f2fadb485}{%
+           family={Tournier},
+           familyi={T\bibinitperiod},
+           given={J-Donald},
+           giveni={J\bibinithyphendelim D\bibinitperiod}}}%
+        {{hash=d9c439d0db079e06038119c4b1a9f05b}{%
+           family={Calamante},
+           familyi={C\bibinitperiod},
+           given={Fernando},
+           giveni={F\bibinitperiod}}}%
+        {{hash=a2b5d137552fe0fb6e98f0c45ac378ef}{%
+           family={Connelly},
+           familyi={C\bibinitperiod},
+           given={Alan},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{19e20e6f9e82e9272df857d9ec9b5dad}
+      \strng{fullhash}{19e20e6f9e82e9272df857d9ec9b5dad}
+      \strng{bibnamehash}{19e20e6f9e82e9272df857d9ec9b5dad}
+      \strng{authorbibnamehash}{19e20e6f9e82e9272df857d9ec9b5dad}
+      \strng{authornamehash}{19e20e6f9e82e9272df857d9ec9b5dad}
+      \strng{authorfullhash}{19e20e6f9e82e9272df857d9ec9b5dad}
+      \field{labelalpha}{TCC07}
+      \field{sortinit}{T}
+      \field{sortinithash}{51f9faf24c60c62ca764a77f78cf5666}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Diffusion-weighted (DW) MR images contain information about the orientation of brain white matter fibres that potentially can be used to study human brain connectivity in vivo using tractography techniques. Currently, the diffusion tensor model is widely used to extract fibre directions from DW-MRI data, but fails in regions containing multiple fibre orientations. The spherical deconvolution technique has recently been proposed to address this limitation. It provides an estimate of the fibre orientation distribution (FOD) by assuming the DW signal measured from any fibre bundle is adequately described by a single response function. However, the deconvolution is ill-conditioned and susceptible to noise contamination. This tends to introduce artefactual negative regions in the FOD, which are clearly physically impossible. In this study, the introduction of a constraint on such negative regions is proposed to improve the conditioning of the spherical deconvolution. This approach is shown to provide FOD estimates that are robust to noise whilst preserving angular resolution. The approach also permits the use of super-resolution, whereby more FOD parameters are estimated than were actually measured, improving the angular resolution of the results. The method provides much better defined fibre orientation estimates, and allows orientations to be resolved that are separated by smaller angles than previously possible. This should allow tractography algorithms to be designed that are able to track reliably through crossing fibre regions.}
+      \field{issn}{1053-8119}
+      \field{journaltitle}{NeuroImage}
+      \field{number}{4}
+      \field{title}{Robust determination of the fibre orientation distribution in diffusion MRI: Non-negativity constrained super-resolved spherical deconvolution}
+      \field{volume}{35}
+      \field{year}{2007}
+      \field{pages}{1459\bibrangedash 1472}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1016/j.neuroimage.2007.02.016
+      \endverb
+    \endentry
+    \entry{Tobisch:2018Frontiers}{article}{}
+      \name{author}{7}{}{%
+        {{hash=91ad5eb8331245abbf707276e001e09f}{%
+           family={Tobisch},
+           familyi={T\bibinitperiod},
+           given={Alexandra},
+           giveni={A\bibinitperiod}}}%
+        {{hash=228127760ec53789ca20dcda0b8ade1c}{%
+           family={Stirnberg},
+           familyi={S\bibinitperiod},
+           given={R{ü}diger},
+           giveni={R\bibinitperiod}}}%
+        {{hash=0b5cb4fe4b95f9882910fb955ab360ed}{%
+           family={Harms},
+           familyi={H\bibinitperiod},
+           given={Robbert\bibnamedelima L.},
+           giveni={R\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=ae998176c84d7a6a58b893bd9cb337ae}{%
+           family={Schultz},
+           familyi={S\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+        {{hash=0ce7955da2b0c404915a1510bd2fab92}{%
+           family={Roebroeck},
+           familyi={R\bibinitperiod},
+           given={Alard},
+           giveni={A\bibinitperiod}}}%
+        {{hash=6e229fb372caf6593ebca65a4e659efb}{%
+           family={Breteler},
+           familyi={B\bibinitperiod},
+           given={Monique\bibnamedelima M.},
+           giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=06b510e2b9c9ebb337fc59e2533a0c36}{%
+           family={St{ö}cker},
+           familyi={S\bibinitperiod},
+           given={Tony},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{13732536821164dbe95a6be4ce8978c6}
+      \strng{fullhash}{83881f6554dd4877f6d73429471fac4a}
+      \strng{bibnamehash}{13732536821164dbe95a6be4ce8978c6}
+      \strng{authorbibnamehash}{13732536821164dbe95a6be4ce8978c6}
+      \strng{authornamehash}{13732536821164dbe95a6be4ce8978c6}
+      \strng{authorfullhash}{83881f6554dd4877f6d73429471fac4a}
+      \field{labelalpha}{TSH*18}
+      \field{sortinit}{T}
+      \field{sortinithash}{51f9faf24c60c62ca764a77f78cf5666}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Frontiers in Neuroscience}
+      \field{title}{Compressed Sensing Diffusion Spectrum Imaging for Accelerated Diffusion Microstructure {MRI} in Long-Term Population Imaging}
+      \field{volume}{12}
+      \field{year}{2018}
+      \field{pages}{650}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3389/fnins.2018.00650
+      \endverb
+    \endentry
+    \entry{HCP}{article}{}
+      \name{author}{6}{}{%
+        {{hash=f246a8ef87257e3289dbf5a27efcf2f0}{%
+           family={{Van Essen}},
+           familyi={V\bibinitperiod},
+           given={David\bibnamedelima C.},
+           giveni={D\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=1b067e83d2e7008cdc1841a1e60c00b5}{%
+           family={Smith},
+           familyi={S\bibinitperiod},
+           given={Stephen\bibnamedelima M.},
+           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=7cfa4ddc13b0da527952f57f52dbd60e}{%
+           family={Barch},
+           familyi={B\bibinitperiod},
+           given={Deanna\bibnamedelima M.},
+           giveni={D\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=c946e197e64894a34f519dac9275ae75}{%
+           family={Behrens},
+           familyi={B\bibinitperiod},
+           given={Timothy\bibnamedelima E.J.},
+           giveni={T\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=138795d93758afeaa2a0a01bb6bfb4df}{%
+           family={Yacoub},
+           familyi={Y\bibinitperiod},
+           given={Essa},
+           giveni={E\bibinitperiod}}}%
+        {{hash=bc462df9ca0202de54413b81d77da857}{%
+           family={Ugurbil},
+           familyi={U\bibinitperiod},
+           given={Kamil},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{6c93bbfc8526dede99123d0b168b34c2}
+      \strng{fullhash}{561c4e4a6d97849b37214526de8acfd8}
+      \strng{bibnamehash}{6c93bbfc8526dede99123d0b168b34c2}
+      \strng{authorbibnamehash}{6c93bbfc8526dede99123d0b168b34c2}
+      \strng{authornamehash}{6c93bbfc8526dede99123d0b168b34c2}
+      \strng{authorfullhash}{561c4e4a6d97849b37214526de8acfd8}
+      \field{labelalpha}{VSB*13}
+      \field{sortinit}{V}
+      \field{sortinithash}{02432525618c08e2b03cac47c19764af}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The Human Connectome Project consortium led by Washington University, University of Minnesota, and Oxford University is undertaking a systematic effort to map macroscopic human brain circuits and their relationship to behavior in a large population of healthy adults. This overview article focuses on progress made during the first half of the 5-year project in refining the methods for data acquisition and analysis. Preliminary analyses based on a finalized set of acquisition and preprocessing protocols demonstrate the exceptionally high quality of the data from each modality. The first quarterly release of imaging and behavioral data via the ConnectomeDB database demonstrates the commitment to making HCP datasets freely accessible. Altogether, the progress to date provides grounds for optimism that the HCP datasets and associated methods and software will become increasingly valuable resources for characterizing human brain connectivity and function, their relationship to behavior, and their heritability and genetic underpinnings.}
+      \field{issn}{1053-8119}
+      \field{journaltitle}{NeuroImage}
+      \field{note}{Mapping the Connectome}
+      \field{title}{The WU-Minn Human Connectome Project: An overview}
+      \field{volume}{80}
+      \field{year}{2013}
+      \field{pages}{62\bibrangedash 79}
+      \range{pages}{18}
+      \verb{doi}
+      \verb 10.1016/j.neuroimage.2013.05.041
+      \endverb
+    \endentry
+    \entry{Wakana:2007}{article}{}
+      \name{author}{13}{}{%
+        {{hash=b4ccf7a02051c8e5ce12f072fb2c2b6e}{%
+           family={Wakana},
+           familyi={W\bibinitperiod},
+           given={Setsu},
+           giveni={S\bibinitperiod}}}%
+        {{hash=1dbac2812e895252ceaa34091f7c323b}{%
+           family={Caprihan},
+           familyi={C\bibinitperiod},
+           given={Arvind},
+           giveni={A\bibinitperiod}}}%
+        {{hash=4696cae611ba9b546206435ad253b550}{%
+           family={Panzenboeck},
+           familyi={P\bibinitperiod},
+           given={Martina\bibnamedelima M.},
+           giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=4bba8a921b238d76397d8dc17785654c}{%
+           family={Fallon},
+           familyi={F\bibinitperiod},
+           given={James\bibnamedelima H.},
+           giveni={J\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=0099a4b3aac2abcb1bd2046811d45fbf}{%
+           family={Perry},
+           familyi={P\bibinitperiod},
+           given={Michele},
+           giveni={M\bibinitperiod}}}%
+        {{hash=83d9f5f7b1cae28366bd81bc6c60ece6}{%
+           family={Gollub},
+           familyi={G\bibinitperiod},
+           given={Randy\bibnamedelima L.},
+           giveni={R\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=22299fd76726fb7e5dcfc7bccd2c1bc7}{%
+           family={Hua},
+           familyi={H\bibinitperiod},
+           given={Kegang},
+           giveni={K\bibinitperiod}}}%
+        {{hash=4aef4171b0714d8de4339ff9d900f67c}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Jiangyang},
+           giveni={J\bibinitperiod}}}%
+        {{hash=b925da934396de7417b912ed83cf92a3}{%
+           family={Jiang},
+           familyi={J\bibinitperiod},
+           given={Hangyi},
+           giveni={H\bibinitperiod}}}%
+        {{hash=746287eac5fb6674d14472a5424c4b47}{%
+           family={Dubey},
+           familyi={D\bibinitperiod},
+           given={Prachi},
+           giveni={P\bibinitperiod}}}%
+        {{hash=72fb04f4cf08c3d389985cbfe8a109bf}{%
+           family={Blitz},
+           familyi={B\bibinitperiod},
+           given={Ari},
+           giveni={A\bibinitperiod}}}%
+        {{hash=4e4ea9ba640da53967ecfca49eb51516}{%
+           family={Zijl},
+           familyi={Z\bibinitperiod},
+           given={Petert},
+           giveni={P\bibinitperiod},
+           prefix={van},
+           prefixi={v\bibinitperiod}}}%
+        {{hash=7c1373e40d611a11dc19fa305c79e50b}{%
+           family={Mori},
+           familyi={M\bibinitperiod},
+           given={Susumu},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{e065af47e28f6e6489a4886cb3e1105d}
+      \strng{fullhash}{10755e2af5724918c5aac96dcdecfdd2}
+      \strng{bibnamehash}{e065af47e28f6e6489a4886cb3e1105d}
+      \strng{authorbibnamehash}{e065af47e28f6e6489a4886cb3e1105d}
+      \strng{authornamehash}{e065af47e28f6e6489a4886cb3e1105d}
+      \strng{authorfullhash}{10755e2af5724918c5aac96dcdecfdd2}
+      \field{labelalpha}{WCP*07}
+      \field{sortinit}{W}
+      \field{sortinithash}{1af34bd8c148ffb32de1494636b49713}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{NeuroImage}
+      \field{title}{Reproducibility of quantitative tractography methods applied to cerebral white matter}
+      \field{volume}{36}
+      \field{year}{2007}
+      \field{pages}{630\bibrangedash 644}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1016/j.neuroimage.2007.02.049
+      \endverb
+    \endentry
+    \entry{Wilcoxon}{article}{}
+      \name{author}{1}{}{%
+        {{hash=405b308b1e8e33ef3275bf6cb9c9b281}{%
+           family={Wilcoxon},
+           familyi={W\bibinitperiod},
+           given={Frank},
+           giveni={F\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {[International Biometric Society, Wiley]}%
+      }
+      \strng{namehash}{405b308b1e8e33ef3275bf6cb9c9b281}
+      \strng{fullhash}{405b308b1e8e33ef3275bf6cb9c9b281}
+      \strng{bibnamehash}{405b308b1e8e33ef3275bf6cb9c9b281}
+      \strng{authorbibnamehash}{405b308b1e8e33ef3275bf6cb9c9b281}
+      \strng{authornamehash}{405b308b1e8e33ef3275bf6cb9c9b281}
+      \strng{authorfullhash}{405b308b1e8e33ef3275bf6cb9c9b281}
+      \field{labelalpha}{Wil45}
+      \field{sortinit}{W}
+      \field{sortinithash}{1af34bd8c148ffb32de1494636b49713}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{00994987}
+      \field{journaltitle}{Biometrics Bulletin}
+      \field{number}{6}
+      \field{title}{Individual Comparisons by Ranking Methods}
+      \field{volume}{1}
+      \field{year}{1945}
+      \field{pages}{80\bibrangedash 83}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.2307/3001968
+      \endverb
+    \endentry
+    \entry{Weinstein:1999}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=412d25ddfa971c48c4aa6c2068d6e0ae}{%
+           family={Weinstein},
+           familyi={W\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=1e1ed2ddd6023b2c085d5e3eb9f40f0a}{%
+           family={Kindlmann},
+           familyi={K\bibinitperiod},
+           given={Gordon},
+           giveni={G\bibinitperiod}}}%
+        {{hash=e7e9b26ec6b91ba9054ca82dba447a6e}{%
+           family={Lundberg},
+           familyi={L\bibinitperiod},
+           given={Eric},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{5c71af3ffd1893450306d1257f91092e}
+      \strng{fullhash}{5c71af3ffd1893450306d1257f91092e}
+      \strng{bibnamehash}{5c71af3ffd1893450306d1257f91092e}
+      \strng{authorbibnamehash}{5c71af3ffd1893450306d1257f91092e}
+      \strng{authornamehash}{5c71af3ffd1893450306d1257f91092e}
+      \strng{authorfullhash}{5c71af3ffd1893450306d1257f91092e}
+      \field{labelalpha}{WKL99}
+      \field{sortinit}{W}
+      \field{sortinithash}{1af34bd8c148ffb32de1494636b49713}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proc. IEEE Visualization}
+      \field{title}{Tensorlines: advection-diffusion based propagation through diffusion tensor fields}
+      \field{year}{1999}
+      \field{pages}{249\bibrangedash 253}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1109/VISUAL.1999.809894
+      \endverb
+    \endentry
+    \entry{Wu}{article}{}
+      \name{author}{12}{}{%
+        {{hash=0a80fba8c4d314a6b6464c62c8864853}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Weining},
+           giveni={W\bibinitperiod}}}%
+        {{hash=d28d53801e1c81c2968c6d94690382f5}{%
+           family={Mcanulty},
+           familyi={M\bibinitperiod},
+           given={Gloria},
+           giveni={G\bibinitperiod}}}%
+        {{hash=1c72b22fc5814c921126d82992f0c6a1}{%
+           family={Hamoda},
+           familyi={H\bibinitperiod},
+           given={Hesham},
+           giveni={H\bibinitperiod}}}%
+        {{hash=e323588a9475cb23cef9fd0c7907bcda}{%
+           family={Sarill},
+           familyi={S\bibinitperiod},
+           given={Kiera},
+           giveni={K\bibinitperiod}}}%
+        {{hash=98b7af4f7a469837a5a404264992d2d6}{%
+           family={Karmacharya},
+           familyi={K\bibinitperiod},
+           given={Sarina},
+           giveni={S\bibinitperiod}}}%
+        {{hash=8ccf64de0981f83a50ae505ded6c11bc}{%
+           family={Gagoski},
+           familyi={G\bibinitperiod},
+           given={Borjan},
+           giveni={B\bibinitperiod}}}%
+        {{hash=4bbfc0da04e1a2bfe64fb67eab334e2d}{%
+           family={Ning},
+           familyi={N\bibinitperiod},
+           given={Lipeng},
+           giveni={L\bibinitperiod}}}%
+        {{hash=7f1930f87499af5f6d0abf2681190160}{%
+           family={Grant},
+           familyi={G\bibinitperiod},
+           given={Patricia},
+           giveni={P\bibinitperiod}}}%
+        {{hash=aa055353464c7ef240342255e730d5f3}{%
+           family={Shenton},
+           familyi={S\bibinitperiod},
+           given={Martha},
+           giveni={M\bibinitperiod}}}%
+        {{hash=cbeeacbcc086520a677d2836e58e4232}{%
+           family={Waber},
+           familyi={W\bibinitperiod},
+           given={Deborah},
+           giveni={D\bibinitperiod}}}%
+        {{hash=432af385fe8b139486b1b79d3ac0d4f7}{%
+           family={Makris},
+           familyi={M\bibinitperiod},
+           given={Nikolaos},
+           giveni={N\bibinitperiod}}}%
+        {{hash=fd364c78a99d71da4a55bef4a04e5b20}{%
+           family={Rathi},
+           familyi={R\bibinitperiod},
+           given={Yogesh},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{4d800c0ab2c61bd2230f746ef4f8e0c0}
+      \strng{fullhash}{be194bb0411d270fd18877ff2b84abbe}
+      \strng{bibnamehash}{4d800c0ab2c61bd2230f746ef4f8e0c0}
+      \strng{authorbibnamehash}{4d800c0ab2c61bd2230f746ef4f8e0c0}
+      \strng{authornamehash}{4d800c0ab2c61bd2230f746ef4f8e0c0}
+      \strng{authorfullhash}{be194bb0411d270fd18877ff2b84abbe}
+      \field{labelalpha}{WMH*20}
+      \field{sortinit}{W}
+      \field{sortinithash}{1af34bd8c148ffb32de1494636b49713}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Brain Imaging and Behavior}
+      \field{month}{08}
+      \field{title}{Detecting microstructural white matter abnormalities of frontal pathways in children with ADHD using advanced diffusion models}
+      \field{volume}{14}
+      \field{year}{2020}
+      \verb{doi}
+      \verb 10.1007/s11682-019-00108-5
+      \endverb
+    \endentry
+    \entry{WASSERTHAL2018239}{article}{}
+      \name{author}{3}{}{%
+        {{hash=83150ba565524d555bf73b33a1152967}{%
+           family={Wasserthal},
+           familyi={W\bibinitperiod},
+           given={Jakob},
+           giveni={J\bibinitperiod}}}%
+        {{hash=f1a872cff19a568110b8f94052b1dfb6}{%
+           family={Neher},
+           familyi={N\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+        {{hash=f673cd141cf85e311274bfdcd9fd11f6}{%
+           family={Maier-Hein},
+           familyi={M\bibinithyphendelim H\bibinitperiod},
+           given={Klaus\bibnamedelima H.},
+           giveni={K\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \strng{namehash}{fc17a7b827f9fa989c87ba80607f358a}
+      \strng{fullhash}{fc17a7b827f9fa989c87ba80607f358a}
+      \strng{bibnamehash}{fc17a7b827f9fa989c87ba80607f358a}
+      \strng{authorbibnamehash}{fc17a7b827f9fa989c87ba80607f358a}
+      \strng{authornamehash}{fc17a7b827f9fa989c87ba80607f358a}
+      \strng{authorfullhash}{fc17a7b827f9fa989c87ba80607f358a}
+      \field{labelalpha}{WNM18}
+      \field{sortinit}{W}
+      \field{sortinithash}{1af34bd8c148ffb32de1494636b49713}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The individual course of white matter fiber tracts is an important factor for analysis of white matter characteristics in healthy and diseased brains. Diffusion-weighted MRI tractography in combination with region-based or clustering-based selection of streamlines is a unique combination of tools which enables the in-vivo delineation and analysis of anatomically well-known tracts. This, however, currently requires complex, computationally intensive processing pipelines which take a lot of time to set up. TractSeg is a novel convolutional neural network-based approach that directly segments tracts in the field of fiber orientation distribution function (fODF) peaks without using tractography, image registration or parcellation. We demonstrate that the proposed approach is much faster than existing methods while providing unprecedented accuracy, using a population of 105 subjects from the Human Connectome Project. We also show initial evidence that TractSeg is able to generalize to differently acquired data sets for most of the bundles. The code and data are openly available at https://github.com/MIC-DKFZ/TractSeg/ and https://doi.org/10.5281/zenodo.1088277, respectively.}
+      \field{issn}{1053-8119}
+      \field{journaltitle}{NeuroImage}
+      \field{title}{TractSeg - Fast and accurate white matter tract segmentation}
+      \field{volume}{183}
+      \field{year}{2018}
+      \field{pages}{239\bibrangedash 253}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1016/j.neuroimage.2018.07.070
+      \endverb
+      \keyw{Machine learning,Diffusion-weighted imaging,Segmentation,Deep learning,Fiber tractography}
+    \endentry
+    \entry{Wiens:2014}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=f2146d2d3af1a8f0926fdef8932257a3}{%
+           family={Wiens},
+           familyi={W\bibinitperiod},
+           given={Vitalis},
+           giveni={V\bibinitperiod}}}%
+        {{hash=3e06dc900459af57c12407b7dbbb167a}{%
+           family={Schlaffke},
+           familyi={S\bibinitperiod},
+           given={Lara},
+           giveni={L\bibinitperiod}}}%
+        {{hash=6b2fcfcb9f0edfcb467b5a843466c574}{%
+           family={Schmidt-Wilcke},
+           familyi={S\bibinithyphendelim W\bibinitperiod},
+           given={Tobias},
+           giveni={T\bibinitperiod}}}%
+        {{hash=ae998176c84d7a6a58b893bd9cb337ae}{%
+           family={Schultz},
+           familyi={S\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{3069359542361eb9b7f951d3cac3d588}
+      \strng{fullhash}{3069359542361eb9b7f951d3cac3d588}
+      \strng{bibnamehash}{3069359542361eb9b7f951d3cac3d588}
+      \strng{authorbibnamehash}{3069359542361eb9b7f951d3cac3d588}
+      \strng{authornamehash}{3069359542361eb9b7f951d3cac3d588}
+      \strng{authorfullhash}{3069359542361eb9b7f951d3cac3d588}
+      \field{labelalpha}{WSSS14}
+      \field{sortinit}{W}
+      \field{sortinithash}{1af34bd8c148ffb32de1494636b49713}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proc.\ EG Conf.\ on Visualization (EuroVis) Short Papers}
+      \field{title}{Visualizing Uncertainty in {HARDI} Tractography Using Superquadric Streamtubes}
+      \field{year}{2014}
+      \field{pages}{37\bibrangedash 41}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.2312/eurovisshort.20141154
+      \endverb
+    \endentry
+    \entry{Yang:2021}{article}{}
+      \name{author}{4}{}{%
+        {{hash=6eceb8a6aa0c7fc59b5a61cedeed13ed}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Joseph\bibnamedelima Yuan-Mou},
+           giveni={J\bibinitperiod\bibinitdelim Y\bibinithyphendelim M\bibinitperiod}}}%
+        {{hash=0e6c45597d6155f70993903889553bde}{%
+           family={Yeh},
+           familyi={Y\bibinitperiod},
+           given={Chun-Hung},
+           giveni={C\bibinithyphendelim H\bibinitperiod}}}%
+        {{hash=8869c1ad62ea270bded3da4fac887120}{%
+           family={Poupon},
+           familyi={P\bibinitperiod},
+           given={Cyril},
+           giveni={C\bibinitperiod}}}%
+        {{hash=d9c439d0db079e06038119c4b1a9f05b}{%
+           family={Calamante},
+           familyi={C\bibinitperiod},
+           given={Fernando},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{416f44eb2f9a996a9226a6c726273eba}
+      \strng{fullhash}{416f44eb2f9a996a9226a6c726273eba}
+      \strng{bibnamehash}{416f44eb2f9a996a9226a6c726273eba}
+      \strng{authorbibnamehash}{416f44eb2f9a996a9226a6c726273eba}
+      \strng{authornamehash}{416f44eb2f9a996a9226a6c726273eba}
+      \strng{authorfullhash}{416f44eb2f9a996a9226a6c726273eba}
+      \field{labelalpha}{YYPC21}
+      \field{sortinit}{Y}
+      \field{sortinithash}{6ae2ff5458ff901249c2745238c951b7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Physics in Medicine {\&} Biology}
+      \field{title}{Diffusion {MRI} tractography for neurosurgery: the basics, current state, technical reliability and challenges}
+      \field{year}{2021}
+      \verb{doi}
+      \verb 10.1088/1361-6560/ac0d90
+      \endverb
+    \endentry
+    \entry{Zhang:2003}{article}{}
+      \name{author}{3}{}{%
+        {{hash=8a44c3dffdeab4748f9387da05b041ac}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Song},
+           giveni={S\bibinitperiod}}}%
+        {{hash=0fa25c5f4b2d0b33a70e04b663143929}{%
+           family={Demiralp},
+           familyi={D\bibinitperiod},
+           given={Cagatay},
+           giveni={C\bibinitperiod}}}%
+        {{hash=5138d6da61cdfcc7827fee5bb15a79ae}{%
+           family={Laidlaw},
+           familyi={L\bibinitperiod},
+           given={David\bibnamedelima H.},
+           giveni={D\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \strng{namehash}{424dd5f62f6ef825645c0abf0adea89a}
+      \strng{fullhash}{424dd5f62f6ef825645c0abf0adea89a}
+      \strng{bibnamehash}{424dd5f62f6ef825645c0abf0adea89a}
+      \strng{authorbibnamehash}{424dd5f62f6ef825645c0abf0adea89a}
+      \strng{authornamehash}{424dd5f62f6ef825645c0abf0adea89a}
+      \strng{authorfullhash}{424dd5f62f6ef825645c0abf0adea89a}
+      \field{labelalpha}{ZDL03}
+      \field{sortinit}{Z}
+      \field{sortinithash}{8f7b480688e809b50b6f6577b16f3db5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Visualization and Computer Graphics}
+      \field{number}{4}
+      \field{title}{Visualizing Diffusion Tensor {MR} Images Using Streamtubes and Streamsurfaces}
+      \field{volume}{9}
+      \field{year}{2003}
+      \field{pages}{454\bibrangedash 462}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1109/TVCG.2003.1260740
+      \endverb
+    \endentry
+    \entry{ZieheLNM04}{article}{}
+      \name{author}{4}{}{%
+        {{hash=b1375334cdd7ad5e3a5253607728e0c9}{%
+           family={Ziehe},
+           familyi={Z\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod}}}%
+        {{hash=b75d6aeba737719b99a3c0a15008ab32}{%
+           family={Laskov},
+           familyi={L\bibinitperiod},
+           given={Pavel},
+           giveni={P\bibinitperiod}}}%
+        {{hash=d45603e8d18805f3031fdae1fe98a806}{%
+           family={Nolte},
+           familyi={N\bibinitperiod},
+           given={Guido},
+           giveni={G\bibinitperiod}}}%
+        {{hash=9f1b6144a45b1967e989e74552e37ada}{%
+           family={M{ü}ller},
+           familyi={M\bibinitperiod},
+           given={Klaus-Robert},
+           giveni={K\bibinithyphendelim R\bibinitperiod}}}%
+      }
+      \strng{namehash}{d0149c7f91b6c03fab1c59daf7395d07}
+      \strng{fullhash}{d0149c7f91b6c03fab1c59daf7395d07}
+      \strng{bibnamehash}{d0149c7f91b6c03fab1c59daf7395d07}
+      \strng{authorbibnamehash}{d0149c7f91b6c03fab1c59daf7395d07}
+      \strng{authornamehash}{d0149c7f91b6c03fab1c59daf7395d07}
+      \strng{authorfullhash}{d0149c7f91b6c03fab1c59daf7395d07}
+      \field{labelalpha}{ZLNM04}
+      \field{sortinit}{Z}
+      \field{sortinithash}{8f7b480688e809b50b6f6577b16f3db5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{J. Mach. Learn. Res.}
+      \field{title}{A Fast Algorithm for Joint Diagonalization with Non-orthogonal Transformations and its Application to Blind Source Separation}
+      \field{volume}{5}
+      \field{year}{2004}
+      \field{pages}{777\bibrangedash 800}
+      \range{pages}{24}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
