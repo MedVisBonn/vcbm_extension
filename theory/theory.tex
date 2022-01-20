@@ -1,0 +1,94 @@
+\section{Theory}
+Most dMRI approaches in the context of dMRI are applying it to generate
+probabilistic tractographies out of deterministic tracking approaches. Such
+approaches are reviewed in Section XY. 
+
+Our first novel contribution is to determine the uncertainty caused by
+measurement errors in a systematical way. Wild bootstrapping is used to create
+noisy resamples out of the measurements. The resampled data is then processed
+and the parameters of a Bingham distribution are evaluated to measure the
+uncertainty which is propagated through the dMRI pipeline. As a second
+contribution we introduce a novel tracking approach, which calculates new
+consensus directions based on the local directions obtained by the bootstrap
+samples.  
+
+\begin{itemize}
+	\item Introduction to wild bootstrapping in our use case. E.g. Using
+		bootstraps to calculate samples and calculate an mean fiber
+		direction model. 
+	\item Clustering 
+	\item Show equivalent uncertainty maps
+	\item Show that the variance is reduced if we use bootstrapping on the
+		selection Model compared to the avg model. This justifies that
+		the selection model stabilizes the computed directions even if
+		noise is added. However for tracking it is better to keep all
+		directions with adjusted length.
+	\item Show the impact of bootstrapping by comparing the final direction
+		main direction with the reference direction. Also compare the
+		amount of fibers which is present in each voxel in case of the
+		selection model.
+	\item Compute also an alternative selection model. Here we use only the
+		most potent fiber count over all bootstraps on voxel level.
+		Justify this as restriction to measurement insecurity.
+	\item Estimating Kent distribution -> See if there is a connection
+		between the directions of a sample compared to the group means? 
+\end{itemize}
+\subsection{Wild Bootstrapping}
+To evaluate the impact of measurement errors, we use use wild bootstrapping. It
+has been shown that it is well suited within the context of dMRI many times and
+is a straight forward way to
+resample the original measurement without redo the measurement process.
+As a first step the model is fitted to the data. We obtain a fODF
+$\hat{\mathcal{T}}$ and can calculate residual of Eq. (\ref{eq:sd-min}) 
+\[ \hat{\varepsilon} = S - M\hat{\mathcal{T}} .\] 
+A new bootstrap realization is calculated by 
+\[ y^{*} = M\hat{\mathcal{T}}  + \hat{\varepsilon} v , \]
+where $v$ denotes the $n$ dimensional Rademacher distribution. Finally the
+model is fitted to the bootstrap realization. This process is repeated $m$
+times to create a sample size of $m$.
+For each sample we calculate the low-rank approximation of rank $1$, $2$ and $3$
+and with the obtained residuals also the selection and average model as it was
+proposed in the paper XY. With this we have generated a sample distribution of
+fiber directions for each voxel. Instead of using these samples to generate a
+probabilistic tracking approach out of a deterministic, we build a mean model
+for each approach. This should reduce the measurement uncertainty on voxel
+level. 
+
+To get deeper insights onto the impact of the bootstrapping we use the  Bingham 
+distribution which is defined as follows: 
+\[
+	B \left( \mathbf{n}, \nu, \kappa_1, \kappa_2 \right) \coloneqq
+	\frac{\exp \left( \mathbf{n}^T B \mathbf{n} \right)}{4 \pi {}_1F_1
+	\left( \nicefrac{1}{2} , \nicefrac{3}{2} , B \right)} ,  
+\]
+with $B = R^T B_{diag} R$, ${}_1 F_1$ the confluent hypergeometric function, $R$
+a rotation matrix that aligns around the main direction $\mu$ and $B_{diag} =
+\text{Diag} \left( \kappa_1, \kappa_2 , 0 \right)$. 
+Since the Bingham distribution belongs to the family of exponential
+distributions, we can use maximum likelihood estimation to fit the parameter of
+the Bingham distribution to the data. To visualize the impact of bootstrapping
+we investigate $\kappa_1$ which is a concentration parameter. E.g. a high value
+denotes that the bootstrapping has not much impact onto the distribution of the
+directions, while a low value denotes a high impact of noise. In Fig. XY
+$\kappa_1$ is plotted for the rank-$3$ approximation, the average model as well
+as the selection model.
+
+
+\subsection{Bootstrap consensus Model}
+To reduce the measurement uncertainty we build a so called mean model.
+Therefore, the directions of all bootstraps get clustered to groups and the
+group mean is the new direction, which 
+To build a mean model we have to assign $n$ directions to $m$ groups on voxel
+level. The group means are set to the directions of the original model. Now each
+direction is assigned to a group such that the sum of angles between group mean
+and direction is minimized over all possible assignments to the groups. In case
+the original model recovers less directions than the bootstrap sample, we
+prevent edge cases by assigning these bootstraps first and update the reference
+direction. This does not lead to a global optimum but since we assume that the
+directions are almost aligned it does lead to a good fit. 
+As analogon to the uncertainty visualzitation within the last paper, we can now
+think of the most selected direction count over all bootstraps and the
+uncertainty can be visualized as count of bootstraps which have chosen the most
+selected direction. 
+
+

@@ -1,0 +1,38 @@
+\section{Background}
+\begin{itemize}
+	\item Introduce spherical deconvolution since it is the basis for
+		bootstrapping. 
+
+\end{itemize}
+Spherical deconvolution is based on solving the linear least square problem 
+\begin{align}
+	\argmin_{\mathcal{T}} \| M \mathcal{T} - S \|^2,
+	\label{eq:sd-min}
+\end{align}
+where 
+$M$ denotes the convolution matrix, $S$ the signal and $\mathcal{T}$ the fODF.
+Earlier approaches expressed the fODF as spherical function and imposed a
+non-negativity constraint to Eq. (\ref{eq:sd-min}). The constrained is justified by
+the fact, that the fODF should represent the fiber fraction in any given
+direction, which is clearly positive. 
+Newer approaches express the fODF as symmetric fourth order tensor and apply a
+H-psd constrained, which implies non-negativity but not vice versa. It has been
+demonstrated, that latter expression increases the angular resolution. 
+
+From the symmetric fourth order fODF $\mathcal{T}f$ peaks are extracted via a rank-$r$
+approximation 
+\begin{align}
+	\mathcal{T}^{\left( r \right)} = \sum_{i=1}^r \lambda_i \mathbf{v}_i
+	\otimes \mathbf{v}_i \otimes \mathbf{v}_i \otimes \mathbf{v}_i, 
+	\label{eq:low-rank}
+\end{align}
+where the scalar $\lambda_i$ represents the volume fraction of the $i$th fiber,
+the unit vector $\mathbf{v}_i \in \mathbb{R}^3$ its direction and $\otimes$ the
+outer product. The approximation is done by calculating 
+\[ \argmin_{\lambda_1, \dots , \lambda_r , \mathbf{v}_1, \dots , \mathbf{v}_r}
+\| \mathcal{T} - \mathcal{T}^{\left( r \right)} \|_F, \]
+where $\| \cdot \|_F$ denotes the Frobenius norm. In case of fiber crossings the
+used methods have a highly reduced angular error, as it was demonstrated in XY,
+compared to peak extraction, which is applied to spherical function fODFs. 
+
+

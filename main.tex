@@ -50,7 +50,7 @@
 \biberVersion
 \BibtexOrBiblatex
 \usepackage[backend=biber,bibstyle=EG,citestyle=alphabetic,backref=true]{biblatex} 
-\addbibresource{egbibsample.bib}
+\addbibresource{test.bib}
 % ---------------------------  
 \electronicVersion
 \PrintedOrElectronic
@@ -61,9 +61,22 @@
 
 \usepackage{egweblnk} 
 % end of prologue
-
+\usepackage{amsmath}
+\usepackage{bbold}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{url}
+\usepackage{algorithm}
+\graphicspath{{./images/}}
+\usepackage{algpseudocode}
+\usepackage{nicefrac}
+\usepackage{mathtools}
+\usepackage{tabularx}
 \usepackage{mathbbol}
-\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator*{\sgn}{sgn}
 \DeclareMathOperator*{\argmax}{arg\,max}
 \DeclareMathOperator*{\argmin}{arg\,min}
 \newcommand{\prob}[2]{\mathbf{#1}_{#2} \otimes \mathbf{#1}_{#2} \otimes \mathbf{#1}_{#2}
@@ -76,7 +89,7 @@
 \input{./abstract/abstract}
 \input{./intro/intro}
 \input{related/related}
-%\input{./background/background}
+\input{./background/background}
 \input{./theory/theory}
 \input{./tracking/tracking}
 \input{./results/results}
