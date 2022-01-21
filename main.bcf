@@ -2164,6 +2164,8 @@
     <bcf:datasource type="file" datatype="bibtex">test.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
+    <bcf:citekey order="1">Jones:2008</bcf:citekey>
+    <bcf:citekey order="2">Gruen:2021</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">
