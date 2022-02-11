@@ -12,7 +12,8 @@
 *.cb
 *.cb2
 .*.lb
-
+*.swp
+/scripts
 ## Intermediate documents:
 *.dvi
 *.xdv

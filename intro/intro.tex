@@ -1,5 +1,60 @@
-\begin{itemize}
-	\item Reduce measurement uncertainty 
-	\item Combine reduced measurement uncertainty with reduced model
-		uncertainty
-\end{itemize}
+\section{Introduction}
+Diffusion Magnetic Resonance Imaging (dMRI) \cite{LeBihan:1986} is a
+non-invasive vital imaging method for the human brain. It particularly has the
+unique ability to get insights into major white matter tracts within the human
+brain. And can
+reconstruct large parts of the white matter tracts, using tractography algorithms. dMRI is based on
+inferring the fiber tracts with the Brownian motion of water molecules. Since
+the fiber tracts impede the water movement it will move along the fiber tracts
+rather than orthogonal to it. 
+This unique ability of fiber tracking makes dMRI to a important feature for large
+scientific studies \cite{Sotiropoulos:2013, Tobisch:2018Frontiers} as well as surgery planning \cite{Yang:2021}.
+
+The process of obtaining tractograms is not trivial at all and contains many
+pitfalls. The most popular and widely used approaches recover the local
+orientation of fiber tracts from dMRI measurements. This problem is an ill
+conditioned inverse problem \cite{TOURNIER20071459}. Earlier approaches, like
+diffusion tensor imaging \cite{BASSER1994247}
+were just able to recover a single direction per voxel, which is not sufficient
+to recover more complex geometries like fibre crossing, kissing and bending.
+Newer approaches rely on high angular resolution imaging (HARDI). Within the
+last decade there have been many methods invented to compute local orientations
+from raw diffusion data, including the
+ball-and-stick model \cite{BEHRENS2007144}, and the low-rank approximation of high order fODF tensors
+\cite{lowrank, Ankele:CARS2017}.
+
+Within our last work we have evaluated the influence of model uncertainty within
+the low-rank approximation in a systematical way. To be more precise, to
+apply the low-rank approximation the number of fibers has to be set. This is a
+crucial step, since setting the number to low will miss relevant directions and
+setting the number to high will introduce wrong directions which makes the
+tracking process even more challenging. Further the remaining directions are
+more error prone, if the number is not set correctly. 
+Therefore, we estimated the number of fibers with help of a Bayesian model and
+created a selection model from these estimations. To improve the directions
+further we proposed a novel averaging model, which fuses all the different
+low-rank approximation into a new model and therefore reduces this source of uncertainty.
+Using a probabilistic fiber tracking model, it has been shown that the
+reconstruction within the newly proposed models is more robust and results in
+better reconstructions compared to fiber tracking within a state of the art
+constrained spherical deconvolution model.
+
+With the increasing complexity of scanner protocols and the resulting more
+complex models also the impact of noise increases dramatically. Within this work
+we will systematically investigate the influence of noise to the generated
+models. Therefore, we use a wild bootstrapping approach, which has been
+successfully applied to dMRI in many cases \cite{Jones:2008}. Instead of
+calculating a fiber distribution to visualize uncertainty we proceed in
+another way and evaluate the impact of noise to the average and selection model.
+
+We are using the new uncertainty to generate a novel consensus bootstrap
+model, which fuses all the bootstrap information into a single model. This new
+approach is then compared to the previously derived models as well as the
+rank-$3$ model. We conclude that the
+impact on crossing fiber tractography depends highly on the model. While the
+improvement in the selection model is significant, the improvement of the
+average model is not large. 
+
+In Section \ref{related} we will introduce some related work which will help the attentive
+reader to put our work into the right context. This is followed by Section
+\ref{background}, where the model is explained on which our approach is based.

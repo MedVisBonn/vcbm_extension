@@ -1,8 +1,45 @@
 \section{Results}
 \subsection{Data}
-The proposed novel bootstrap consensus is applied to the three models discussed
-in the previous paper and the benefits are evaluated on data from the Human
-Connectome Project (HCP). The diffusion MR images have a resolution of $1.25$ mm
+The proposed novel bootstrap consensus model is applied to the selection,
+average and rank $3$ model. The CSD model got replaced by the rank $3$ model
+because it was knocked of compared to the other models by dice score. Further
+the CSD used in the model is computational heavy, i.e. computation takes 4 times as long
+as the $4$th order CSD which is used within this paper. This especially matter
+because of the time intense bootstrap creation. 
+
+To evaluate the proposed model data from the Human
+Connectome Project (HCP) is used \cite{HCP}. The diffusion MR images have a resolution of $1.25$ mm
 isotropic with $145 \times 174 \times 145$ voxels. 
 
-As reference data we use the qualitatively high 
+As reference data we use the high quality data, which were published within the
+scope of the Tractseg paper \cite{WASSERTHAL2018239}. These references data have been
+created by manually refining the segmented full brain fiber tractography. For
+more details we refer to the original literature.
+
+All test were performed on 12 randomly chosen subjects for which such reference tractographies
+exist. Since these tractographies can not be seen as ground truth and more as a
+good reference, we are just interested how good the proposed approach manages to
+reconstruct major white matter bundles. Therefore, we compare the approach by
+Dice score, which is defined as
+\[ 
+	DICE = \frac{2 |RD \cap TR |}{|TR| + |RD|} ,
+\]
+where $RD$ denotes the reference data and $TR$ the tracking results
+\cite{SCHILLING2019194}. 
+Further we measure how much is cut of the streamlines by the density filter.
+This should indicate if the reconstruction is maybe good, however it is hardly
+dependent on the applied filter. 
+
+\subsection{Computational Effort}
+All experiments were computed on an Intel i9 with 3.3 GHz and 64 GB RAM. The
+following durations are denoted in h:min:s or min:s.
+
+The computation of a single bootstrap data sample took 1:10 on a single core,
+multi-threaded fourth order fODF estimation took 4:33, the computation of the
+selection model took 1:10, the computation of the averaging model took 1:30 and
+the computation of the rank-3 model 0:40. The calculation of 100 bootstraps took
+therefore 8:08:00, using all threads to create the bootstrap data as well as the
+models. This also includes the computation of the consensus model, which on its
+own took 11:00. The tracking itself is independent of the preprocessing steps.
+It took approximately 2:30 for a bundle such it is shown in Figure xy on a
+single thread including postprocessing.  
