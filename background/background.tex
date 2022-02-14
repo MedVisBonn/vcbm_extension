@@ -3,7 +3,7 @@ Earliest approaches used a diffusion tensor model
 \cite{LeBihan:1986,Mori:1999} to estimate a single dominant fiber orientation
 per voxel. From an anatomical point of view it is known that large parts of the
 white matter voxel contain more than one fiber bundle \cite{Jeurissen:2012}, and it has also be shown
-that accounting for these more complex fiber geometries improve the dMRI
+that accounting for these more complex fiber geometries improves the dMRI
 tractography greatly \cite{Neher:2015}
 
 Therefore, we use constrained spherical deconvolution, which is a widely used
@@ -17,13 +17,14 @@ where
 $M$ denotes the convolution matrix, $S$ the signal and $\mathcal{T}$ the fiber
 orientation distribution function (fODF).
 Earlier approaches expressed the fODF as spherical function and imposed a
-non-negativity constraint to Eq. (\ref{eq:sd-min}) \cite{TOURNIER20071459}. The constrained is justified by
+non-negativity constraint to Eq. (\ref{eq:sd-min}) \cite{TOURNIER20071459}. The
+constraint is justified by
 the fact, that the fODF should represent the fiber fraction in any given
 direction, which is clearly positive. Crossing fiber tractography can now be
 performed by following in the direction of local fODF maxima.
 
 Newer approaches express the fODF as symmetric fourth order tensor and apply a
-H-psd constrained, which implies non-negativity but not vice versa. It has been
+H-psd constrain, which implies non-negativity but not vice versa. It has been
 demonstrated, that latter expression increases the angular resolution.
 Therefore, all following results use the fODF tensor representation
 \cite{Ankele:CARS2017}. 

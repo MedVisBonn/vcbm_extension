@@ -1,30 +1,30 @@
 \section{Related Work}\label{related}
 The diffusion MRI tractography pipeline suffers from several sources of
 uncertainty \cite{Schultz:SciVisBook2014, Schultz:NBM2018, Gillmann:STAR2021}.
-They can broadly categorised into the three categories measurement uncertainty,
+They can broadly categorised into measurement uncertainty,
 model uncertainty and parameter uncertainty. 
 
 The impact of measurement
-uncertainty on the dMRI pipeline has been studied great detail. Within the last
+uncertainty on the dMRI pipeline has been studied in greatest detail. Within the last
 decade there have been several methods proposed to simulate uncertainty within
 the dMRI context, like Bayesian modeling \cite{BEHRENS2007144} or bootstrapping
-\cite{Chung:2006}. Instead of single streamlines we then recover distributions,
+\cite{Chung:2006}. Instead of single streamlines we recover distributions,
 which can be visualized using hyperstreamlines \cite{Jeurissen:2012, Wiens:2014}
 or illustrative confidence intervals \cite{Brecheisen:2013}. Especially
 bootstrapping tends to be very time consuming.
 
 We refer to model uncertainty as the uncertainty, which arises from the choice
 of several mathematical models to extract directions from the dMRI data
-\cite{Schultz:SciVisBook2014}. It exists a wide range of such models to estimate
+\cite{Schultz:SciVisBook2014}. There exists a wide range of models to estimate
 fiber direction \cite{Panagiotaki:2012}, and they might lead to different
 results. There is no general preferabale model, since the suitability depends  on
 the anatomical location \cite{Bretthorst:2004,Freidlin:2007}. Our previous work
-can be seen as special case of model uncertainty, since we use a different model
+can be seen as a special case of model uncertainty, since we use a different model
 for each fiber direction count \cite{Gruen:2021}. 
 
 Another uncertainty arises from the parameter choice within the pipeline. In the
 tracking algorithm we have to adjust several parameters, which have a great
-impact on the final tractography, like a angle below which the streamline
+impact on the final tractography, like a threshold angle below which the streamline
 branches, a maximum branching number, a minimum distance between two branches,
 and overall parameters like stopping criterias. The last topic has been addressed by a visual
 tool to explore the impact of such parameters in a systematical way

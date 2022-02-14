@@ -2,22 +2,22 @@
 \subsection{Data}
 The proposed novel bootstrap consensus model is applied to the selection,
 average and rank $3$ model. The CSD model got replaced by the rank $3$ model
-because it was knocked of compared to the other models by dice score. Further
+because it was knocked off compared to the other models by dice score. Further,
 the CSD used in the model is computational heavy, i.e. computation takes 4 times as long
-as the $4$th order CSD which is used within this paper. This especially matter
+as the $4$th order CSD which is used within this paper. This especially matters
 because of the time intense bootstrap creation. 
 
-To evaluate the proposed model data from the Human
+To evaluate the proposed models, data from the Human
 Connectome Project (HCP) is used \cite{HCP}. The diffusion MR images have a resolution of $1.25$ mm
 isotropic with $145 \times 174 \times 145$ voxels. 
 
-As reference data we use the high quality data, which were published within the
-scope of the Tractseg paper \cite{WASSERTHAL2018239}. These references data have been
+As reference data we use the high quality data, which was published within the
+scope of the Tractseg paper \cite{WASSERTHAL2018239}. This reference data has been
 created by manually refining the segmented full brain fiber tractography. For
 more details we refer to the original literature.
 
-All test were performed on 12 randomly chosen subjects for which such reference tractographies
-exist. Since these tractographies can not be seen as ground truth and more as a
+All tests were performed on 12 randomly chosen subjects for which such reference tractographies
+exist. Since these tractographies cannot be seen as ground truth and more as a
 good reference, we are just interested how good the proposed approach manages to
 reconstruct major white matter bundles. Therefore, we compare the approach by
 Dice score, which is defined as
@@ -26,7 +26,7 @@ Dice score, which is defined as
 \]
 where $RD$ denotes the reference data and $TR$ the tracking results
 \cite{SCHILLING2019194}. 
-Further we measure how much is cut of the streamlines by the density filter.
+Further, we measure how much is cut off the streamlines by the density filter.
 This should indicate if the reconstruction is maybe good, however it is hardly
 dependent on the applied filter. 
 
@@ -43,3 +43,7 @@ models. This also includes the computation of the consensus model, which on its
 own took 11:00. The tracking itself is independent of the preprocessing steps.
 It took approximately 2:30 for a bundle such it is shown in Figure xy on a
 single thread including postprocessing.  
+
+\subsection{Qualitative Comparison}
+As a first experiment we tracts the right Cortiscospinal Tract (CST) from a seed
+region, which is indicated with a dashed black line in Fig. XY. 
