@@ -1,7 +1,22 @@
 \section{Crossing Fiber Tractography with Reduced Measurement Uncertainty}
 
 \subsection{Probabilistic Streamline-Based Tractography}
+\begin{figure*}[h]
+	\centering
+	\begin{subfigure}[b]{0.45\linewidth}
+		\includegraphics[width=\linewidth]{FACT}
+		\caption{Nearest neighbor interpolation}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.45\linewidth}
+		\includegraphics[width=\linewidth]{Trilinear}
+		\caption{Trilinear interpolation}
+	\end{subfigure}
+	\caption{Comparison of nearest neighbor interpolation and trilinear
+	interpolation in the front part of the cingulum. Seedpoints are in the
+upper right corner.}
 
+	\label{fig:interpolation-comparison}
+\end{figure*}
 Within this work a probabilistic streamline-based approach is used. For a given
 seed point, the streamline grows iteratively in both directions using Euler
 integration. Since neither the seed point nor any other point of the streamline
@@ -51,7 +66,26 @@ restricted to 60 degrees, which coincides with our anatomical knowledge.
 
 This iterative algorithm proceeds until we either reach a region with fractional
 anisotropy below $0.3$ or the summed angle over the last $30$ mm is greater than
-$130$ degrees. This prevents streamlines to go back and forth. 
+$130$ degrees. This prevents streamlines to go back and forth. In latter case
+the entire streamline gets removed. 
+
+In Fig. \ref{fig:interpolation-comparison} we have visualized the nearest
+neighbor interpolation, which was used within the last paper and the trilinear
+interpolation which we use from now on. The constrains are set as mentioned
+above and to create a better comparison, we used a deterministic approach, which
+always follows the direction with the smallest angle compared to the current
+direction. It is clearly visible, that the trilinear interpolation is superior
+compared to the computational less expensive nearest neighbor interpolation if it comes to
+regions with a high curvature. This is due to two main reasons. First of all,
+tracking with trilinear interpolation leads to much smoother results and does
+not create large angles as the nearest neighbor interpolation does. Secondly,
+it is able to reconstruct a larger amount of streamlines within this high
+curvature region, because it does not get in conflict with the constrains.
+
+Therefore, we used the trilinear approach within this work and further set the
+probabilistic direction selection function more restrictive, i.e. restricting
+the maximum angle to 45 degrees instead of 60.  
+
 
 \subsection{Postprocessing}
 While diffusion MRI is in general able to reconstruct large parts of the white
