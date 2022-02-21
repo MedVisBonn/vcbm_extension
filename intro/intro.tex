@@ -4,7 +4,7 @@ non-invasive vital imaging method for the human brain. It particularly has the
 unique ability to get insights into major white matter tracts within the human
 brain and can
 reconstruct large parts of the white matter tracts, using tractography algorithms. dMRI is based on
-inferring the fiber tracts with the Brownian motion of water molecules. Since
+inferring the fiber tracts using the Brownian motion of water molecules. Since
 the fiber tracts impede the water movement it will move along the fiber tracts
 rather than orthogonal to it. 
 This unique ability of fiber tracking makes dMRI an important feature for large
@@ -25,19 +25,21 @@ ball-and-stick model \cite{BEHRENS2007144}, and the low-rank approximation of hi
 
 Within our last work we have evaluated the influence of model uncertainty within
 the low-rank approximation in a systematical way. To be more precise, the fiber
-count has to be set a priori for the low-rank approximation. This is a
+count has to be set a priori to apply the low-rank approximation. This is a
 crucial step, since setting the number to low will miss relevant directions and
 setting the number to high will introduce wrong directions which makes the
 tracking process even more challenging. Further the remaining directions are
 more error-prone, if the number is not set correctly. 
 Therefore, we estimated the number of fibers with the help of a Bayesian model and
-created a selection model from these estimations. To improve the directions
+created a selection model from these estimations. To improve the precision of
+the local direction fields
 further, we proposed a novel averaging model, which fuses all the different
-low-rank approximations into a new model and therefore reduces this source of uncertainty.
-Using a probabilistic fiber tracking model, it has been shown that the
-reconstruction within the newly proposed models is more robust and results in
+low-rank approximations into a new model and therefore, reduces this source of
+uncertainty even further.
+Using a probabilistic fiber tracking model, it has been shown that fiber
+tracking within the newly proposed models is more robust and results in
 better reconstructions compared to fiber tracking within a state of the art
-constrained spherical deconvolution model.
+ $8$th constrained spherical deconvolution model.
 
 With the increasing complexity of scanner protocols and the resulting more
 complex models also the sensitivity to measurement noise increases. Within this work
@@ -47,7 +49,8 @@ successfully applied to dMRI in many cases \cite{Jones:2008}. Instead of
 calculating a fiber distribution to visualize uncertainty, we proceed in
 another way and evaluate the impact of noise to the average and selection model.
 
-We are using the new uncertainty to generate a novel consensus bootstrap
+We are using the newly derived quantification of measurement uncertainty to the
+direction fields to generate a novel consensus bootstrap
 model, which fuses all the bootstrap information into a single model. This new
 approach is then compared to the previously derived models as well as the
 rank-$3$ model. We conclude that the

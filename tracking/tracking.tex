@@ -20,11 +20,11 @@ upper right corner.}
 Within this work a probabilistic streamline-based approach is used. For a given
 seed point, the streamline grows iteratively in both directions using Euler
 integration. Since neither the seed point nor any other point of the streamline
-lies on a grid point, we interpolate the current position trilinearly. Therefore,
+lies necessarily on a grid point, we interpolate the current position trilinearly. Therefore,
 we have to solve a matching problem first, since we have to decide which
 directions belong together to apply the trilinear interpolation. Since we assume
-smoothness between the voxels we use the three directions, from the last
-interpolation step as group means $\bar{\mathbf{v}}_i$, $i \in \left\{ 1\dots 3 
+smoothness between the voxels we use the $r$ directions, from the last
+interpolation step as group means $\bar{\mathbf{v}}_i$, $i \in \left\{ 1\dots r 
 \right\}$. Now we fit each vertex to the group means such
 that 
 \begin{align}
@@ -36,10 +36,12 @@ that
 \end{align}
 is minimized. We only update the group means if a group mean is not defined.
 Then we solve the above minimization problem and assign the direction as new
-group mean. Afterwards, we rerun the minimization for all vertices. This is done,
+group mean. Afterwards, we rerun the minimization for all vertices to get a
+close approximation of the optimal configuration. This is done,
 to reduce the time consumption drastically. Further, the local optimal
 configuration is cached. Using this, we only have to calculate the assignments
-once for each voxel which we are tracking through. 
+once for each voxel which we are tracking through and reduce the time
+consumption of trilinear interpolation dramatically. 
 To initialize the trilinear interpolation, we take the directions of the nearest voxel as group means.
 Given the interpolated directions $\mathbf{v}_i$ at the current point, we
 reorient them to have a non-negative inner product with the current tracking
@@ -47,22 +49,22 @@ direction $\mathbf{w}$. We select one of the $r$ possible directions by the
 following probabilistic model.
 
 We assign each unit direction $\mathbf{v}_i$ with the volume fraction
-$\lambda_i$ for $i \in \left\{ 1\dots r \right\}$ following the probability
+$\lambda_i$ for $i \in \left\{ 1\dots r \right\}$ a probability following the probability
 scheme 
 \[
 	p \left( \mathbf{v}_i \right) \coloneqq \frac{ \mathbb{1}_{\lbrace\theta_i <
-		\frac{1}{3} \pi \rbrace} \lambda_i \cos \left( \left( \frac{3}{\sqrt{2
-\pi}} \theta_i \right)^2 \right)}{\sum_j \mathbb{1}_{\lbrace\theta_j <
-		\frac{1}{3} \pi \rbrace} \lambda_j \cos \left( \left( \frac{3}{\sqrt{2
-\pi}} \theta_j \right)^2 \right) }, 
+		\frac{1}{3} \pi \rbrace} \lambda_i \cos \left( \left( \frac{9}{2\sqrt{2
+\pi}} \theta_i \right)^2 \right)^2}{\sum_j \mathbb{1}_{\lbrace\theta_j <
+		\frac{1}{3} \pi \rbrace} \lambda_j \cos \left( \left( \frac{9}{2\sqrt{2
+\pi}} \theta_j \right)^2 \right)^2 }, 
 \]
 where $\theta_i$ denotes the angle between the possible direction $\mathbf{v}_i$
 and the current direction $\mathbf{w}$. 
 
-The proposed probability function assigns angles below 30 degrees almost the
+The proposed probability function assigns to direction with angles below 20 degrees almost the
 same probability, which coincides with the limited angular resolution of
 spherical deconvolution \cite{TOURNIER20071459}. Further, the maximum angle is
-restricted to 60 degrees, which coincides with our anatomical knowledge.
+restricted to $45$ degrees, which coincides with our anatomical knowledge.
 
 This iterative algorithm proceeds until we either reach a region with fractional
 anisotropy below $0.3$ or the summed angle over the last $30$ mm is greater than
@@ -76,14 +78,15 @@ above and to create a better comparison, we used a deterministic approach, which
 always follows the direction with the smallest angle compared to the current
 direction. It is clearly visible, that the trilinear interpolation is superior
 compared to the computational less expensive nearest neighbor interpolation if it comes to
-regions with a high curvature. This is due to two main reasons. First of all,
-tracking with trilinear interpolation leads to much smoother results and does
-not create large angles as the nearest neighbor interpolation does. Secondly,
-it is able to reconstruct a larger amount of streamlines within this high
-curvature region, because it does not get in conflict with the constrains.
+regions with a high curvature. This is due to two main reasons. Nearest neighbor
+interpolation leads in general to higher angles in each integration step
+therefore, we would have to be less restrictive with the summed angle threshold.
+However, being less restrictive would also lead to more false positive
+streamlines. Instead, we use trilinear interpolation, since it is more precise,
+leads to smaller angles and allows to set more restrictive constrains. 
 
-Therefore, we used the trilinear approach within this work and further set the
-probabilistic direction selection function more restrictive, i.e. restricting
+Due to the in general smaller angles, we have also restricted the 
+probabilistic direction selection function further, i.e. restricting
 the maximum angle to 45 degrees instead of 60.  
 
 
@@ -96,9 +99,11 @@ generates outliers with low density, which have to be removed to have a proper
 output. 
 
 To avoid false positives, we use inclusion and exclusion regions. All regions
-are set carefully for a reference patient according to [hier die quelle].
+are set carefully for a reference patient according to the protocols in
+\cite{MaierHein:2017}.
 The remaining patients are linearly registered to the reference patient and the
-linear transformation is used to map the regions to the other patients. 
+linear transformation is used to map the regions to the other patients
+\cite{FSL}.
 If a streamline intersects with an exclusion region, the whole streamline is
 discarded and if a streamline does not intersect with all inclusion regions, it
 is discarded as well. 

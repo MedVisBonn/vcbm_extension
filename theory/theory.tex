@@ -1,4 +1,30 @@
 \section{Theory}
+\begin{figure*}[h]
+	\centering
+	\begin{subfigure}[b]{0.24\linewidth}
+		\includegraphics[width=\linewidth]{selected}
+		\caption{The most likely number of fiber according to the
+		selection model. {\color{white}asdfdsafdsfdsa}}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.24\linewidth}
+		\includegraphics[width=\linewidth]{selected-bootstrap}
+		\caption{The most like number of fibers over all
+		bootstraps.{\color{white}iiiiiiiiiiii asdfdsafdsfdsa}}
+\end{subfigure}  
+	\begin{subfigure}[b]{0.24\linewidth}
+		\includegraphics[width=\linewidth]{uncertainty}
+		\caption{Certainty of the selected model.
+		{\color{white}assdfsddfasd asdfdsafdsfdsa asdfsdafdfsfdfa}}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.24\linewidth}
+		\includegraphics[width=\linewidth]{uncertainty-bootstrap}
+		\caption{Number of bootstraps, which selected the most likely
+		model over all bootstraps.}
+	\end{subfigure}
+	\caption{Comparison of model selection with and without bootstrapping.}
+	\label{fig:selected-uncertainty}
+\end{figure*}
+
 Most dMRI approaches in the context of dMRI are applying it to generate
 probabilistic tractographies out of deterministic tracking approaches. Such
 approaches are reviewed in Section \ref{related}. 
@@ -37,31 +63,6 @@ For each sampled fODF we calculate the low-rank approximation of rank $3$
 and with the obtained residuals also the selection and average model as it was
 proposed by Gruen et al. \cite{Gruen:2021}.
 
-\begin{figure*}[h]
-	\centering
-	\begin{subfigure}[b]{0.33\linewidth}
-		\includegraphics[width=\linewidth]{selected}
-		\caption{The most likely number of fiber according to the
-		selection model}
-	\end{subfigure}
-	\begin{subfigure}[b]{0.33\linewidth}
-		\includegraphics[width=\linewidth]{selected-bootstrap}
-		\caption{The most like number of fibers overall bootstraps.
-		$SSIM=0.77$}
-\end{subfigure}  \\
-
-	\begin{subfigure}[b]{0.33\linewidth}
-		\includegraphics[width=\linewidth]{uncertainty}
-		\caption{Certainty of the selected model.}
-	\end{subfigure}
-	\begin{subfigure}[b]{0.33\linewidth}
-		\includegraphics[width=\linewidth]{uncertainty-bootstrap}
-		\caption{Number of bootstraps, which selected the most likely
-		model over all bootstraps. $SSIM=0.67$}
-	\end{subfigure}
-	\caption{Comparison of model selection with and without bootstrapping.}
-	\label{fig:selected-uncertainty}
-\end{figure*}
 As a first contribution we investigate the distribution of the selected ranks
 over all bootstrap. Therefore, we have simulated 100 bootstraps and applied the
 selection model to all of them. In Fig. \ref{fig:selected-uncertainty}, the most
@@ -72,57 +73,72 @@ calculated by selecting the model, which occurs most in bootstraps. The count of
 occurrences can be interpreted as uncertainty, e.g. if the selection model takes
 always the same model not mattering the bootstrap errors, it is very certain
 that this model fits the data well.  
-In most cases the selection model coincides with the most bootstrapping this
-also gets justified by a high SSIM of $0.77$ which is just calculated on the
-image area, to avoid the influence of the similar background
-\cite{wang2004image}. 
-Hier nochmal genauer sein
-
-
+In most cases the selection model coincides with the most bootstrapping. Only in
+$14.1\%$ of the voxels withing the white matter area the selected rank differs
+by $1$ and in $0.8\%$ the rank differs by $2$. Also regions which are quiet
+certain are stay certain under bootstrapping.
 
 \subsection{Bootstrap Consensus Model}
+\begin{figure*}[t]
+	\centering
+	\begin{subfigure}[b]{0.33\linewidth}
+		\includegraphics[width=\linewidth]{sel-bootstrap-maindir}
+		\caption{Selection model}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.33\linewidth}
+		\includegraphics[width=\linewidth]{avg-bootstrap-maindir}
+		\caption{Average model}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.33\linewidth}
+		\includegraphics[width=\linewidth]{rank-bootstrap-maindir}
+		\caption{Rank 3 model}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.33\linewidth}
+		\includegraphics[width=\linewidth]{sel-bootstrap-seconddir}
+		\caption{Selection model}
+		\label{fig:sel-bottom}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.33\linewidth}
+		\includegraphics[width=\linewidth]{avg-bootstrap-seconddir}
+		\caption{Average model}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.33\linewidth}
+		\includegraphics[width=\linewidth]{rank-bootstrap-seconddir}
+		\caption{Rank 3 model}
+	\end{subfigure}
+	\caption{Redefined orientation dispersion index calculated for the main
+	direction (top row) and second direction (bottom row) of 100 bootstraps.}
+	\label{fig:dispersion}
+\end{figure*}
+
+
 Instead of using the bootstrap samples to produce a probability density map of
 streamlines, we use it to reduce the measurement uncertainty by fusing the
 information of all bootstraps into a new model. 
 Therefore, the directions of all bootstraps get clustered to groups and the
 group means are the new directions.
 
-To build a consensus model we have to assign $n$ directions to $m$ groups on voxel
-level. We initialize the process by setting the directions of the original model
+To build a consensus model we have to assign $n$ directions of $r$ bootstraps to $m$ groups on voxel
+level where $m \geq n$. We initialize the process by setting the directions of the original model
 as reference directions for the $m$ groups. Now each
-direction is assigned to a group such that the sum of angles between group
+direction of each bootstrap is assigned to a group such that the sum of
+distances between group
 reference and direction is minimized over all possible assignments to the
 groups, i.e. we want to minimize the objective function 
 \begin{align}
-	T : \text{Sym} \left( r \right)^n & \mapsto \mathbb{R}_+ \nonumber \\
-	Z & \rightarrow \sum \arccos | \langle \mathbf{v}_{Z\left( i
-	\right)}, \mathbf{v}_i \rangle | ,  
+	T : \text{Sym} \left( n \right) & \mapsto \mathbb{R}_+ \nonumber \\
+	Z & \rightarrow \sum \| \sgn \left( \langle \mathbf{v}_{Z\left( i
+	\right)}, \bar{\mathbf{v}}_i \rangle \right) \mathbf{v}_{Z\left( i
+	\right)} - \bar{\mathbf{v}}_i\| ,  
 \end{align} 
-where $\text{Sym}\left( r \right)$ denotes the symmetric group and $\mathbf{v}$ denotes
+where $\text{Sym}\left( n \right)$ denotes the symmetric group and
+$\bar{\mathbf{v}}_i$ denotes
 the reference direction. To prevent wrong assignments if only one reference
-direction is initialized we first assign the highest fiber count to the
+direction is initialized we first assign the direction from the bootstrap with
+the  highest fiber count to the
 groups and update the uninitialized reference directions with the assignments.
 Note that this does not necessary lead to a global optimum, but is in most cases
 close to the optimum. 
-
-\begin{figure*}[t]
-	\centering
-	\begin{subfigure}[b]{0.33\linewidth}
-		\includegraphics[width=\linewidth]{sel-bootstrap}
-		\caption{Selection model}
-	\end{subfigure}
-	\begin{subfigure}[b]{0.33\linewidth}
-		\includegraphics[width=\linewidth]{avg-bootstrap}
-		\caption{Average model}
-	\end{subfigure}
-	\begin{subfigure}[b]{0.33\linewidth}
-		\includegraphics[width=\linewidth]{rank-bootstrap}
-		\caption{Rank 3 model}
-	\end{subfigure}
-	\caption{Redefined orientation dispersion index calculated for the main
-	direction of 100 bootstraps.}
-	\label{fig:dispersion}
-\end{figure*}
 
 To get deeper insights into the impact of the bootstrapping we fit a Watson
 distribution to the grouped directions. The Watson distribution is defined as  
@@ -146,36 +162,25 @@ In Fig. \ref{fig:dispersion} we have visualized the redefined orientation disper
 \cite{dispersionParameter}  
 \[ OD = \frac{2}{\pi} \arctan \left( \frac{1}{\kappa} \right) \] 
 for the selection, average and rank 3 model. This score is more intuitive since
-it maps the low dispersion to low values and vice versa. It is visible that the
-selection model shows lower dispersion in large parts of the CC and CST tracts
-compared to the average as well as the rank $3$ model. This is caused by the
+it maps the low dispersion to low values and vice versa. 
+
+It is visible that the
+selection model and average model shows lower dispersion in large parts of the CC and CST tracts
+compared to the rank $3$ model. This is caused by the
 ability of the selection model to select the rank $1$ model in this areas, which
 is not as susceptible to noise as higher rank models. I.e. the selection model
 reduces the impact of measurement noise without explicitly being build for
-this. 
-Therefore, we assume that the impact to the average and rank $3$ model is higher
-than to the selection model. However, it will also have an impact to the
-selection model, which is also susceptible to noise in higher rank areas. 
+this. The average model also benefits from the noise reduction, since the impact
+of the lower rank models is high in these regions.
+On the other hand the average model still contains the 3 fiber directions, which
+makes it more flexible compared to the selection model, which contains in many
+voxels just a single fiber direction. This is denoted by the purple areas within
+the brain in Fig. \ref{fig:sel-bottom}.
+We conclude that average model fuses to stability from the selection model in
+the mean direction and also the flexibility of the rank $3$ model, which can be
+especially in crossing regions important.
+Therefore, we assume that the impact to the average and rank $3$ model is lower
+than to the selection model since we increase the flexibility by introducing
+more directions into the consensus selection model. 
 
-\begin{figure*}[t]
-	\centering
-	\includegraphics[width=\linewidth]{dir}
-	\caption{Reconstructed fiber orientations of the different models, the
-	red box in the left image denotes the position within the brain. Top row
-shows models without consensus bootstrapping, bottom row with consensus
-bootstrapping. From left to right: Averaging model, selection model, rank-$3$
-model.}
-	\label{fig:directions}
-\end{figure*}
-
-After having investigated the dispersion of the main direction, it is also
-important to understand the impact of the newly proposed model on the direction
-fields which are plotted in Figure \ref{fig:directions}. 
-The most obvious observation seems to be that the consensus bootstrap model generated
-from the selection model contains in almost all voxel 3 fiber directions. But we
-also see that the consensus model of the average and selection model coincide in
-large parts. 
-Since the difference between the main directions is hardly visible, we have
-colored the background regarding the difference of the main direction. Here we
-see that also within the rank $3$ vector field some changes are made. 
 

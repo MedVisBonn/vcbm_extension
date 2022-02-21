@@ -2,7 +2,7 @@
 \subsection{Data}
 The proposed novel bootstrap consensus model is applied to the selection,
 average and rank $3$ model. The CSD model got replaced by the rank $3$ model
-because it was knocked off compared to the other models by dice score. Further,
+because it was knocked off compared to the other models by Dice score. Further,
 the CSD used in the model is computational heavy, i.e. computation takes 4 times as long
 as the $4$th order CSD which is used within this paper. This especially matters
 because of the time intense bootstrap creation. 
@@ -17,19 +17,100 @@ created by manually refining the segmented full brain fiber tractography. For
 more details we refer to the original literature.
 
 All tests were performed on 12 randomly chosen subjects for which such reference tractographies
-exist. Since these tractographies cannot be seen as ground truth and more as a
-good reference, we are just interested how good the proposed approach manages to
-reconstruct major white matter bundles. Therefore, we compare the approach by
+exist. For each tract we created a seeding plane by intersecting the reference
+fiber bundle with a plane and initialize the tracking process with the direction
+of the fiber bundle at the seedpoint. This should mimic a directional region of
+interest as it might be defined by an expert on brain anatomy
+\cite{Graumann2016}. We then apply the tracking process until we have as many
+streamlines as the reference tractography. This should guaranty that the
+comparison between the different models is fair . Therefore, we compare the approach by
 Dice score, which is defined as
 \[ 
 	DICE = \frac{2 |RD \cap TR |}{|TR| + |RD|} ,
 \]
 where $RD$ denotes the reference data and $TR$ the tracking results
 \cite{SCHILLING2019194}. 
-Further, we measure how much is cut off the streamlines by the density filter.
-This should indicate if the reconstruction is maybe good, however it is hardly
-dependent on the applied filter. 
 
+\subsection{Qualitative Comparison}
+\begin{figure}[t]
+	\centering
+	\begin{subfigure}[b]{0.45\linewidth}
+		\includegraphics[width=\linewidth]{cst-rank-c}
+		\caption{Low rank 3 model}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.45\linewidth}
+		\includegraphics[width=\linewidth]{cst-rank-bootstrap-c}
+		\caption{Consensus low rank 3 model}
+\end{subfigure} \\
+	\begin{subfigure}[b]{0.45\linewidth}
+		\includegraphics[width=\linewidth]{cst-avg-c}
+		\caption{Average model}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.45\linewidth}
+		\includegraphics[width=\linewidth]{cst-avg-bootstrap-c}
+		\caption{Consensus Average model}
+\end{subfigure} \\
+	\begin{subfigure}[b]{0.45\linewidth}
+		\includegraphics[width=\linewidth]{cst-sel-c}
+		\caption{Selection model}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.45\linewidth}
+		\includegraphics[width=\linewidth]{cst-sel-bootstrap-c}
+		\caption{Consensus Selection Model}
+\end{subfigure} \\
+\caption{Reconstruction of the right Corticospinal Tract.}
+	\label{fig:CST}
+\end{figure}
+As a first experiment we tracts the right Cortiscospinal Tract (CST) from a seed
+region, which is indicated with a dashed black line in Fig. \ref{fig:CST}. This tract is
+known for its huge lateral spread, which is normally difficult to recover. The
+novel proposed consensus approach increases the completeness of the lateral
+spread especially for the selection model dramatically. While the selection
+model is only able to recover a few single streamlines within this area the
+consensus approach improves this area significantly. The other approaches
+were able to reconstruct the lateral spread also without the consensus approach
+quiet well. However, the spread is denser within the consensus model. 
+\begin{figure*}[t]
+	\centering
+	\includegraphics[width=\linewidth]{dir}
+	\caption{Reconstructed fiber orientations of the different models, the
+	red box in the left image denotes the position within the brain. Top row
+shows models without consensus bootstrapping, bottom row with consensus
+bootstrapping. Left: Averaging model. Right: selection model.}
+	\label{fig:directions}
+\end{figure*}
+
+This observation can be further justified by inspecting the multi vector fields
+on Fig. \ref{fig:directions}. There are many differences between the average and
+selection model. The most obvious is, that the average model has three fibers in
+each voxel, while the selection model contains often just one fiber in a voxel.
+For the tracking approach this leads to much more spread as seen in the
+reconstruction of the CST. However, this also leads to much more 'fuzziness'
+within the average model reconstruction. Applying the consensus to the average
+and selection model leads to quiet similar multi vector fields as it can be seen
+in the red circle. Within this voxel the average and selection model are
+dissimilar but the consensus model agrees. 
+
+\subsection{Quantitative Comparison}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\linewidth]{Dice}
+	\caption{Dice score averaged over all 12 patients tractwise for each
+	model.}
+	\label{fig:Dice}
+\end{figure}
+For a representative experiment we have reconstructed the corpus callosum (CC), the
+cingulum (CG), the coricospinal tract (CST), the inferior fronto-occipital (IFO)
+and the inferior longitudinal fasciculus (ILF), the optic radiation (OR), and
+the superior longitudinal fasciculus (SLF). In the reference tragtographies, the
+CC and SLF tracts were divided into subtracts, which we joined into a single
+tract (CC) or one per hemisphere (SLF). 
+
+The Dice scores of all tracts averaged over all 12 subjects are shown in Fig. 7.
+In all cases the novel consensus approach increased the Dice score. Especially,
+the selection model benefits greatly while the Dice score in the other models
+increases only moderately. Overall the consensus selection model and the
+consensus average model shares the highest Dice score. The 
 \subsection{Computational Effort}
 All experiments were computed on an Intel i9 with 3.3 GHz and 64 GB RAM. The
 following durations are denoted in h:min:s or min:s.
@@ -44,6 +125,4 @@ own took 11:00. The tracking itself is independent of the preprocessing steps.
 It took approximately 2:30 for a bundle such it is shown in Figure xy on a
 single thread including postprocessing.  
 
-\subsection{Qualitative Comparison}
-As a first experiment we tracts the right Cortiscospinal Tract (CST) from a seed
-region, which is indicated with a dashed black line in Fig. XY. 
+
