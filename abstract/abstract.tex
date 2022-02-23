@@ -1,18 +1,27 @@
 \begin{abstract}
-	Diffusion Magnetic Resonance Imaging (dMRI) tractography has the unique
-	ability to reconstruct major white matter tracts non-invasive and it
-	therefore widely used in neurosurgical planning and in neuroscience.
-	However, it is affected by various sources of uncertainties. Within our
-	last work we evaluated the model uncertainty that arises by selecting a
-	mathematical model to estimate multiple fiber orientations in a given
-	voxel. We used this evaluation to propose a novel average model, where
-	we have fused the information of all different models into one new
-	model. This work extends our previous work, by evaluating the impact of
-	measurement noise to the mathematical framework. We then use the newly
-	derived uncertainty to reduce it by fuse all information into a new
-	consensus model. Experiments on different white matter tracts in
-	multiple subjects indicate that reducing the measurement uncertainty in
-	this way increases the accuracy of crossing fiber tractography.
+  
+  Diffusion Magnetic Resonance Imaging (dMRI) tractography has the
+  unique ability to reconstruct major white matter tracts
+  non-invasively and is therefore widely used in neurosurgical
+  planning and neuroscience. In this work, we reduce two sources of
+  uncertainty within the tractography pipeline. The first one is the
+  model uncertainty that arises in crossing fiber tractography, from
+  having to estimate the number of relevant fiber compartments in each
+  voxel. The second one is the data uncertainty that arises from
+  measurement noise. We propose a mathematical framework to estimate
+  model uncertainty, and we reduce this type of uncertainty with a
+  model averaging approach that combines the fiber direction estimates
+  from all candidate models, weighted by the posterior probability of
+  the respective model. We use bootstrapping to estimate data
+  uncertainty, and consolidate the fiber direction estimates from all
+  bootstraps into a consensus model. We observe that a traditional
+  model selection strategy frequently selects different models in
+  different bootstraps. In this sense, the bootstrap consensus also
+  reduces model uncertainty. Either approach increases the accuracy of
+  crossing fiber tractography in multiple subjects, and combining them
+  provides a small additional benefit.
+  
+  \textbf{Keywords:} diffusion MRI, tractography, uncertainty, model averaging, bootstrapping
 %-------------------------------------------------------------------------
 %  ACM CCS 1998
 %  (see https://www.acm.org/publications/computing-classification-system/1998)
