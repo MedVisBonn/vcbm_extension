@@ -32,8 +32,7 @@ tool to explore the impact of the parameters in a systematical way
 \cite{Brecheisen:2009}.
 
 Lately the focus of uncertainty in dMRI has been set to the partial volume
-effect. While the resolution of a modern dMRI is restricted to 1.25 mm in each
-direction, the size of an axon is around 0.1-20 $\mu m$. Therefore, in each voxel
+effect. While the resolution of a modern dMRI is at millimeter scale, the size of an axon is around 0.1-20 $\mu m$. Therefore, in each voxel
 are many axons present and we can only measure an average of all these axons.
 This leads to two problems. Firstly, a tract can spread within a voxel. This can
 be partially solved by modern crossing fiber approaches and
@@ -42,7 +41,8 @@ selection.
 Secondly, two bundles can intersect
 within a voxel and are then indistinguishable for local tracking approaches
 \cite{Schilling:2022}. Within this work we use regions of interest, which are
-based on our prior knowledge to reduce this source of uncertainty. A more
+based on our prior knowledge to reduce this source of uncertainty
+\cite{MaierHein:2017}. A more
 advanced approach to reduce this source of error is to use machine learning for
 tract segmentation as it was done in Tracseg \cite{WASSERTHAL2018239}.
 
