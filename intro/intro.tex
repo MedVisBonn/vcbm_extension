@@ -18,12 +18,12 @@ diffusion tensor imaging \cite{BASSER1994247}
 were just able to recover a single direction per voxel, which is not sufficient
 to recover more complex geometries like fibre crossing, kissing and bending.
 Newer approaches rely on high angular resolution imaging (HARDI). Within the
-last decade there have been many methods invented to compute local orientations
+last decade there have been many methods invented to compute multiple local orientations
 from raw diffusion data, including the
 ball-and-stick model \cite{BEHRENS2007144}, and the low-rank approximation of high order fODF tensors
 \cite{lowrank, Ankele:CARS2017}.
 
-Within our last work we have evaluated the influence of model uncertainty within
+Within our last work we have evaluated the influence of model uncertainty in
 the low-rank approximation in a systematical way. To be more precise, the fiber
 count has to be set a priori to apply the low-rank approximation. This is a
 crucial step, since setting the number to low will miss relevant directions and
@@ -47,7 +47,8 @@ we will systematically investigate the influence of noise to the generated
 models. We use a wild bootstrapping approach, which has been
 successfully applied to dMRI in many cases \cite{Jones:2008}. Instead of
 calculating a fiber distribution to visualize uncertainty, we proceed in
-another way and evaluate the impact of noise to the average and selection model.
+another way and evaluate the impact of noise to the average, selection, and
+low-rank model.
 
 We are using the newly derived quantification of measurement uncertainty to the
 direction fields to generate a novel consensus bootstrap

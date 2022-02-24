@@ -35,7 +35,7 @@ that
 	\|
 \end{align}
 is minimized. We only update the group means if a group mean is not defined.
-Then we solve the above minimization problem and assign the direction as new
+Then we solve the above minimization problem for each vertices and assign the direction as new
 group mean. Afterwards, we rerun the minimization for all vertices to get a
 close approximation of the optimal configuration. This is done,
 to reduce the time consumption drastically. Further, the local optimal
@@ -43,6 +43,7 @@ configuration is cached. Using this, we only have to calculate the assignments
 once for each voxel which we are tracking through and reduce the time
 consumption of trilinear interpolation dramatically. 
 To initialize the trilinear interpolation, we take the directions of the nearest voxel as group means.
+
 Given the interpolated directions $\mathbf{v}_i$ at the current point, we
 reorient them to have a non-negative inner product with the current tracking
 direction $\mathbf{w}$. We select one of the $r$ possible directions by the
