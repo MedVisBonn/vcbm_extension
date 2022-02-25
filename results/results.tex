@@ -26,38 +26,84 @@ streamlines as the reference tractography. This should guaranty that the
 comparison between the different models is fair.
 
 \subsection{Qualitative Comparison}
-\begin{figure}[t]
+\begin{figure*}[t]
 	\centering
-	\begin{subfigure}[b]{0.45\linewidth}
-		\includegraphics[width=\linewidth]{cst-rank-c}
-		\caption{Low rank 3 model}
+\begin{subfigure}[b]{0.13\linewidth}
+		\includegraphics[width=\linewidth]{cst-ref-c}
+		\caption{Low rank 3 model {\color{white} avdsdsds} }
 	\end{subfigure}
-	\begin{subfigure}[b]{0.45\linewidth}
+	\begin{subfigure}[b]{0.13\linewidth}
+		\includegraphics[width=\linewidth]{cst-rank-c}
+		\caption{Low rank 3 model {\color{white} avdsdsds} }
+	\end{subfigure}
+	\begin{subfigure}[b]{0.13\linewidth}
 		\includegraphics[width=\linewidth]{cst-rank-bootstrap-c}
 		\caption{Consensus low rank 3 model}
-\end{subfigure} \\
-	\begin{subfigure}[b]{0.45\linewidth}
+\end{subfigure} 
+	\begin{subfigure}[b]{0.13\linewidth}
 		\includegraphics[width=\linewidth]{cst-avg-c}
-		\caption{Average model}
+		\caption{Average model {\color{white} avdsdsds}}
 	\end{subfigure}
-	\begin{subfigure}[b]{0.45\linewidth}
+	\begin{subfigure}[b]{0.13\linewidth}
 		\includegraphics[width=\linewidth]{cst-avg-bootstrap-c}
 		\caption{Consensus Average model}
-\end{subfigure} \\
-\begin{subfigure}[b]{0.45\linewidth}
+\end{subfigure} 
+\begin{subfigure}[b]{0.13\linewidth}
 		\includegraphics[width=\linewidth]{cst-sel-c}
-		\caption{Selection model}
+		\caption{Selection model {\color{white} avdsdsds}}
 	\end{subfigure}
-	\begin{subfigure}[b]{0.45\linewidth}
+	\begin{subfigure}[b]{0.13\linewidth}
 		\includegraphics[width=\linewidth]{cst-sel-bootstrap-c}
 		\caption{Consensus Selection Model}
-\end{subfigure} \\
+\end{subfigure} 
 \caption{Reconstruction of the right Corticospinal Tract. The reference
 tractography is set as grey background and the reconstruction as XYZ colored
 foreground to make comparison more intuitive. The seed region is indicated by
 the black dashed line. }
 	\label{fig:CST}
-\end{figure}
+\end{figure*}
+\begin{figure*}[t]
+	\centering
+\begin{subfigure}[b]{0.23\linewidth}
+		\includegraphics[width=\linewidth]{cc-ref-c}
+		\caption{Low rank 3 model {\color{white} avdsdsds} }
+	\end{subfigure}
+	\hspace{0.01\linewidth}
+	\begin{subfigure}[b]{0.23\linewidth}
+		\includegraphics[width=\linewidth]{cc-rank-c}
+		\caption{Low rank 3 model {\color{white} avdsdsds} }
+	\end{subfigure}
+	\hspace{0.01\linewidth}
+	\begin{subfigure}[b]{0.23\linewidth}
+		\includegraphics[width=\linewidth]{cc-rank-bootstrap-c}
+		\caption{Consensus low rank 3 model}
+\end{subfigure} 
+	\hspace{0.01\linewidth}
+	\begin{subfigure}[b]{0.23\linewidth}
+		\includegraphics[width=\linewidth]{cc-avg-c}
+		\caption{Average model {\color{white} avdsdsds}}
+\end{subfigure} \\
+	\begin{subfigure}[b]{0.23\linewidth}
+		\includegraphics[width=\linewidth]{cc-avg-bootstrap-c}
+		\caption{Consensus Average model}
+\end{subfigure} 
+	\hspace{0.01\linewidth}
+\begin{subfigure}[b]{0.23\linewidth}
+		\includegraphics[width=\linewidth]{cc-sel-c}
+		\caption{Selection model {\color{white} avdsdsds}}
+	\end{subfigure}
+	\hspace{0.01\linewidth}
+	\begin{subfigure}[b]{0.23\linewidth}
+		\includegraphics[width=\linewidth]{cc-sel-bootstrap-c}
+		\caption{Consensus Selection Model}
+\end{subfigure} 
+\caption{Reconstruction of the right Corticospinal Tract. The reference
+tractography is set as grey background and the reconstruction as XYZ colored
+foreground to make comparison more intuitive. The seed region is indicated by
+the black dashed line. }
+	\label{fig:CST}
+\end{figure*}
+
 As a first experiment we tract the right Cortiscospinal Tract (CST) from a seed
 region, which is indicated with a dashed black line in Fig. \ref{fig:CST}. This tract is
 known for its huge lateral spread, which is difficult to recover. The
