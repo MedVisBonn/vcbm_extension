@@ -30,8 +30,7 @@
 	We denote that the Bayesian model is resistant against noise in the
 sense that it selects in most cases the same model as the selection model
 applied to the original data. However, it is also sensitive to noise, i.e. it
-does not select always the same model. This can be seen as equivalent of
-uncertainty.}
+does not select always the same model.}
 	\label{fig:selected-uncertainty}
 \end{figure*}
 
@@ -120,7 +119,16 @@ lead to different outcomes.
 		\caption{Rank 3 model}
 	\end{subfigure}
 	\caption{Redefined orientation dispersion index calculated for the main
-	direction (top row) and second direction (bottom row) of 100 bootstraps.}
+		direction (top row) and second direction (bottom row) of 100
+		bootstraps. The directions are ordered by volume fraction.
+Within the main direction it is visible that the dispersion in the rank $3$
+model is higher than in the both other models, which indicates a higher
+susceptibility to noise. In the second direction we see
+that the selection model has some purple areas within the white matter mask.
+This denotes that this voxel contains just one fiber direction. These one fiber
+regions are often in regions where the average model has a high dispersion
+index. Compared to the rank $3$ model both models have a lower dispersion in
+large parts of the white matter areas. }
 	\label{fig:dispersion}
 \end{figure*}
 

@@ -56,10 +56,14 @@ comparison between the different models is fair.
 		\includegraphics[width=\linewidth]{cst-sel-bootstrap-c}
 		\caption{Consensus Selection Model}
 \end{subfigure} 
-\caption{Reconstruction of the right Corticospinal Tract. The reference
-tractography is set as grey background and the reconstruction as XYZ colored
-foreground to make comparison more intuitive. The seed region is indicated by
-the black dashed line. }
+\caption{Reconstruction of the right Corticospinal Tract. To make the comparison
+	between the reference and the tractographies more intuitive, we have
+	indicated contour of the reference in each reconstruction with a black
+	line. The seed region is indicated by
+the black dashed line. Within the consensus models the tracking algorithm shows a much higher ability
+to reconstruct the lateral spread compared to the base models. This is
+especially true for the selection model, where the reconstruction in the base
+model misses a lot of the lateral spread.  }
 	\label{fig:CST}
 \end{figure*}
 \begin{figure*}[t]
@@ -77,12 +81,12 @@ the black dashed line. }
 	\begin{subfigure}[b]{0.23\linewidth}
 		\includegraphics[width=\linewidth]{cc-rank-bootstrap-c}
 		\caption{Consensus low rank 3 model}
-\end{subfigure} 
-	\hspace{0.01\linewidth}
+\end{subfigure} \\ 
 	\begin{subfigure}[b]{0.23\linewidth}
 		\includegraphics[width=\linewidth]{cc-avg-c}
 		\caption{Average model {\color{white} avdsdsds}}
-\end{subfigure} \\
+\end{subfigure} 
+	\hspace{0.01\linewidth}
 	\begin{subfigure}[b]{0.23\linewidth}
 		\includegraphics[width=\linewidth]{cc-avg-bootstrap-c}
 		\caption{Consensus Average model}
@@ -97,11 +101,10 @@ the black dashed line. }
 		\includegraphics[width=\linewidth]{cc-sel-bootstrap-c}
 		\caption{Consensus Selection Model}
 \end{subfigure} 
-\caption{Reconstruction of the right Corticospinal Tract. The reference
-tractography is set as grey background and the reconstruction as XYZ colored
-foreground to make comparison more intuitive. The seed region is indicated by
-the black dashed line. }
-	\label{fig:CST}
+\caption{Reconstruction of the corpus callosum Tract. The reconstruction within the
+selection model misses a lot of the lateral spread. This gets greatly improved
+within the consensus selection model. }
+	\label{fig:CC}
 \end{figure*}
 
 As a first experiment we tract the right Cortiscospinal Tract (CST) from a seed
@@ -121,7 +124,9 @@ seems to be more aligned.
 	\caption{Reconstructed fiber orientations of the different models, the
 	red box in the left image denotes the position within the brain. Top row
 shows models without consensus bootstrapping, bottom row with consensus
-bootstrapping. Left: Averaging model. Right: selection model.}
+bootstrapping. Left: Averaging model. Right: selection model. Both consensus
+models coincide in most voxels very well, although the base models differ as it
+is visible in the red circled voxel.}
 	\label{fig:directions}
 \end{figure*}
 
@@ -147,8 +152,10 @@ reason for the great improvement of the consensus selection model.
 	\centering
 	\includegraphics[width=\linewidth]{comparison-dice}
 	\caption{Boxplots of the dice scores of all patients for all models. All
-	subtracts are preprocessed seperatly, then merhed and the dice scores
-are calculated for a binary mask of the joint subtracts.}
+	subtracts are preprocessed separately, then merged and the dice scores
+are calculated for a binary mask of the joint subtracts. The
+average dice of the newly proposed consensus model is in all tracts greater or
+equal to the dice score of the base model.}
 	\label{fig:Dice}
 \end{figure}
 
@@ -170,7 +177,9 @@ Low Rank Model &   &
 \end{tabular}
 \caption{Comparison of different models by Nemenyi post-hoc test. All $p$ values
 below $0.05$ are marked. If the top model is significantly better in green else
-in red.}
+in red. The newly proposed base model shows for the selection and average model
+and significant improvement. Also the average model is significantly better than
+the selection and rank $3$ model, which supports our previous paper further.}
 	\label{tab:sig}
 \end{table*}
 
