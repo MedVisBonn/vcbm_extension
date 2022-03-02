@@ -14,12 +14,13 @@
   from all candidate models, weighted by the posterior probability of
   the respective model. We use bootstrapping to estimate data
   uncertainty, and consolidate the fiber direction estimates from all
-  bootstraps into a consensus model. We observe that a traditional
-  model selection strategy frequently selects different models in
-  different bootstraps. In this sense, the bootstrap consensus also
+  bootstraps into a consensus model. We observe that, in most voxels,
+  a traditional model selection strategy selects different models
+  across bootstraps. In this sense, the bootstrap consensus also
   reduces model uncertainty. Either approach increases the accuracy of
-  crossing fiber tractography in multiple subjects, and combining them
-  provides a small additional benefit.
+  crossing fiber tractography in multiple subjects, but model
+  averaging is much more efficient computationally. Combining both
+  ideas achieved the highest overall accuracy.
   
   \textbf{Keywords:} diffusion MRI, tractography, uncertainty, model averaging, bootstrapping
 %-------------------------------------------------------------------------
