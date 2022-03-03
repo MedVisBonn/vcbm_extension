@@ -70,8 +70,8 @@ where $v$ denotes a random draw from the $n$ dimensional Rademacher distribution
 times to create a sample size of $m$ bootstraps.
 
 For each sampled fODF we calculate the low-rank approximation of rank $3$
-and with the obtained residuals also the selection and average model as it was
-proposed by Gruen et al. \cite{Gruen:2021}.
+and with the obtained residuals also the selection and average model as it is
+described in the previous section.
 
 As a first contribution we investigate the distribution of the selected ranks
 over all bootstrap. Therefore, we have simulated 100 bootstraps and applied the
@@ -97,6 +97,7 @@ lead to different outcomes.
 	\begin{subfigure}[b]{0.33\linewidth}
 		\includegraphics[width=\linewidth]{sel-bootstrap-maindir}
 		\caption{Selection model}
+		
 	\end{subfigure}
 	\begin{subfigure}[b]{0.33\linewidth}
 		\includegraphics[width=\linewidth]{avg-bootstrap-maindir}
@@ -106,30 +107,12 @@ lead to different outcomes.
 		\includegraphics[width=\linewidth]{rank-bootstrap-maindir}
 		\caption{Rank 3 model}
 	\end{subfigure}
-	\begin{subfigure}[b]{0.33\linewidth}
-		\includegraphics[width=\linewidth]{sel-bootstrap-seconddir}
-		\caption{Selection model}
-		\label{fig:sel-bottom}
-	\end{subfigure}
-	\begin{subfigure}[b]{0.33\linewidth}
-		\includegraphics[width=\linewidth]{avg-bootstrap-seconddir}
-		\caption{Average model}
-	\end{subfigure}
-	\begin{subfigure}[b]{0.33\linewidth}
-		\includegraphics[width=\linewidth]{rank-bootstrap-seconddir}
-		\caption{Rank 3 model}
-	\end{subfigure}
+
 	\caption{Redefined orientation dispersion index calculated for the main
-		direction (top row) and second direction (bottom row) of 100
-		bootstraps. The directions are ordered by volume fraction.
+		direction (top row). The directions are ordered by volume fraction.
 Within the main direction it is visible that the dispersion in the rank $3$
 model is higher than in the both other models, which indicates a higher
-susceptibility to noise. In the second direction we see
-that the selection model has some purple areas within the white matter mask.
-This denotes that this voxel contains just one fiber direction. These one fiber
-regions are often in regions where the average model has a high dispersion
-index. Compared to the rank $3$ model both models have a lower dispersion in
-large parts of the white matter areas. }
+susceptibility to noise. }
 	\label{fig:dispersion}
 \end{figure*}
 
@@ -198,11 +181,10 @@ this. The average model also benefits from the noise reduction, since the impact
 of the lower rank models is high in these regions.
 On the other hand the average model still contains more fiber directions, which
 makes it more flexible compared to the selection model, which contains in many
-voxels just a single fiber direction. This is denoted by the purple areas within
-the brain in Fig. \ref{fig:sel-bottom}.
-We conclude that average model fuses to stability from the selection model in
+voxels just a single fiber direction.
+We conclude that average model fuses the stability from the selection model in
 the mean direction and also the flexibility of the rank $3$ model, which can be
-especially in crossing regions important.
+important in crossing regions.
 Therefore, we assume that the impact to the average and rank $3$ model is lower
 than to the selection model since we increase the flexibility by introducing
 more directions into the consensus selection model. 

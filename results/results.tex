@@ -36,7 +36,7 @@ comparison between the different models is fair.
 	\end{subfigure}
 \end{minipage}
 \hfil
-	\begin{minipage}[t]{0.19\linewidth}
+	\begin{minipage}{0.19\linewidth}
 		\begin{subfigure}[b]{\linewidth}
 		\includegraphics[width=\linewidth]{cst-rank-c}
 		\caption{Low rank 3 model {\color{white} avdsdsds} }
@@ -45,21 +45,21 @@ comparison between the different models is fair.
 		\includegraphics[width=\linewidth]{cst-rank-bootstrap-c}
 		\caption{Consensus low rank 3 model}
 \end{subfigure} 
-	\end{minipage}
+	\end{minipage} \hfil
 	\begin{minipage}{0.19\linewidth}
 	\begin{subfigure}[b]{\linewidth}
 		\includegraphics[width=\linewidth]{cst-avg-c}
-		\caption{Average model {\color{white} avdsdsds}}
+		\caption{Average model {\color{white} aasfd vdsdsds}}
 	\end{subfigure}
 	\begin{subfigure}[b]{\linewidth}
 		\includegraphics[width=\linewidth]{cst-avg-bootstrap-c}
-		\caption{Consensus Average model}
+		\caption{Consensus Average model{\color{white} aasfd vdsdsds}}
 \end{subfigure} 
-	\end{minipage}
+	\end{minipage} \hfil 
 	\begin{minipage}{0.19\linewidth} 
 	\begin{subfigure}[b]{\linewidth}
 		\includegraphics[width=\linewidth]{cst-sel-c}
-		\caption{Selection model {\color{white} avdsdsds}}
+		\caption{Selection model {\color{white} avdsdsds asdf asdf}}
 	\end{subfigure}
 	\begin{subfigure}[b]{\linewidth}
 		\includegraphics[width=\linewidth]{cst-sel-bootstrap-c}
@@ -69,8 +69,7 @@ comparison between the different models is fair.
 \caption{Reconstruction of the right Corticospinal Tract. To make the comparison
 	between the reference and the tractographies more intuitive, we have
 	indicated contour of the reference in each reconstruction with a black
-	line. The seed region is indicated by
-the black dashed line. Within the consensus models the tracking algorithm shows a much higher ability
+	line. Within the consensus models the tracking algorithm shows a much higher ability
 to reconstruct the lateral spread compared to the base models. This is
 especially true for the selection model, where the reconstruction in the base
 model misses a lot of the lateral spread.  }
@@ -78,44 +77,55 @@ model misses a lot of the lateral spread.  }
 \end{figure*}
 \begin{figure*}[t]
 	\centering
-\begin{subfigure}[b]{0.23\linewidth}
-		\includegraphics[width=\linewidth]{cc-ref-c}
+	\begin{minipage}{0.24\linewidth}
+\begin{subfigure}[b]{\linewidth}
+		\includegraphics[width=\linewidth]{or-ref-c}
 		\caption{Low rank 3 model {\color{white} avdsdsds} }
 	\end{subfigure}
-	\hspace{0.01\linewidth}
-	\begin{subfigure}[b]{0.23\linewidth}
-		\includegraphics[width=\linewidth]{cc-rank-c}
+\end{minipage}
+\hfil
+	\begin{minipage}{0.24\linewidth}
+		\begin{subfigure}[b]{\linewidth}
+		\includegraphics[width=\linewidth]{or-rank-c}
 		\caption{Low rank 3 model {\color{white} avdsdsds} }
 	\end{subfigure}
-	\hspace{0.01\linewidth}
-	\begin{subfigure}[b]{0.23\linewidth}
-		\includegraphics[width=\linewidth]{cc-rank-bootstrap-c}
+	\begin{subfigure}[b]{\linewidth}
+		\includegraphics[width=\linewidth]{or-rank-bootstrap-c}
 		\caption{Consensus low rank 3 model}
-\end{subfigure} \\ 
-	\begin{subfigure}[b]{0.23\linewidth}
-		\includegraphics[width=\linewidth]{cc-avg-c}
-		\caption{Average model {\color{white} avdsdsds}}
 \end{subfigure} 
-	\hspace{0.01\linewidth}
-	\begin{subfigure}[b]{0.23\linewidth}
-		\includegraphics[width=\linewidth]{cc-avg-bootstrap-c}
+	\end{minipage} \hfil
+	\begin{minipage}{0.24\linewidth}
+	\begin{subfigure}[b]{\linewidth}
+		\includegraphics[width=\linewidth]{or-avg-c}
+		\caption{Average model {\color{white} aasfd vdsdsds}}
+	\end{subfigure}
+	\begin{subfigure}[b]{\linewidth}
+		\includegraphics[width=\linewidth]{or-avg-bootstrap-c}
 		\caption{Consensus Average model}
 \end{subfigure} 
-	\hspace{0.01\linewidth}
-\begin{subfigure}[b]{0.23\linewidth}
-		\includegraphics[width=\linewidth]{cc-sel-c}
-		\caption{Selection model {\color{white} avdsdsds}}
+	\end{minipage} \hfil 
+	\begin{minipage}{0.24\linewidth} 
+	\begin{subfigure}[b]{\linewidth}
+		\includegraphics[width=\linewidth]{or-sel-c}
+		\caption{Selection model {\color{white} avdsdsds asdf asdf}}
 	\end{subfigure}
-	\hspace{0.01\linewidth}
-	\begin{subfigure}[b]{0.23\linewidth}
-		\includegraphics[width=\linewidth]{cc-sel-bootstrap-c}
+	\begin{subfigure}[b]{\linewidth}
+		\includegraphics[width=\linewidth]{or-sel-bootstrap-c}
 		\caption{Consensus Selection Model}
 \end{subfigure} 
-\caption{Reconstruction of the corpus callosum Tract. The reconstruction within the
-selection model misses a lot of the lateral spread. This gets greatly improved
-within the consensus selection model. }
-	\label{fig:CC}
+	\end{minipage}
+	\caption{Reconstruction of the optic radiation (OR) Tract. To make the comparison
+	between the reference and the tractographies more intuitive, we have
+	indicated contour of the reference in each reconstruction with a black
+	line. For the low rank approximation it is visible that the consensus
+	model reduces the false positive streamlines.  The consensus average
+	model has a much higher overlap compared to the base average model and
+	the consensus selection model also increases the overlap. All
+reconstructions have problems to follow the tract in the upper region where we
+have an high curvature.  }
+	\label{fig:OR}
 \end{figure*}
+
 
 As a first experiment we tract the right Cortiscospinal Tract (CST) from a seed
 region, which is indicated with a dashed black line in Fig. \ref{fig:CST}. This tract is
