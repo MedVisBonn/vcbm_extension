@@ -1,4 +1,4 @@
-\section{Averaging and Selection Model}
+\section{Averaging and Selection Model}\label{sec:Models}
 
 Within our work we have proposed a probabilistic framework
 to quantify the posterior probability with which different potential fiber values
@@ -102,3 +102,19 @@ For our experiments we have set $p \left(  \mathcal{T} \mid \mathcal{H}_r,
 residual increases, and as it is visible in Fig CSDSF it supports our prior
 assumptions about single fiber regions well.
 
+\subsection{Computing Local Tracking Directions}
+In previous work the strategy has been to determine an optimal rank $r \in
+\left\{ 1,\dots , 3 \right\}$ in each integration step and use the set of
+directions $\mathbf{v}_i$ for tracking \cite{Anekele:CARS2017}. Using this
+approach overlooks the uncertainty which arises by the selection of a single
+model, if several models have non-negligible probabilities. We use this approach
+as direct comparison and use the model with the highest probability $p \left(
+ \mathcal{H}_r \mid \mathcal{T} \right)$ according to the framework from the
+ previous section.
+ 
+As a new contribution, we propose to fuse the information of all different
+models into a new averaging model. I.e. we create a weighted sum of
+corresponding parameters $\mathbf{v}_i^{\left( r \right)}$ and
+$\lambda_i^{\left( r \right)}$ from the different
+$r$-fiber models with weights given by the posterior probabilities of the
+models.
