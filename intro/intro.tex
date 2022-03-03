@@ -18,7 +18,7 @@ ball-and-stick model \cite{BEHRENS2007144}, spherical deconvolution \cite{TOURNI
 Tractography is affected by many sources of uncertainty \cite{Schultz:SciVisBook2014}. One of them is the model uncertainty that arises when having to make an \emph{a priori} choice of the number of fibers in a given voxel. In models such as ball-and-sticks or low-rank tensor approximation, this is a
 crucial step, since setting the number too low will miss relevant directions, while setting it too high will introduce spurious directions and increase variance in the remaining directions.
 
-We recently introduced the first framework for the quantification of this type of uncertainty, and a method for its reduction, which we refer to as ``model averaging'' \cite{Gruen:2021}. Our current work reports a refined implementation of that idea, and makes the following additional contributions:
+We recently introduced the first framework for the quantification of this type of uncertainty, and a method for its reduction, which we refer to as \emph{model averaging} \cite{Gruen:2021}. Our current work reports a refined implementation of that idea, and makes the following additional contributions:
 \begin{enumerate}
 \item We study how the above-described model uncertainty interacts with data uncertainty, which arises due to measurement noise and is commonly estimated via bootstrapping \cite{Chung:2006}.
 \item We design a new approach for the joint reduction of data and model uncertainty based on a bootstrap consensus strategy, and compare it to our previous model averaging technique.
@@ -55,7 +55,7 @@ We recently introduced the first framework for the quantification of this type o
 % improvement in the selection model is huge, the improvement of the
 % average model is not large. 
 
-The remainder of our paper is organized as follows: Section~\ref{sec:related} discusses the related work that provides the suitable context of our proposed framework. Section~\ref{sec:background} introduces the mathematical model on which our approach is based. \textbf{TODO:} Next sentence depends on final structure of presenting averaging vs.\ bootstrap consensus. Section~\ref{sec:tracking} describes our implementation of a probabilistic tractography approach that can make use of the model averaging and bootstrap consensus strategies. Section~\ref{sec:results} reports and discusses our experimental results, before Section~\ref{sec:conclusion} summarizes our main findings and concludes our work.
+The remainder of our paper is organized as follows: We first provide the required background by discussing related work in general (Sections~\ref{sec:related}), and briefly summarizing the crossing fiber model on which our work is based (Section~\ref{sec:background}). We then introduce our two main approaches, model averaging and bootstrap consensus, in Sections~\ref{sec:Models} and~\ref{sec:bootstrap-consensus}, respectively, and describe an algorithm for dMRI tractography that uses them in  Section~\ref{sec:tracking}. We report and discuss our experimental results in Section~\ref{sec:results}, before Section~\ref{sec:conclusion} summarizes our main findings and concludes our work.
 
 %%% Local Variables:
 %%% mode: latex
