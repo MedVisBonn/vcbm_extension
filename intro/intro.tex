@@ -8,7 +8,7 @@ scientific studies \cite{Sotiropoulos:2013, Tobisch:2018Frontiers} as well as su
 
 The most popular and widely used tractography algorithms recover the local
 orientation of fiber tracts from dMRI measurements. Earlier approaches like
-Diffusion Tensor Imaging \cite{BASSER1994247}
+Diffusion Tensor Imaging (DTI) \cite{BASSER1994247}
 were just able to recover a single direction per voxel, which is not sufficient
 to recover more complex geometries like fiber crossing, kissing, and bending.
 Newer approaches rely on high angular resolution imaging (HARDI), and typically lead to ill-conditioned inverse problems. Popular mathematical models for the estimation of multiple local orientations include the
@@ -55,7 +55,7 @@ We recently introduced the first framework for the quantification of this type o
 % improvement in the selection model is huge, the improvement of the
 % average model is not large. 
 
-The remainder of our paper is organized as follows: We first provide the required background by discussing related work in general (Sections~\ref{sec:related}), and briefly summarizing the crossing fiber model on which our work is based (Section~\ref{sec:background}). We then introduce our two main approaches, model averaging and bootstrap consensus, in Sections~\ref{sec:Models} and~\ref{sec:bootstrap-consensus}, respectively, and describe an algorithm for dMRI tractography that uses them in  Section~\ref{sec:tracking}. We report and discuss our experimental results in Section~\ref{sec:results}, before Section~\ref{sec:conclusion} summarizes our main findings and concludes our work.
+The remainder of our paper is organized as follows: We first provide the required background by discussing related work (Sections~\ref{sec:related}), and summarizing the crossing fiber model on which our work is based (Section~\ref{sec:background}). We then introduce our two main approaches, model averaging and bootstrap consensus, in Sections~\ref{sec:Models} and~\ref{sec:bootstrapping}, respectively, and describe an algorithm for dMRI tractography that uses them in Section~\ref{sec:tracking}. We report and discuss our experimental results in Section~\ref{sec:results}, before Section~\ref{sec:conclusion} summarizes our main findings and concludes our work.
 
 %%% Local Variables:
 %%% mode: latex

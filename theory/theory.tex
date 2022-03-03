@@ -1,62 +1,48 @@
-\section{Theory}
-\label{sec:bootstrap-consensus}
+\section{Bootstrapping for Uncertainty Estimation and Reduction}
+\label{sec:bootstrapping}
 \begin{figure*}[t]
 	\centering
-	\begin{subfigure}[b]{0.24\linewidth}
+	\begin{subfigure}[b]{0.23\linewidth}
 		\includegraphics[width=\linewidth]{selected}
-		\caption{The most likely number of fiber according to the
-		selection model. {\color{white}asdfdsafdsfdsa}}
+		\caption{The most likely number of fibers according to our model
+		selection.}
 		\label{fig:selected-uncertainty:rank-original}
-	\end{subfigure}
-	\begin{subfigure}[b]{0.24\linewidth}
+              \end{subfigure}
+              \hspace{0.01\linewidth}
+	\begin{subfigure}[b]{0.23\linewidth}
 		\includegraphics[width=\linewidth]{selected-bootstrap}
-		\caption{The most like number of fibers over all
-		bootstraps.{\color{white}iiiiiiiiiiii asdfdsafdsfdsa}}
+		\caption{The most likely number of fibers over all
+		bootstraps.}
 		\label{fig:selected-uncertainty:rank}
-\end{subfigure}  
-	\begin{subfigure}[b]{0.24\linewidth}
+              \end{subfigure}
+              \hspace{0.01\linewidth}
+	\begin{subfigure}[b]{0.23\linewidth}
 		\includegraphics[width=\linewidth]{uncertainty}
-		\caption{Certainty of the selected model.
-		{\color{white}assdfsddfasd asdfdsafdsfdsa asdfsdafdfsfdfa}}
-		
+		\caption{Bayesian probability of the number of fibers in (a).}
 		\label{fig:selected-uncertainty:unc-original}
-	\end{subfigure}
-	\begin{subfigure}[b]{0.24\linewidth}
+              \end{subfigure}
+              \hspace{0.01\linewidth}
+	\begin{subfigure}[b]{0.23\linewidth}
 		\includegraphics[width=\linewidth]{uncertainty-bootstrap}
-		\caption{Number of bootstraps, which selected the most likely
-		model over all bootstraps.}
+		\caption{Fraction of bootstraps which selected the number of fibers in (b).}
 		\label{fig:selected-uncertainty:unc}
 	\end{subfigure}
-	\caption{Comparison of model selection with and without bootstrapping.
-	We denote that the Bayesian model is resistant against noise in the
-sense that it selects in most cases the same model as the selection model
-applied to the original data. However, it is also sensitive to noise, i.e. it
-does not select always the same model.}
+	\caption{Small differences between model selection without bootstrapping (a) and the most frequently selected model under bootstrapping (b) indicate that data uncertainty also has a certain effect on the selected model. The stability of model selection under bootstrapping (d) correlates well with the confidence derived from our Bayesian framework (c).}
 	\label{fig:selected-uncertainty}
 \end{figure*}
 
-Most bootstrap approaches in the context of dMRI are used  to generate
-probabilistic tractographies out of deterministic tracking approaches. Such
-approaches are reviewed in Section \ref{sec:related}. 
+We describe the variability that arises from noise in the dMRI measurement as data uncertainty. Taking measurements repeatedly is a natural way to estimate it, but is usually not feasible in practice. Therefore, different bootstrapping techniques have been established to estimate data uncertainty based on a single DTI or HARDI acquisition \cite{Chung:2006,Jones:2008}.
 
-Our first novel contribution is to determine the uncertainty caused by
-measurement errors to the proposed models in a systematical way. Therefore, wild bootstrapping is used to create
-noisy resamples out of the measurements. The resampled data is then processed
-and the parameters of a Watson distribution are evaluated to measure the
-uncertainty which is propagated through the dMRI pipeline. 
-
-As a second contribution we introduce a novel model, which reduces the measurement
-uncertainty by incorporating all bootstraps into a new bootstrap consensus model.
+We summarize one such bootstrapping approach in Section~\ref{sec:wild-bootstrap}, and use it in two ways: In Section~\ref{sec:data-vs-model-uncertainty}, we investigate the interaction between data and model uncertainty, by studying the variance of the selected model under bootstrapping. In Section~\ref{sec:bootstrap-consensus}, we define a bootstrap consensus for the joint reduction of data and measurement uncertainty. As a by-product, this allows us to quantify and visualize the effect of model selection and averaging on the variability of fiber direction estimates in Section~\ref{sec:vis-uncertainty-reduction}.
 
 \subsection{Wild Bootstrapping}
-To evaluate the impact of measurement errors we use wild bootstrapping. It
-has been shown in many cases that it is well suited within the context of dMRI and
-is a straightforward way to
-resample the original measurement without redoing the measurement process
-\cite{Jones:2008}.
+\label{sec:wild-bootstrap}
+We use wild bootstrapping to evaluate the impact of measurement noise. It is a straightforward way to
+resample the original measurements without repeating the measurement process, and has been used widely in the context of dMRI
+\cite{Jones:2008,Schultz:EuroVis2013,Siddiqui:2021}.
 
-To create bootstrap samples the following process is applied. As a first step the model is fitted to the data. We obtain a fODF
-$\hat{\mathcal{T}}$ and can calculate residual of Eq. (\ref{eq:sd-min}) 
+Wild bootstrapping uses model residuals to estimate noise. We combine it with the fODF tensor framework from Section~\ref{sec:background} by fitting an initial fODF
+$\hat{\mathcal{T}}$ via Eq. (\ref{eq:sd-min}), and calculating the residual 
 \[ \hat{\varepsilon} = S - M\hat{\mathcal{T}} .\] 
 A new bootstrap realization is calculated by 
 \[ y^{*} = M\hat{\mathcal{T}}  + \hat{\varepsilon} v , \]
@@ -66,71 +52,61 @@ where $v$ denotes a random draw from the $n$ dimensional Rademacher distribution
 		\nicefrac{1}{2} \text{ if } \mathbf{k}_i=1 \\
 		0 \text { otherwise } 
 \end{cases} \text{ for } i \in \left\{ 1\dots n \right\} . \]
- Finally the model is fitted to the bootstrap realization. This process is repeated $m$
-times to create a sample size of $m$ bootstraps.
 
-For each sampled fODF we calculate the low-rank approximation of rank $3$
-and with the obtained residuals also the selection and average model as it is
-described in the previous section.
+This process is repeated $m$ times to create a sample of $m$ bootstraps. For each bootstrap realization, we fit a new fODF and compute its low-rank approximations.
 
-As a first contribution we investigate the distribution of the selected ranks
-over all bootstrap. Therefore, we have simulated 100 bootstraps and applied the
-selection model to all of them. The most
-likely model in the original data is plotted in Fig.
-\ref{fig:selected-uncertainty:rank-original} and the uncertainty of the selected model is
-plotted in \ref{fig:selected-uncertainty:unc-original}. The generalization to the bootstrap model is
-plotted right to the plots with the original data. Here the most likely number of fibers is
-calculated by selecting the model, which occurs most in bootstraps. The count of
-occurrences can be interpreted as uncertainty, e.g. if the selection model takes
-always the same model not mattering the bootstrap errors, it is very certain
-that this model fits the data well and vice versa.  
-In most cases the selection model coincides with the most bootstraps. Only in
-$14.1\%$ of the voxels withing the white matter area the selected rank differs
-by $1$ and in $0.8\%$ the rank differs by $2$. Also regions which are quiet
-certain are stay certain under bootstrapping. Therefore, we conclude that the
-Bayesian posterior model is sensitive to noise and small changes in the data can
-lead to different outcomes. 
+%For each sampled fODF we calculate the low-rank approximation of rank $3$
+%and with the obtained residuals also the selection and average model as it is
+%described in the previous section.
 
-\subsection{Bootstrap Consensus Model}
+\subsection{Interaction Between Data and Model Uncertainty}
+\label{sec:data-vs-model-uncertainty}
+
+We hypothesized that data and model uncertainty interact in the sense that, in many voxels, applying model selection to different bootstrap realizations would lead to different choices of the optimal rank $r$. We were also interested in the extent to which the frequencies with which different ranks are selected agree with the probabilities that are assigned by our Bayesian model.
+
+Therefore, we took 100 bootstraps and applied model
+selection to all of them. Comparing the most
+likely number of fibers in the original data (Fig.~\ref{fig:selected-uncertainty:rank-original}) to the number that is most frequently selected over all bootstraps (Fig.~\ref{fig:selected-uncertainty:rank}) already reveals a certain amount of variability: In $14.1\%$ of the voxels within the white matter, the selected rank differs
+by $1$; in $0.8\%$, it differs by $2$.
+
+The probability of the most likely number of fibers according to Eq.~(\ref{eq:Bayes}) is
+shown in Fig.~\ref{fig:selected-uncertainty:unc-original}, next to the fraction of bootstraps that agreed on the most frequently selected number in Fig.~\ref{fig:selected-uncertainty:unc}. Visually, we find a remarkable agreement between the regions in which our Bayesian framework has a high confidence in its choice (high values in c), and the regions in which the choice is stable under bootstrapping (high values in d). We believe that this provides further empirical support for the framework proposed in Section~\ref{sec:model-comparison}.
+
+\subsection{Bootstrap Consensus}
+\label{sec:bootstrap-consensus}
 \begin{figure*}[t]
 	\centering
-	\begin{subfigure}[b]{0.33\linewidth}
+	\begin{subfigure}[b]{0.32\linewidth}
 		\includegraphics[width=\linewidth]{sel-bootstrap-maindir}
-		\caption{Selection model}
+		\caption{Model Selection}
 		
 	\end{subfigure}
-	\begin{subfigure}[b]{0.33\linewidth}
+        \hspace{0.01\linewidth}
+	\begin{subfigure}[b]{0.32\linewidth}
 		\includegraphics[width=\linewidth]{avg-bootstrap-maindir}
-		\caption{Average model}
+		\caption{Model Averaging}
 	\end{subfigure}
-	\begin{subfigure}[b]{0.33\linewidth}
+        \hspace{0.01\linewidth}
+	\begin{subfigure}[b]{0.32\linewidth}
 		\includegraphics[width=\linewidth]{rank-bootstrap-maindir}
-		\caption{Rank 3 model}
+		\caption{Rank-3 Approximation}
 	\end{subfigure}
 
-	\caption{Redefined orientation dispersion index calculated for the main
-		direction (top row). The directions are ordered by volume fraction.
-Within the main direction it is visible that the dispersion in the rank $3$
-model is higher than in the both other models, which indicates a higher
-susceptibility to noise. }
+	\caption{Mapping orientation dispersion of the principal fiber
+		direction under bootstrapping confirms that the dispersion in the rank-$3$
+result is higher than with model selection or averaging, indicating their ability to decrease susceptibility to noise.}
 	\label{fig:dispersion}
 \end{figure*}
 
+In analogy to how the model averaging in Section~\ref{sec:computing-tracking-directions} reduces model uncertainty by fusing information from alternative models, we derive a bootstrap consensus that fuses information from all bootstraps. We emphasize that this differs from the traditional use of bootstrapping in probabilistic tractography, where bootstrap samples produce a distribution of streamlines from a common seed \cite{Jones:2008,Jeurissen:2011}. Instead of estimating data uncertainty, our bootstrap consensus aims to reduce its effect. Due to the interaction between data and model uncertainty that was observed in Fig.~\ref{fig:selected-uncertainty}, it can also be expected to jointly reduce model uncertainty.
 
-Instead of using the bootstrap samples to produce a probability density map of
-streamlines, we use it to reduce the measurement uncertainty by fusing the
-information of all bootstraps into a new model. 
-Therefore, the directions of all bootstraps get clustered to groups and the
-group means are the new directions.
+The bootstrap consensus is formed by clustering the directions from all bootstraps into groups, and taking the group means as the final tracking directions. Specifically, we assign the $n_i$ directions from the $i$th bootstrap to $m$ groups, where we set $m=3$ as the maximum number of fibers we are willing to consider. Due to the large number of bootstraps, an enumeration of all possible assignments that guarantees a global optimum, as it could be used in Section~\ref{sec:computing-tracking-directions}, is no longer feasible.
 
-To build a consensus model we have to assign $n$ directions of $r$ bootstraps to $m$ groups on voxel
-level where $m \geq n$. We initialize the process by setting the reference
-direction for the $m$ groups as directions of
-the low-rank $3$ model computed on the original data. Now each
-direction of each bootstrap is assigned to a group such that the sum of
-distances between group
-reference and direction is minimized over all possible assignments to the
-groups, i.e. we want to minimize the objective function 
+Instead, we initialize the reference
+directions for each group with a rank-$3$ approximation of the original data. Now, the
+directions from each bootstrap are assigned to the groups such that the sum of
+distances between the group
+reference and the directions are minimized over all possible assignments. Formally, we minimize the objective function 
 \begin{align}
 	T : \text{Sym} \left( n \right) & \mapsto \mathbb{R}_+ \nonumber \\
 	Z & \rightarrow \sum \| \sgn \left( \langle \mathbf{v}_{Z\left( i
@@ -139,16 +115,21 @@ groups, i.e. we want to minimize the objective function
 \end{align} 
 where $\text{Sym}\left( n \right)$ denotes the symmetric group, 
 $\bar{\mathbf{v}}_i$ denotes
-the reference direction and $\mathbf{v}_i$ denotes the direction from the
-bootstrap. To prevent wrong assignments if only one reference
-direction is initialized we first assign the direction from the bootstrap with
-the  highest fiber count to the
-groups and update the uninitialized reference directions with the assignments.
-Note that this does not necessary lead to a global optimum, but is in most cases
-close to the optimum. 
+the reference direction, $\mathbf{v}_i$ denotes the direction from the
+bootstrap.
+% I think the following contradicts the initialization above:
+% To prevent wrong assignments if only one reference
+%direction is initialized we first assign the direction from the bootstrap with
+%the  highest fiber count to the
+%groups and update the uninitialized reference directions with the assignments.
+%Note that this does not necessary lead to a global optimum, but is in most cases
+%close to the optimum. 
 
-To get deeper insights into the impact of the bootstrapping we fit a Watson
-distribution to the grouped directions \cite{jupp_mardia_1999}. The Watson distribution is defined as  
+\subsection{Visualizing the Uncertainty in Fiber Directions}
+\label{sec:vis-uncertainty-reduction}
+
+Our main motivation for using model selection or averaging instead of always extracting the maximum number of fibers is that we expect it to reduce variance in the true fiber estimates. The clustering that we perform to compute the bootstrap consensus can be used to quantify and visualize this effect. To this end, we fit a Watson
+distribution to the grouped directions. The Watson distribution is defined as  \cite{jupp_mardia_1999}
 \begin{align*}
 	f : \mathbb{S}^2 & \longrightarrow  \mathbb{R}_+ \\
 	\mathbf{x} & \longmapsto  M \left( \frac{1}{2}, \frac{3}{2} , \kappa
@@ -157,37 +138,24 @@ distribution to the grouped directions \cite{jupp_mardia_1999}. The Watson distr
 	\right) 	,  
 \end{align*}
 where $\kappa$ is the dispersion parameter, $\| \mathbf{\mu} \| = 1$ the
-mean direction and $M$ be the confluent hypergeometric function. 
+mean direction and $M$ the confluent hypergeometric function. 
 
-We use the Watson distribution because it has two main advantages. First of all, it is antipodal symmetric,
-which fits our model assumption of indistinguishable $\pm \mathbf{v}$
-directions. Secondly, it is one of the easiest models for axial data and
-introduces the dispersion parameter, which gives  us deeper insights into the
-uncertainty within the groups. 
+We use the Watson distribution for two reasons: First, it is antipodally symmetric,
+which fits the fact that in Eq.~(\ref{eq:low-rank}), directions $\pm \mathbf{v}$
+are indistinguishable. Second, its dispersion parameter $\kappa$ allows us to quantify the variability in the fiber directions within each group. $\kappa$ can be re-parameterized to obtain an orientation dispersion index
+\[ \mathrm{OD} = \frac{2}{\pi} \arctan \left( \frac{1}{\kappa} \right) \]
+that is normalized to $[0,1]$ and indicates higher variability with higher values \cite{dispersionParameter}.
 
-In Fig. \ref{fig:dispersion} we have visualized the redefined orientation dispersion index
-\cite{dispersionParameter}  
-\[ OD = \frac{2}{\pi} \arctan \left( \frac{1}{\kappa} \right) \] 
-for the selection, average and rank 3 model. This score is more intuitive since
-it maps the low dispersion to low values and vice versa. 
+Fig.~\ref{fig:dispersion} visualizes orientation dispersion of the primary fiber that was estimated with model selection, model averaging, or a rank-3 approximation. In particular in the regions in which model selection picks a single fiber (cf.\ Fig.~\ref{fig:selected-uncertainty}; this includes parts of the corpus callosum and corticospinal tract), this results in lower dispersion 
+compared to the rank-$3$ model, confirming our expectation that estimating a single fiber direction is less susceptible to noise than estimating multiple directions from the same data. The same regions still have reduced dispersion after model averaging, confirming its effectiveness for uncertainty reduction.
 
-It is visible that the
-selection model and average model shows lower dispersion in large parts of the CC and CST tracts
-compared to the rank $3$ model. This is caused by the
-ability of the selection model to select the rank $1$ model in this areas, which
-is not as susceptible to noise as higher rank models. I.e. the selection model
-reduces the impact of measurement noise without explicitly being build for
-this. The average model also benefits from the noise reduction, since the impact
-of the lower rank models is high in these regions.
-On the other hand the average model still contains more fiber directions, which
-makes it more flexible compared to the selection model, which contains in many
-voxels just a single fiber direction.
-We conclude that average model fuses the stability from the selection model in
-the mean direction and also the flexibility of the rank $3$ model, which can be
-important in crossing regions.
-Therefore, we assume that the impact to the average and rank $3$ model is lower
-than to the selection model since we increase the flexibility by introducing
-more directions into the consensus selection model. 
+% Maybe this could go into the discussion part later on:
+%We conclude that average model fuses the stability from the selection model in
+%the mean direction and also the flexibility of the rank $3$ model, which can be
+%important in crossing regions.
+%Therefore, we assume that the impact to the average and rank $3$ model is lower
+%than to the selection model since we increase the flexibility by introducing
+%more directions into the consensus selection model. 
 
 
 
