@@ -37,7 +37,8 @@ Bayesian model comparison referred as model evidence. It is derived from $p
 \left( \mathcal{T} \mid \mathcal{H}_r , \Theta_r \right)$, the posterior
 probability of $T$ given an $r$-fiber model with a specific parameter vector
 $\Theta_r$. For the low-rank approximation $\mathcal{T}^{\left( r \right)}$ the
-parameter vector is $\Theta_r \coloneqq \left( \lambda_1 , \mathbf{v}_1 , \dots
+parameter vector are the volume fractions and unit direction from Eq.
+(\ref{eq:low-rank}), i.e. $\Theta_r \coloneqq \left( \lambda_1 , \mathbf{v}_1 , \dots
 , \lambda_r , \mathbf{v}_r \right)$. 
 
 The overall model evidence does not depend on any particular parameter values
@@ -87,10 +88,10 @@ we use the Kumaraswamy Probabilistic Density Function (PDF)
 \begin{align}
 	f \left( x, a, b \right) \coloneqq ab x^{a-1} \left( 1- x^a
 	\right)^{b-1} \text{ for } x \in \left( 0,1 \right) \text{ and } a,b >
-	0.
+	0
 	\label{eq:Kumaraswamy}
 \end{align}
-
+as an ansatz.
 The Kumaraswamy PDF because it has two main benefits. Firstly, it
 provides a considerable flexibility through its parameters $a$ and $b$ on the
 interval. Secondly, it is computational more efficient than related
@@ -118,3 +119,11 @@ corresponding parameters $\mathbf{v}_i^{\left( r \right)}$ and
 $\lambda_i^{\left( r \right)}$ from the different
 $r$-fiber models with weights given by the posterior probabilities of the
 models.
+
+The computation of the weighted sum is straightforward. However, to compute the
+sum we first have to establish a correspondence between the directions of the
+different $r$-fiber models, such that the first direction of all models agrees
+and the second directions of all models agree. From the $2! \times 3! =12$ possible assignments, we
+select the one that minimizes the overall sum of angles between the resulting
+weighted means $\mathbf{v}_i$ and their corresponding $\mathbf{v}_i^{\left( r
+\right)}$.
