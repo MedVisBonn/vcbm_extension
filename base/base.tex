@@ -6,7 +6,8 @@ are suitable given a local fODF.
 Using these information is especially for the low-rank approximation important,
 since a wrong assumption on the number of fibers in a local voxel introduces new
 fiber directions or misses important fibre directions. Which then leads to false
-positive or false negatives. Further, the fibers are not independent of each
+positive or false negatives streamlines and makes the tracking process error
+prone. Further, the fibers are not independent of each
 other, i.e. missing the correct number will also introduce an error to the
 fibers.
 
@@ -24,7 +25,7 @@ conditional probability, the posterior probability can be rewritten as
 \end{align}
 where $p \left(  \mathcal{H}_r \right)$ is our prior belief that rank $r$ is
 suitable, without considering the fODF. While in literature the agreement
-towards multi-fiber configurations is strong, the distribution over the brain
+towards multi-fiber configurations is strong, the distribution within the brain
 differs from source to source  \cite{BEHRENS2007144,Jeurissen:2012, Schultz:MICCAI12}. We have evaluated several  prior values from literature,
 but the effect on the posteriors were minor. Therefore, we decided to use a
 non-informative prior that assigns equal prior probability to the values of $r
@@ -100,8 +101,10 @@ $\beta$-distributions.
 For our experiments we have set $p \left(  \mathcal{T} \mid \mathcal{H}_r,
 \hat{\Theta}_r \right) = f \left(  \| \hat{\mathcal{R}}^{\left( r \right)} \| ; 1,20
 \right)$. This leads to a monotonically decreasing probability as the relative
-residual increases, and as it is visible in Fig CSDSF it supports our prior
-assumptions about single fiber regions well.
+residual increases, the amount of two and three fiber voxels matches with the
+range of estimates from literature \cite{Jeurissen:2012, Schultz:MICCAI12}, and we have single fiber voxels in regions
+which are used to estimated the single fiber response function in the spherical
+deconvolution \cite{TOURNIER20071459}.
 
 \subsection{Computing Local Tracking Directions}
 In previous work the strategy has been to determine an optimal rank $r \in
