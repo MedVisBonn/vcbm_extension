@@ -1,0 +1,104 @@
+\section{Averaging and Selection Model}
+
+Within our work we have proposed a probabilistic framework
+to quantify the posterior probability with which different potential fiber values
+are suitable given a local fODF.
+Using these information is especially for the low-rank approximation important,
+since a wrong assumption on the number of fibers in a local voxel introduces new
+fiber directions or misses important fibre directions. Which then leads to false
+positive or false negatives. Further, the fibers are not independent of each
+other, i.e. missing the correct number will also introduce an error to the
+fibers.
+
+\subsection{Bayesian Model Comparison}
+We use a Bayesian model comparison approach, i.e. we are interested in the
+posterior probability $p \left( \mathcal{H}_r \mid \mathcal{T} \right)$, where
+$\mathcal{H}_r$ denotes the hypothesis that rank $r$ is the optimal rank to
+extract $r$ fibers from a given fODF $\mathcal{T}$. Using Bayes' theorem of
+conditional probability, the posterior probability can be rewritten as
+\begin{align}
+	p \left( \mathcal{H}_r \mid \mathcal{T} \right) \propto p \left(
+		\mathcal{T} \mid \mathcal{H}_r 
+	\right) p \left(  \mathcal{H}_r \right), 
+	\label{eq:Bayes}
+\end{align}
+where $p \left(  \mathcal{H}_r \right)$ is our prior belief that rank $r$ is
+suitable, without considering the fODF. While in literature the agreement
+towards multi-fiber configurations is strong, the distribution over the brain
+differs from source to source  \cite{BEHRENS2007144,Jeurissen:2012, Schultz:MICCAI12}. We have evaluated several  prior values from literature,
+but the effect on the posteriors were minor. Therefore, we decided to use a
+non-informative prior that assigns equal prior probability to the values of $r
+\in \left\{ 1,2,3 \right\}$. The case $r=0$ can be excluded since we limit
+tracking to a white matter mask. 
+
+The remaining term $p \left( \mathcal{T} \mid \mathcal{H}_r \right)$, is the
+probability of the fODF $\mathcal{T}$ given a rank $r$ and is in the context of
+Bayesian model comparison referred as model evidence. It is derived from $p
+\left( \mathcal{T} \mid \mathcal{H}_r , \Theta_r \right)$, the posterior
+probability of $T$ given an $r$-fiber model with a specific parameter vector
+$\Theta_r$. For the low-rank approximation $\mathcal{T}^{\left( r \right)}$ the
+parameter vector is $\Theta_r \coloneqq \left( \lambda_1 , \mathbf{v}_1 , \dots
+, \lambda_r , \mathbf{v}_r \right)$. 
+
+The overall model evidence does not depend on any particular parameter values
+and can therefore marginalized out 
+\begin{align}
+	p \left( \mathcal{T} \mid \mathcal{H}_r \right) = \int p \left(
+		\mathcal{T} \mid \mathcal{H}_r , \Theta_r 
+	\right) p \left( \Theta_r \mid \mathcal{H}_r  \right) d \Theta_r. 
+	\label{eq:model-evidence}
+\end{align}
+
+Since the calculation of Eq. (\ref{eq:model-evidence}), would require to solve a
+high dimensional integral, we use a approximation via the Bayesian Information
+Criterion (BIC) 
+\[ \text{BIC} = k \ln \left( n \right) - 2 \ln \left( p \left( \mathcal{T} \mid
+\mathcal{H}_r, \hat{\Theta}_r \right) \right), \]
+where $p \left(  \mathcal{T} \mid \mathcal{H}_r , \hat{\Theta}_r \right)$
+corresponds to the likelihood of the rank-$r$ with parameters $\hat{\Theta}_r$
+that best fit the fODF $\mathcal{T}$, $k$ is the number of parameters in
+$\Theta_r$, and $n$ denotes the number of data points to which the model was
+fitted \cite{Schwarz1978}. Under certain conditions the BIC is related to the
+model evidence by \cite{Konishi2008}
+\begin{align}
+	p \left( \mathcal{T} \mid \mathcal{H}_r \right) \approx \exp \left(  -
+		\frac{\text{BIC}}{2}
+\right).
+	\label{eq:BIC-model}
+\end{align}
+This allows us to compute the model evidence in a simple and efficent way and
+will be used in the following work. 
+\subsection{From Model Likelihood to Model Uncertainty}
+To apply the Bayesian framework, we still need to provide an equation for $p
+\left( \mathcal{T} \mid \mathcal{H}_r , \hat{\Theta}_r \right)$. Therefore, we
+use the relative magintude of the corresponding low-rank approximation residual 
+\begin{align}
+	\| \tilde{\mathcal{R}}^{\left( r \right)} \| = \frac{ \| \mathcal{T} -
+	\mathcal{T}^{\left( r \right)} \| }{ \| \mathcal{T} \|} \in \left[ 0,1
+	\right].
+	\label{eq:residual}
+\end{align}
+A zero residual would indicate a crossing fiber model that explains the observed
+fODF perfectly, which is unrealistic in real world applications due to
+measurement noise and other effects that our crossing fiber model does not
+account for. Since modelling all these effects would be extremely challenging,
+we use the Kumaraswamy Probabilistic Density Function (PDF)
+\cite{Kumaraswamy1980}
+\begin{align}
+	f \left( x, a, b \right) \coloneqq ab x^{a-1} \left( 1- x^a
+	\right)^{b-1} \text{ for } x \in \left( 0,1 \right) \text{ and } a,b >
+	0.
+	\label{eq:Kumaraswamy}
+\end{align}
+
+The Kumaraswamy PDF because it has two main benefits. Firstly, it
+provides a considerable flexibility through its parameters $a$ and $b$ on the
+interval. Secondly, it is computational more efficient than related
+$\beta$-distributions. 
+
+For our experiments we have set $p \left(  \mathcal{T} \mid \mathcal{H}_r,
+\hat{\Theta}_r \right) = f \left(  \| \hat{\mathcal{R}}^{\left( r \right)} \| ; 1,20
+\right)$. This leads to a monotonically decreasing probability as the relative
+residual increases, and as it is visible in Fig CSDSF it supports our prior
+assumptions about single fiber regions well.
+
