@@ -62,7 +62,7 @@ This process is repeated $m$ times to create a sample of $m$ bootstraps. For eac
 \subsection{Interaction Between Data and Model Uncertainty}
 \label{sec:data-vs-model-uncertainty}
 
-We hypothesized that data and model uncertainty interact in the sense that, in many voxels, applying model selection to different bootstrap realizations would lead to different choices of the optimal rank $r$. We were also interested in the extent to which the frequencies with which different ranks are selected agree with the probabilities that are assigned by our Bayesian model.
+We hypothesized that data and model uncertainty interact in the sense that, in many voxels, the effect of measurement noise is sufficient to change the selected fiber number. We were also interested in the extent to which the frequencies with which different ranks are selected under bootstrapping agree with the probabilities that are assigned by our Bayesian model.
 
 Therefore, we took 100 bootstraps and applied model
 selection to all of them. Comparing the most
@@ -108,6 +108,7 @@ directions from each bootstrap are assigned to the groups such that the sum of
 distances between the group
 reference and the directions are minimized over all possible assignments. Formally, we minimize the objective function 
 \begin{align}
+  \label{eq:matching-cost}
 	T : \text{Sym} \left( n \right) & \mapsto \mathbb{R}_+ \nonumber \\
 	Z & \rightarrow \sum \| \sgn \left( \langle \mathbf{v}_{Z\left( i
 	\right)}, \bar{\mathbf{v}}_i \rangle \right) \mathbf{v}_{Z\left( i
