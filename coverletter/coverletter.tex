@@ -4,29 +4,24 @@
 %
 \documentclass[a4paper]{article}
 \begin{document}
-Dear editors and reviewers,
-thanks again for the kind invitation to submit an extension to our previous
-paper. Within our previous work we have introduced an averaging model to reduce
-the model uncertainty which arises by the need of selecting a sufficient rank
-$r$. Therefore, we used a Bayesian model comparison to derive a probability for
-each model and fuse the information from all different models into an averaging model. 
+\noindent
+\textbf{Cover letter for the submission ``Model Averaging and Bootstrap Consensus Based Uncertainty Reduction in Diffusion MRI Tractography''}
+\vskip\baselineskip
+Dear editor, dear reviewers,
 
-Within this extension we set our focus to the interaction between model
-uncertainty and data uncertainty, which arises by
-measurement noise. Instead of remeasure patients several times we use wild bootstrapping
-to simulate noised measurements. From the noise measurements we compute the
-averaging and the selection model and investigated the impact of noise to the
-primary directions. We use the information from all bootstraps to create a new
-model which fuses all bootstraps in a consensus model and reduces the data
-uncertainty. Fiber tracking within the new model leads to an significantly
-better Dice score compared to the average and selection model. As a baseline
-comparison we have used a rank-$3$ model. Also compared to the baseline the new models are
-significantly better.
+thank you again for the kind invitation to submit an extended version of our VCBM workshop paper ``Reducing Model Uncertainty in Crossing Fiber Tractography'' to Computer Graphics Forum. We are also thankful for your patience and for giving us the extra time that was needed to refine our original approach, to implement an additional, entirely new method, and to run several new and time-consuming experiments. We are confident that, compared to our previous publication, our current submission provides more than the requested 30\% additional benefit to the readers of your journal.
 
-We apologize for the delayed submission. However, we are confident that our new
-approach is quiet a bit more than the required 30 \% of new work and the
-bootstrap consensus computation was very time intense. 
+Our work improves the accuracy of diffusion MRI tractography by reducing different types of uncertainty. In particular, within our VCBM paper, we introduced model averaging as a means to reduce
+the model uncertainty which arises from having to select a suitable fiber number at each point of the tracking process. Therefore, we used Bayesian model comparison to derive a probability for
+each model, and fuse the information from all options into an average model. 
 
+For our extension, we refined our implementation and experimental setup so that it yields even more accurate results, and provide a more detailed quantitative evaluation. Even more importantly, we introduce an additional approach, which we refer to as bootstrap consensus. It follows a similar information fusion idea as model averaging, but reduces data uncertainty. We demonstrate that it can be combined with model averaging, and that it further improves results. We also use it to study model uncertainty in more detail, in particular, how it interacts with the uncertainty from measurement noise, and how model averaging affects the variance in fiber estimates.
+
+After finishing all these points, we are now looking forward to the constructive feedback from our peers.
+
+Best regards
+
+Johannes Grün and Thomas Schultz
 
 \end{document}
 
