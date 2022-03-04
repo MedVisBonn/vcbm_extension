@@ -208,7 +208,7 @@ own took 11:00. The tracking itself is independent of the preprocessing steps.
 
 \begin{table}
 \centering
-\begin{tabular}{p{4cm}p{1.5cm}}
+\begin{tabular}{p{4cm}p{3cm}}
 	{}  & Time per 1000 streamlines in seconds\\ \hline  
 	Average Model & 27.51\\
 	Consensus Average Model & 28.29\\
@@ -230,16 +230,17 @@ leads to many false positive streamlines.}
 
 \end{table}
 
-For the different models the tracking needs a different amount of time due to
-redoing the tracking if a streamline does meet the filter criteria. The
-selection model has the fastest run time per streamline due to its restricted
+For the different models fiber tracking needs a different amount of time due to
+redoing the tracking if a streamline does not meet the filter criteria. The
+selection model has the fastest run time per 1000 streamline due to its restricted
 flexibility in the fiber directions on voxel level, which leads to less false
 positive streamlines. With the increasing
 variability within the directions the consensus selection model takes 
 longer. Tractography in the rank-$3$ takes the most time, since it has the
 highest flexibility and here the consensus model reduces the false positive
 streamlines, which leads to a noticeable reduction of the runtime.  
-
+Tracking in the averaging model ranges between the selection and the rank-$3$
+model and the consensus averaging model takes a takes a bit longer.  
 
 %%% Local Variables:
 %%% mode: latex
