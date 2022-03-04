@@ -1,30 +1,22 @@
 \section{Results}
 \label{sec:results}
 \subsection{Data}
-The proposed novel consensus model is applied to the selection,
-average and rank $3$ model. The CSD model got replaced by the rank $3$ model
-because it was knocked off compared to the other models by Dice score. Further,
-the CSD used in the model is computational heavy, i.e. computation takes 4 times as long
-as the $4$th order CSD which is used within this paper. This especially matters
-because of the time intense bootstrap creation. 
-
-To evaluate the proposed models, data from the Human
-Connectome Project (HCP) is used \cite{HCP}. The diffusion MR images have a resolution of $1.25$ mm
-isotropic with $145 \times 174 \times 145$ voxels. 
-
-As reference data we use the high quality data, which was published within the
-scope of the Tractseg paper \cite{WASSERTHAL2018239}. This reference data has been
-created by manually refining the segmented full brain fiber tractography. For
-more details we refer to the original literature.
+We evaluate the proposed methods on data from the Human
+Connectome Project (HCP) \cite{HCP}. The diffusion MR images have a resolution of $1.25$ mm
+isotropic with $145 \times 174 \times 145$ voxels and have been acquired with 90 gradient directions each at $b\approx\{1000,2000,3000\}\,\mathrm{s}/\mathrm{mm}^2$.
+%
+We compare our results to reference tractographies which were published within the
+scope of the TractSeg paper \cite{WASSERTHAL2018239}. This reference data has been
+created by manually refining a segmented full brain fiber tractography. %For
+%more details, we refer to the original literature.
 
 All tests were performed on 12 randomly chosen subjects for which such reference tractographies
-exist. For each tract we created seed points by intersecting the reference
+exist. For each tract, we created seed points by intersecting the reference
 fiber bundle with a plane and initialize the tracking process with the direction
 of the fiber bundle at the seed point. This should mimic a directional region of
 interest as it might be defined by an expert on brain anatomy
 \cite{Graumann2016}. We then apply the tracking process until we have as many
-streamlines as the reference tractography. This should guaranty that the
-comparison between the different models is fair.
+streamlines as the reference tractography. This should guarantee a fair comparison between the different models.
 
 \subsection{Qualitative Comparison}
 \begin{figure*}[t]
@@ -66,16 +58,31 @@ comparison between the different models is fair.
 		\caption{Consensus Selection Model}
 \end{subfigure} 
 	\end{minipage}
-\caption{Reconstruction of the right Corticospinal Tract. To make the comparison
-	between the reference and the tractographies more intuitive, we have
-	indicated contour of the reference in each reconstruction with a black
-	line. Within the consensus models the tracking algorithm shows a much higher ability
-to reconstruct the lateral spread compared to the base models. This is
-especially true for the selection model, where the reconstruction in the base
-model misses a lot of the lateral spread.  }
+\caption{Reconstruction of the right corticospinal tract. For a more direct comparison
+	between the reference and the tractographies, we overlaid the contour of the reference on each reconstruction with a black
+	line. The bootstrap consensus (bottom) leads to a much higher ability
+to reconstruct the lateral spread compared to the base models (top). This is
+especially true for the selection model (right).  }
 	\label{fig:CST}
 \end{figure*}
-\begin{figure*}[t]
+
+We compare results from model selection and model averaging, with and without the additional use of the bootstrap consensus. Our previous work \cite{Gruen:2021} included results from standard constrained spherical deconvolution as another baseline. However, this did not achieve competitive results and its computational expense made it difficult to combine it with bootstrapping in the same way as the other approaches. Therefore, we replaced it by a new baseline, which uses low-rank approximation with rank 3 throughout the brain.
+
+As a first experiment, we track the right corticospinal tract (CST). We attempt to reconstruct the reference result, shown in Fig.~\ref{fig:CST}a, from a seed
+region which is indicated with a dashed black line in Fig.~\ref{fig:CST}. To provide further guidance for visual comparison, the outline of the reference is overlaid on the remaining reconstructions as a black contour.
+
+The main risk of a model selection strategy~(f) is premature tract termination due to a local underestimation of the true fiber number. It is obvious that this prevented full recovery of the lateral spread of the CST. Model averaging~(d) and bootstrap consensus~(g) both lead to a more complete reconstruction. The bootstrap consensus leads to an ever denser sampling of the spreading region even when combining it with model averaging or the rank-3 model. An important advantage of model averaging compared to the rank-3 model is the reduction of false positives. This is less obvious in the image, because most of them have been filtered out successfully by the mechanisms in Section~\ref{sec:postprocessing}.
+
+\begin{figure*}
+	\centering
+	\includegraphics[width=\linewidth]{dir}
+	\caption{Reconstructed fiber orientations from the different models. The
+          red box in the left image denotes the position within the brain. Both consensus
+          models (bottom row) agree quite well in most voxels, although results from model averaging (left) and model selection (right) differ, for example, in the voxel highlighted by the red circle.}
+	\label{fig:directions}
+\end{figure*}
+
+\begin{figure*}
 	\centering
 	\begin{minipage}{0.24\linewidth}
 \begin{subfigure}[b]{\linewidth}
@@ -114,68 +121,28 @@ model misses a lot of the lateral spread.  }
 		\caption{Consensus Selection Model}
 \end{subfigure} 
 	\end{minipage}
-	\caption{Reconstruction of the optic radiation (OR) Tract. To make the comparison
-	between the reference and the tractographies more intuitive, we have
-	indicated contour of the reference in each reconstruction with a black
-	line. For the low rank approximation it is visible that the consensus
-	model reduces the false positive streamlines.  The consensus average
-	model has a much higher overlap compared to the base average model and
-	the consensus selection model also increases the overlap. All
-reconstructions have problems to follow the tract in the upper region where we
-have an high curvature.  }
+	\caption{Reconstruction of the optic radiation (OR). Again, we overlaid the contour of the reference on each reconstruction with a black
+          line. The bootstrap consensus increases the overlap with the reference both for model averaging~(d) and selection~(f). For the rank-3 model~(b), it reduces the false positives, even though that effect is less visible due to the streamline filtering during post-processing.}
 	\label{fig:OR}
 \end{figure*}
 
+Inspecting the multi vector fields in Fig.~\ref{fig:directions} provides further insight. The most obvious difference between the average and
+selection model is that, in many voxels, model averaging (top left) leads to a larger number of fibers compared to model selection (top right). This explains the more complete reconstruction that was observed in Fig.~\ref{fig:CST}. 
+On the other hand, applying the bootstrap consensus makes the results from averaging (bottom right) and selection (bottom left) rather similar. The red circle highlights a voxel in which the average and selection model differ, but agree after forming a bootstrap consensus. This illustrates that the bootstrap consensus reduces not just data uncertainty, but also model uncertainty.
 
-As a first experiment we tract the right Cortiscospinal Tract (CST) from a seed
-region, which is indicated with a dashed black line in Fig. \ref{fig:CST}. This tract is
-known for its huge lateral spread, which is difficult to recover. The
-novel proposed consensus approach increases the completeness of the lateral
-spread especially for the selection model dramatically. While the selection
-model is only able to recover a few single streamlines within this area the
-consensus approach improves this area significantly. The consensus model also
-improves the average and low-rank model. Here the spread is present in the base
-model, but get denser by applying the consensus model. Further the streamlines
-seems to be more aligned.
-
-\begin{figure*}[h]
-	\centering
-	\includegraphics[width=\linewidth]{dir}
-	\caption{Reconstructed fiber orientations of the different models, the
-	red box in the left image denotes the position within the brain. Top row
-shows models without consensus bootstrapping, bottom row with consensus
-bootstrapping. Left: Averaging model. Right: selection model. Both consensus
-models coincide in most voxels very well, although the base models differ as it
-is visible in the red circled voxel.}
-	\label{fig:directions}
-\end{figure*}
-
-This observation can be further explained by inspecting the multi vector fields
-on Fig. \ref{fig:directions}. The most obvious difference between the average and
-selection model is, that the average model has three fibers in
-each voxel, while the selection model contains often just one fiber in a voxel.
-For the tracking approach this leads to much more spread as seen in the
-reconstruction of the CST. However, this also leads to much more 'fuzziness'
-within the average model reconstruction. 
-Applying the consensus to the average
-and selection model leads to quiet similar multi vector fields as it can be seen
-in the red circle. Within this voxel the average and selection model are
-dissimilar but the consensus model agrees. This is also the case for the most
-other voxels. However, in some voxels we see differences, as for example in the
-voxel on top of the red circle where the average model contains $2$ fibers,
-while the selection model contains just one fiber. Therefore, we conclude that
-the consensus selection model and the average model are very similar, which is a
-reason for the great improvement of the consensus selection model. 
+Fig.~\ref{fig:OR} provides qualitative results on another bundle, the optic radiation. Model selection~(f) again leads to an incomplete reconstruction of the spread in the posterior part, which is more fully sampled with model averaging. Again, the bootstrap consensus further improves both models.
 
 \subsection{Quantitative Comparison}
-\begin{figure}[t]
+
+For a quantitative evaluation, we reconstructed the corpus callosum (CC), the
+cingulum (CG), the corticospinal tract (CST), the inferior fronto-occipital (IFO)
+and the inferior longitudinal fasciculus (ILF), the optic radiation (OR), and
+the superior longitudinal fasciculus (SLF). To keep the analysis more manageable, we combined the left and right tracts, and merged the subtracts that were defined for CC and SLF in the reference \cite{WASSERTHAL2018239}.
+
+\begin{figure}
 	\centering
 	\includegraphics[width=\linewidth]{comparison-dice}
-	\caption{Boxplots of the dice scores of all patients for all models. All
-	subtracts are preprocessed separately, then merged and the dice scores
-are calculated for a binary mask of the joint subtracts. The
-average dice of the newly proposed consensus model is in almost all tracts greater or
-equal to the dice score of the base model.}
+	\caption{Boxplots of the Dice scores of all subjects for all models. In almost all cases, model averaging yields a higher median Dice than model selection, and the bootstrap consensus improves upon the results of the corresponding base model.}
 	\label{fig:Dice}
 \end{figure}
 
@@ -195,83 +162,55 @@ Consensus Selection Model &  &  &  & {\cellcolor{lightred} 0.001} &
 Low Rank Model &   &
  &   & & 0.494 \\
 \end{tabular}
-\caption{Comparison of different models by Nemenyi post-hoc test. All $p$ values
-below $0.05$ are marked. If the top model is significantly better in green else
-in red. The newly proposed base model shows for the selection and average model
-and significant improvement. Also the average model is significantly better than
-the selection and rank $3$ model, which supports our previous paper further.}
+\caption{Comparison of all models by a Nemenyi post-hoc test. All $p$ values
+below $0.05$ are marked in green if the top model is significantly better, else
+in red. Our model averaging strategy is significantly better than
+model selection and the rank $3$ model. The bootstrap consensus further improves model selection and averaging.}
 	\label{tab:sig}
 \end{table*}
 
-
-For a representative experiment we have reconstructed the corpus callosum (CC), the
-cingulum (CG), the coricospinal tract (CST), the inferior fronto-occipital (IFO)
-and the inferior longitudinal fasciculus (ILF), the optic radiation (OR), and
-the superior longitudinal fasciculus (SLF). In the reference tragtographies, the
-CC and SLF tracts were divided into subtracts, which we have merged into a single
-tract. Further, we have merged the left and right parts of each tract. We have
-evaluated the reconstruction quality by Dice score which is defined as
+We
+evaluated the reconstruction quality by the Dice score which is defined as
 \[ 
 	\text{DICE} = \frac{2 |RD \cap TR |}{|TR| + |RD|} ,
 \]
-where $RD$ denotes the reference data and $TR$ the tracking results
+where $RD$ denotes a binary mask that is derived from the reference data, and $TR$ one from the tracking results
 \cite{SCHILLING2019194}. A high Dice score is desired, as it denotes a high
-overlap and a low overreach. To validate the results further, we applied a
-Friedman test on model level to investigate if a model is significantly better
-than any other model \cite{doi:10.1080/01621459.1937.10503522}. Post-hoc we
-applied Nemenyi test to identify which models are significantly different
-\cite{Nemenyi}.  
+overlap and a low overreach. In Fig.~\ref{fig:Dice}, results from the average,
+selection and low-rank model with and without use of the bootstrap consensus are
+visualized as box plots to show the tract wise distribution (over subjects) of the Dice scores. In most cases, we observe that model averaging yields a more accurate reconstruction compared to model selection, and that the bootstrap consensus increases Dice compared to the corresponding strategy without bootstrapping.
 
+To further quantify these findings, we compared all six models with a
+Friedman test, to investigate whether differences between models are statistically significant \cite{doi:10.1080/01621459.1937.10503522}. Since that was the case ($p\ll 0.001$), we
+applied a Nemenyi post-hoc test to identify which models differ significantly
+\cite{Nemenyi}.
 
-Figure \ref{fig:Dice} and Table \ref{tab:sig} summarize the results of our
-quantitative comparison. In Fig. \ref{fig:Dice}, results from the average,
-selection and low-rank model with and without use of the consensus model are
-visualized using box plots to show the tract wise distribution of the Dice
-scores. In Table \ref{tab:sig} the results of the post hoc Nemenyi tests are
-shown. As a first result we denote that the Friedman test has shown that there
-are significant differences between the models. 
+According to the results of that post-hoc test, which are shown in Table~\ref{tab:sig}, when comparing strategies without the bootstrap consensus,
+model averaging is significantly better than either model selection or the rank-3 model, while neither of the latter two are preferable to the other overall. From this, we conclude that model averaging as it was first described in our previous work \cite{Gruen:2021} provides a significant advantage.
 
-To justify our previous work further, we are interested in the comparison of the
-average, selection and low-rank model. The first impression from Fig.
-\ref{fig:Dice} is that the average model is preferable to the other models and
-that it depends on the tract if we prefer the selection or the low-rank model.
-As it is visible in Table \ref{tab:sig} the improvement of the average model to
-the other models is significant, while neither the selection model nor the
-low-rank model is preferable to
-the other. Therefore, we conclude that the average model, which we have proposed
-within our last paper is significantly better than both other models. 
+Concerning the bootstrap consensus that is introduced in our current work, we observe in Fig.~\ref{fig:Dice} that, in 6 out of 7 tracts, the consensus average model achieves a higher median Dice score than model averaging by itself, that the consensus selection model always beats model selection alone, and that the consensus rank-3 model has a higher median Dice in 4 out of 7
+tracts. According to Table~\ref{tab:sig}, these improvements are significant for model averaging and selection, but not for the rank-3 model. We believe this is due to the fact that the main advantage there is to reduce false positive streamlines, most of which are however successfully filtered out before computing the Dice.
 
-Within this work, we are more interested in the consensus model. Therefore, we
-investigate if the improvement is significant between the model with and without
-the application of the consensus. From Fig. \ref{fig:Dice} we can conclude, that
-in 6 out of 7 tracts the consensus average model has an higher average Dice
-score than the average model, that the consensus selection model has always an
-higher Dice score, and that the consensus low-rank model has in 4 out of 7
-tracts an higher Dice score. These changes are significant for the average and
-selection model, while they are not significant for the low-rank model. 
+Comparing the consensus models with each other, Fig.~\ref{fig:Dice} suggest that the consensus average and selection models are quite similar, and both are
+preferable compared to the consensus rank-3 model. This is confirmed by the significance tests. In terms of practical utility, it is relevant to put these results in context with the computational effort of the different approaches.
 
-Further, we want to compare the consensus models against each other. From Fig
-\ref{fig:Dice} it seems that the consensus average and selection model are
-preferable compared to the consensus low-rank model. Both models are equally
-good compared by the mean dice score. This gets justified by the significance
-tests. The consensus average as well as the consensus selection model are
-significantly better than the consensus low-rank model. 
-
-Overall we have shown that the consensus model improves our previously proposed
-models significantly. However, the improvement by average Dice score is only for
-the selection model large. 
+%Overall we have shown that the consensus model improves our previously proposed
+%models significantly. However, the improvement by average Dice score is only for
+%the selection model large. 
 \subsection{Computational Effort}
-All experiments were computed on an Intel i9 with 3.3 GHz and 64 GB RAM. The
-following durations are denoted in h:min:s or min:s.
+All experiments were computed on an Intel i9 with 3.3~GHz and 64~GB RAM. The
+following durations are denoted in (h:)min:s.
 
 The computation of a single bootstrap data sample took 1:10 on a single core,
-multi-threaded fourth order fODF estimation took 4:33, the computation of the
-selection model took 1:10, the computation of the averaging model took 1:30 and
-the computation of the rank-3 model 0:40. The calculation of 100 bootstraps took
-therefore 8:08:00, using all threads to create the bootstrap data as well as the
+multi-threaded fourth-order fODF tensor estimation took 4:33, the computation of the multi-vector fields took 0:40 with the rank-3 model, 1:10 with model selection, 1:30 with model averaging. Therefore, the calculation of 100 bootstraps took 8:08:00, using all CPU cores to create the bootstrap data as well as the
 models. This also includes the computation of the consensus model, which on its
 own took 11:00. The tracking itself is independent of the preprocessing steps.
-It took approximately 3:30 for a bundle such it is shown in Figure
-\ref{fig:Dice} on a single thread including postprocessing.  
+It took approximately 3:30 for a bundle such as it is shown in Figure
+\ref{fig:Dice} using a single thread, including post-processing.  
 
 
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../main"
+%%% End:
