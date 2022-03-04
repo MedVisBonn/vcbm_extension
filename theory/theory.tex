@@ -33,7 +33,7 @@
 
 We describe the variability that arises from noise in the dMRI measurement as data uncertainty. Taking measurements repeatedly is a natural way to estimate it, but is usually not feasible in practice. Therefore, different bootstrapping techniques have been established to estimate data uncertainty based on a single DTI or HARDI acquisition \cite{Chung:2006,Jones:2008}.
 
-We summarize one such bootstrapping approach in Section~\ref{sec:wild-bootstrap}, and use it in two ways: In Section~\ref{sec:data-vs-model-uncertainty}, we investigate the interaction between data and model uncertainty, by studying the variance of the selected model under bootstrapping. In Section~\ref{sec:bootstrap-consensus}, we define a bootstrap consensus for the joint reduction of data and measurement uncertainty. As a by-product, this allows us to quantify and visualize the effect of model selection and averaging on the variability of fiber direction estimates in Section~\ref{sec:vis-uncertainty-reduction}.
+We summarize one such bootstrapping approach in Section~\ref{sec:wild-bootstrap}, and use it in two ways: In Section~\ref{sec:data-vs-model-uncertainty}, we investigate the interaction between data and model uncertainty, by studying the variance of the selected model under bootstrapping. In Section~\ref{sec:bootstrap-consensus}, we define a bootstrap consensus for the joint reduction of data and measurement uncertainty. As a by-product, this allows us to investigate the effect of model selection and averaging on the variability of fiber direction estimates in Section~\ref{sec:vis-uncertainty-reduction}.
 
 \subsection{Wild Bootstrapping}
 \label{sec:wild-bootstrap}
@@ -145,7 +145,7 @@ We use the Watson distribution for two reasons: First, it is antipodally symmetr
 which fits the fact that in Eq.~(\ref{eq:low-rank}), directions $\pm \mathbf{v}$
 are indistinguishable. Second, its dispersion parameter $\kappa$ allows us to quantify the variability in the fiber directions within each group. $\kappa$ can be re-parameterized to obtain an orientation dispersion index
 \[ \mathrm{OD} = \frac{2}{\pi} \arctan \left( \frac{1}{\kappa} \right) \]
-that is normalized to $[0,1]$ and indicates higher variability with higher values \cite{dispersionParameter}.
+that is normalized to $(0,1)$ and indicates higher variability with higher values \cite{dispersionParameter}.
 
 Fig.~\ref{fig:dispersion} visualizes orientation dispersion of the primary fiber that was estimated with model selection, model averaging, or a rank-3 approximation. In particular in the regions in which model selection picks a single fiber (cf.\ Fig.~\ref{fig:selected-uncertainty}; this includes parts of the corpus callosum and corticospinal tract), this results in lower dispersion 
 compared to the rank-$3$ model, confirming our expectation that estimating a single fiber direction is less susceptible to noise than estimating multiple directions from the same data. The same regions still have reduced dispersion after model averaging, confirming its effectiveness for uncertainty reduction.

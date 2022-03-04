@@ -7,20 +7,20 @@
   uncertainty within the tractography pipeline. The first one is the
   model uncertainty that arises in crossing fiber tractography, from
   having to estimate the number of relevant fiber compartments in each
-  voxel. The second one is the data uncertainty that arises from
-  measurement noise. We propose a mathematical framework to estimate
-  model uncertainty, and we reduce this type of uncertainty with a
-  model averaging approach that combines the fiber direction estimates
-  from all candidate models, weighted by the posterior probability of
-  the respective model. We use bootstrapping to estimate data
-  uncertainty, and consolidate the fiber direction estimates from all
-  bootstraps into a consensus model. We observe that, in most voxels,
-  a traditional model selection strategy selects different models
-  across bootstraps. In this sense, the bootstrap consensus also
-  reduces model uncertainty. Either approach increases the accuracy of
-  crossing fiber tractography in multiple subjects, but model
-  averaging is much more efficient computationally. Combining both
-  ideas achieved the highest overall accuracy.
+  voxel. We propose a mathematical framework to estimate model
+  uncertainty, and we reduce this type of uncertainty with a model
+  averaging approach that combines the fiber direction estimates from
+  all candidate models, weighted by the posterior probability of the
+  respective model. The second source of uncertainty is measurement
+  noise. We use bootstrapping to estimate this data uncertainty, and
+  consolidate the fiber direction estimates from all bootstraps into a
+  consensus model. We observe that, in most voxels, a traditional
+  model selection strategy selects different models across
+  bootstraps. In this sense, the bootstrap consensus also reduces
+  model uncertainty. Either approach significantly increases the accuracy of
+  crossing fiber tractography in multiple subjects, and combining them
+  provides an additional benefit. However, model averaging is much more
+  efficient computationally.
   
   \textbf{Keywords:} diffusion MRI, tractography, uncertainty, model averaging, bootstrapping
 %-------------------------------------------------------------------------
