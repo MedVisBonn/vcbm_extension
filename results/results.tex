@@ -209,18 +209,18 @@ own took 11:00. The tracking itself is independent of the preprocessing steps.
 \begin{table}
 \centering
 \begin{tabular}{p{4cm}p{1.5cm}}
-	{}  & Time per streamline in seconds\\ \hline  
-Average Model & 0,028\\
-Consensus Average Model & 0,028\\
-Selection Model & 0,023\\
-Consensus Average Model & 0,025 \\
-Low Rank Model &  0,043\\
-Consensus Low Rank Model & 0,036\\
+	{}  & Time per 1000 streamlines in seconds\\ \hline  
+	Average Model & 27.51\\
+	Consensus Average Model & 28.29\\
+	Selection Model & 23.70\\
+	Consensus Average Model & 24.59 \\
+	Low Rank Model &  43.27\\
+	Consensus Low Rank Model & 35.90\\
 
 
 \end{tabular}
 
-\caption{Comparison of the average time needed to create a single streamline of
+\caption{Comparison of the average time needed to reconstruct 1000 streamlines of
 	the right CST in Fig. \ref{fig:CST}. The differences are due to
 	redoing the tracking for a seed if the streamline is filtered out. The
 	selection model needs the lowest amount of time to track a streamline
