@@ -69,7 +69,7 @@ especially true for the selection model (right).  }
 We compare results from model selection and model averaging, with and without the additional use of the bootstrap consensus. Our previous work \cite{Gruen:2021} included results from standard constrained spherical deconvolution as another baseline. However, this did not achieve competitive results and its computational expense made it difficult to combine it with bootstrapping in the same way as the other approaches. Therefore, we replaced it by a new baseline, which uses low-rank approximation with rank 3 throughout the brain.
 
 As a first experiment, we track the right corticospinal tract (CST). We attempt to reconstruct the reference result, shown in Fig.~\ref{fig:CST}a, from a seed
-region which is indicated with a dashed black line in Fig.~\ref{fig:CST}. To provide further guidance for visual comparison, the outline of the reference is overlaid on the remaining reconstructions as a black contour.
+region which is indicated with a dashed black line in Fig.~\ref{fig:CST}a. To provide further guidance for visual comparison, the outline of the reference is overlaid on the remaining reconstructions as a black contour.
 
 The main risk of a model selection strategy~(f) is premature tract termination due to a local underestimation of the true fiber number. It is obvious that this prevented full recovery of the lateral spread of the CST. Model averaging~(d) and bootstrap consensus~(g) both lead to a more complete reconstruction. The bootstrap consensus leads to an ever denser sampling of the spreading region even when combining it with model averaging or the rank-3 model. An important advantage of model averaging compared to the rank-3 model is the reduction of false positives. This is less obvious in the image, because most of them have been filtered out successfully by the mechanisms in Section~\ref{sec:postprocessing}.
 
@@ -207,6 +207,27 @@ models. This also includes the computation of the consensus model, which on its
 own took 11:00. The tracking itself is independent of the preprocessing steps.
 It took approximately 3:30 for a bundle such as it is shown in Figure
 \ref{fig:Dice} using a single thread, including post-processing.  
+
+\begin{table}
+\centering
+\begin{tabular}{p{4cm}p{2cm}}
+	{}  & \rot{Time per Streamline}\\ \hline  
+Time per Streamline &  0,043266442408073  \\
+h & 0,035900104058273  \\
+h & 0,027518216888127 \\
+h & 0,02828546562228  \\
+h & 0,022701475595914  \\
+h & 0,024597249508841
+
+
+\end{tabular}
+
+\caption{Comparison of all models by a Nemenyi post-hoc test. All $p$ values
+below $0.05$ are marked in green if the top model is significantly better, else
+in red. Our model averaging strategy is significantly better than
+model selection and the rank $3$ model. The bootstrap consensus further improves model selection and averaging.}
+	\label{tab:sig}
+\end{table}
 
 
 
