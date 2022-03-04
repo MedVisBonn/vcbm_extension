@@ -32,7 +32,7 @@ comparison between the different models is fair.
 	\begin{minipage}{0.19\linewidth}
 \begin{subfigure}[b]{\linewidth}
 		\includegraphics[width=\linewidth]{cst-ref-c}
-		\caption{Low rank 3 model {\color{white} avdsdsds} }
+		\caption{Reference {\color{white} avdsdsds} }
 	\end{subfigure}
 \end{minipage}
 \hfil
@@ -80,7 +80,7 @@ model misses a lot of the lateral spread.  }
 	\begin{minipage}{0.24\linewidth}
 \begin{subfigure}[b]{\linewidth}
 		\includegraphics[width=\linewidth]{or-ref-c}
-		\caption{Low rank 3 model {\color{white} avdsdsds} }
+		\caption{Reference {\color{white} avdsdsds} }
 	\end{subfigure}
 \end{minipage}
 \hfil
@@ -174,7 +174,7 @@ reason for the great improvement of the consensus selection model.
 	\caption{Boxplots of the dice scores of all patients for all models. All
 	subtracts are preprocessed separately, then merged and the dice scores
 are calculated for a binary mask of the joint subtracts. The
-average dice of the newly proposed consensus model is in all tracts greater or
+average dice of the newly proposed consensus model is in almost all tracts greater or
 equal to the dice score of the base model.}
 	\label{fig:Dice}
 \end{figure}
@@ -212,7 +212,7 @@ CC and SLF tracts were divided into subtracts, which we have merged into a singl
 tract. Further, we have merged the left and right parts of each tract. We have
 evaluated the reconstruction quality by Dice score which is defined as
 \[ 
-	DICE = \frac{2 |RD \cap TR |}{|TR| + |RD|} ,
+	\text{DICE} = \frac{2 |RD \cap TR |}{|TR| + |RD|} ,
 \]
 where $RD$ denotes the reference data and $TR$ the tracking results
 \cite{SCHILLING2019194}. A high Dice score is desired, as it denotes a high
