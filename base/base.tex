@@ -77,12 +77,13 @@ $p
 \end{align}
 which is defined on the correct interval $[0,1]$, and can be tuned to achieve the correct qualitative behavior of decreasing with increasing $\| \tilde{\mathcal{R}}^{\left( r \right)} \|$, at an empirically plausible slope.
 
-As illustrated in \cite{Gruen:2021}, setting $a=1,b=20$ leads to a fraction of two and three fiber voxels that matches estimates from the literature, and to the detection of single fiber voxels in regions that are widely assumed to contain a single dominant orientation.
+As illustrated in \cite{Gruen:2021}, setting $a=1$, $b=20$ leads to a fraction of two and three fiber voxels that matches estimates from the literature, and to the detection of single fiber voxels in regions that are widely assumed to contain a single dominant orientation.
 
 \subsection{Computing Tracking Directions from Alternative Models}
 \label{sec:computing-tracking-directions}
 
-As in our previous work \cite{Gruen:2021}, we fuse the information from tensor approximations with different ranks $r \in \left\{ 1,\dots , 3 \right\}$ by taking a weighted sum of the
+As in our previous work \cite{Gruen:2021}, we fuse the information from tensor
+approximations with different ranks $r \in \left\{ 1,2 , 3 \right\}$ by taking a weighted sum of the
 corresponding parameters $\mathbf{v}_i^{\left( r \right)}$ and
 $\lambda_i^{\left( r \right)}$ with weights given by the above-defined posterior probabilities. We refer to this strategy as \emph{model averaging.}
 

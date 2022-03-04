@@ -11,7 +11,11 @@ Our work builds on a previously described low-rank approximation of fODF tensors
 	\label{eq:sd-min}
 \end{align}
 where 
-$M$ denotes a convolution matrix that is based on the dMRI response from a single fiber compartment, vector $S$ contains all dMRI measurements in a given voxel. A set of $r$ fiber directions is then estimated as unit vectors $\mathbf{v}_i \in \mathbb{R}^3$ with volume fractions $\lambda_i$ ($i=1,\ldots,r$) via a rank-$r$
+$M$ denotes a convolution matrix that is based on the dMRI response from a
+single fiber compartment, vector $S$ contains all dMRI measurements in a given
+voxel. A set of $r$ fiber directions is then estimated as unit vectors
+$\mathbf{v}_i \in \mathbb{R}^3$ with volume fractions $\lambda_i$ for $i \in
+\left\{ 1 , \dots , r \right\}$ via a rank-$r$
 approximation 
 \begin{align}
 	\mathcal{T}^{\left( r \right)} = \sum_{i=1}^r \lambda_i \mathbf{v}_i

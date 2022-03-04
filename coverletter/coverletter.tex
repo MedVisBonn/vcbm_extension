@@ -4,13 +4,30 @@
 %
 \documentclass[a4paper]{article}
 \begin{document}
-Dear XY,
+Dear editors and reviewers,
 thanks again for the kind invitation to submit an extension to our previous
-paper. Within this extension we have investigated the impact of noise
-to the diffusion MRI pipeline. Therefore, we have employed wild bootstrapping to
-simulate noise without redoing the any measurements. Then we have investigated
-the influence of noise to the models we have proposed within our previous paper.
-It is visible that the 
+paper. Within our previous work we have introduced an averaging model to reduce
+the model uncertainty which arises by the need of selecting a sufficient rank
+$r$. Therefore, we used a Bayesian model comparison to derive a probability for
+each model and fuse the information from all different models into an averaging model. 
+
+Within this extension we set our focus to the interaction between model
+uncertainty and data uncertainty, which arises by
+measurement noise. Instead of remeasure patients several times we use wild bootstrapping
+to simulate noised measurements. From the noise measurements we compute the
+averaging and the selection model and investigated the impact of noise to the
+primary directions. We use the information from all bootstraps to create a new
+model which fuses all bootstraps in a consensus model and reduces the data
+uncertainty. Fiber tracking within the new model leads to an significantly
+better Dice score compared to the average and selection model. As a baseline
+comparison we have used a rank-$3$ model. Also compared to the baseline the new models are
+significantly better.
+
+We apologize for the delayed submission. However, we are confident that our new
+approach is quiet a bit more than the required 30 \% of new work and the
+bootstrap consensus computation was very time intense. 
+
+
 \end{document}
 
 
