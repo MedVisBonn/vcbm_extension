@@ -1,9 +1,17 @@
 \section{Model Averaging and Selection}\label{sec:Models}
 
-Our first approach to uncertainty reduction in dMRI tractography addresses the model uncertainty that arises from having to select the rank $r$ in Eq.~(\ref{eq:low-rank}). Underestimating $r$ will miss important fiber directions, while overestimating it confounds the tracking with spurious directions and increases the variance of the true fiber estimates. We approach this choice using Bayesian model comparison in Section~\ref{sec:model-comparison}, and derive the model averaging and model selection approaches from it in Section~\ref{sec:computing-tracking-directions}.
+Our first approach to uncertainty reduction in dMRI tractography (Fig. \ref{fig:base_overview}) addresses the model uncertainty that arises from having to select the rank $r$ in Eq.~(\ref{eq:low-rank}). Underestimating $r$ will miss important fiber directions, while overestimating it confounds the tracking with spurious directions and increases the variance of the true fiber estimates. We approach this choice using Bayesian model comparison in Section~\ref{sec:model-comparison}, and derive the model averaging and model selection approaches from it in Section~\ref{sec:computing-tracking-directions}.
 
 \subsection{Model Comparison in a Bayesian Framework}
 \label{sec:model-comparison}
+\begin{figure*}[t]
+	\centering
+	\includegraphics[width=\linewidth]{base_overview_scheme}
+	\caption{Computation of tracking directions via model averaging. For a given fODF $\mathcal{T}$, low-rank approximations with ranks $r \in \left\{ 1,2 , 3 \right\}$ are computed and their probabilities evaluated using the Bayesian framework described in Section \ref{sec:model-comparison}. The directions of the approximations are then aligned before an average is taken that minimizes the overall sum of angles between the resulting
+weighted means $\mathbf{v}_i$ and their corresponding $\mathbf{v}_i^{\left( r
+\right)}$. The final model is a sum of the three models weighted by posterior probability $p \left( \mathcal{T} \mid \mathcal{H}_r \right)$, as shown in Section \ref{sec:computing-tracking-directions}.}
+	\label{fig:base_overview}
+\end{figure*}
 In Bayesian model comparison, we are interested in the
 posterior probability $p \left( \mathcal{H}_r \mid \mathcal{T} \right)$, where
 $\mathcal{H}_r$ denotes the hypothesis that extracting $r$ fibers is optimal for a given fODF $\mathcal{T}$. Using Bayes' theorem of
