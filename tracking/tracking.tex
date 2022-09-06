@@ -5,32 +5,31 @@
 Our work reduces the data and model uncertainty that affects local fiber directions. Despite this, the fundamental uncertainty that arises from partial volume effects remains, as discussed in Section~\ref{sec:related}: Even if multiple fiber directions were estimated with perfect accuracy, it remains  uncertain which of them should be followed in each step of the tracking. In regions where tracts fan out, there might even be multiple valid ways to continue them. Previous work used deterministic tracking with a branching mechanism to handle these situations \cite{Ankele:CARS2017}. In our work, we follow a probabilistic approach instead. However, its probabilistic nature is limited to deciding which of multiple fiber compartments should be followed next. Unlike most other probabilistic tractography methods \cite{BEHRENS2007144,Jones:2008}, it does not sample a distribution of fiber directions \emph{within} each fiber compartment, since this type of uncertainty is reduced by our bootstrap consensus.
 
 Our tracking acts on multi-vector fields that are pre-computed using any of the methods proposed above. For a given seed point, the streamline is grown iteratively in both directions using Euler
-integration. The multi-vector fields are interpolated to the current position trilinearly. Therefore,
-we have to solve another matching problem, since we have to decide which
+integration\added{, which was sufficient to reconstruct even the curved part of the cingulum bundle at a step size of $0.9\,\mathrm{mm}$}. The multi-vector fields are interpolated to the current position. \added{To keep computational effort manageable, we use trilinear interpolation. It requires solving} another matching problem, since we have to decide which
 directions belong together during interpolation. Assuming
 smoothness between the voxels, we use the $r$ directions from the last
 interpolation step as initial group means $\bar{\mathbf{v}}_i$, $i \in \left\{ 1\dots r 
-\right\}$ and assign the vectors from all grid points that are involved in the current interpolation by minimizing the same cost function as in Eq.~(\ref{eq:matching-cost}). After all assignments have been made, we compute new group means from them and iterate the assignment once. To reduce the computational expense, we cache the final assignments, so that they only need to be computed once for each voxel through which we are tracking.
+\right\}$ and assign the vectors from all grid points that are involved in the current interpolation by minimizing the same cost function as in Eq.~(\ref{eq:matching-cost}). \added{If fewer than three vectors are available due to model selection, zero vectors replace the missing ones for the purpose of interpolation.} After all assignments have been made, we compute new group means from them and iterate the assignment once. To reduce the computational expense, we cache the final assignments, so that they only need to be computed once for each voxel through which we are tracking.
 
-\begin{figure}
-	\centering
-	\begin{subfigure}[b]{0.45\linewidth}
-		\includegraphics[width=\linewidth]{FACT}
-		\caption{Nearest neighbor interpolation}
-	\end{subfigure}
-	\begin{subfigure}[b]{0.45\linewidth}
-		\includegraphics[width=\linewidth]{Trilinear}
-		\caption{Trilinear interpolation}
-	\end{subfigure}
-	\caption{Comparison of nearest neighbor interpolation and trilinear
-	interpolation in the anterior part of the cingulum. Seed points are marked
-	by the white dots in the upper right corner. The trilinear interpolation
-        is superior with respect to following the tract curvature, and remaining within the correct tract.}
+% \begin{figure}
+% 	\centering
+% 	\begin{subfigure}[b]{0.45\linewidth}
+% 		\includegraphics[width=\linewidth]{FACT}
+% 		\caption{Nearest neighbor interpolation}
+% 	\end{subfigure}
+% 	\begin{subfigure}[b]{0.45\linewidth}
+% 		\includegraphics[width=\linewidth]{Trilinear}
+% 		\caption{Trilinear interpolation}
+% 	\end{subfigure}
+% 	\caption{Comparison of nearest neighbor interpolation and trilinear
+% 	interpolation in the anterior part of the cingulum. Seed points are marked
+% 	by the white dots in the upper right corner. The trilinear interpolation
+%         is superior with respect to following the tract curvature, and remaining within the correct tract.}
 
-	\label{fig:interpolation-comparison}
-\end{figure}
+% 	\label{fig:interpolation-comparison}
+% \end{figure}
 
-Our previous work \cite{Gruen:2021} avoided the complications from having to find such matchings by simply using nearest neighbor interpolation. Fig.~\ref{fig:interpolation-comparison} illustrates that trilinear interpolation permits a more accurate reconstruction of curved tracts, in this example, the anterior part of the cingulum. Starting from seeds (grey spheres) on the upper right, it is obvious that trilinear interpolation~(b) permits a larger number of streamlines to successfully track through the strongly curved part of the cingulum. Moreover, with nearest neighbor interpolation, some streamlines get diverted into the forceps minor of the corpus callosum.
+% Our previous work \cite{Gruen:2021} avoided the complications from having to find such matchings by simply using nearest neighbor interpolation. Fig.~\ref{fig:interpolation-comparison} illustrates that trilinear interpolation permits a more accurate reconstruction of curved tracts, in this example, the anterior part of the cingulum. Starting from seeds (grey spheres) on the upper right, it is obvious that trilinear interpolation~(b) permits a larger number of streamlines to successfully track through the strongly curved part of the cingulum. Moreover, with nearest neighbor interpolation, some streamlines get diverted into the forceps minor of the corpus callosum.
 
 %Further, the local optimal
 %configuration is cached. Using this, we only have to calculate the assignments
@@ -56,20 +55,20 @@ Given the interpolated directions $\mathbf{v}_i$ at the current point, we
 reorient them to have a non-negative inner product with the current tracking
 direction $\mathbf{w}$. We select one of the $r$ possible directions by assigning each unit direction $\mathbf{v}_i$ with volume fraction
 $\lambda_i$ for $i \in \left\{ 1 , \dots , r \right\}$ a probability following the probability
-scheme 
-\[
+scheme
+\begin{equation}
+  \label{eq:probabilistic-selection}
 	p \left( \mathbf{v}_i \right) \coloneqq \frac{ \mathbb{1}_{\lbrace\theta_i <
 		\frac{1}{4} \pi \rbrace} \lambda_i \cos \left( \left( \frac{9}{2\sqrt{2
 \pi}} \theta_i \right)^2 \right)^2}{\sum_j \mathbb{1}_{\lbrace\theta_j <
 		\frac{1}{4} \pi \rbrace} \lambda_j \cos \left( \left( \frac{9}{2\sqrt{2
-\pi}} \theta_j \right)^2 \right)^2 }, 
-\]
+\pi}} \theta_j \right)^2 \right)^2 },   
+\end{equation}
 where $\theta_i$ denotes the angle between the possible direction $\mathbf{v}_i$
-and the current direction $\mathbf{w}$. 
-
-This assigns almost the same probability to directions with angles below 20 degrees, which coincides with the limited angular resolution of
-spherical deconvolution \cite{TOURNIER20071459}. Further, the maximum angle is
-restricted to $45$ degrees, to limit diversions into neighboring tracts. We note that the use of trilinear interpolation allowed us to make this threshold slightly stricter compared to our prior work \cite{Gruen:2021}.
+and the current direction $\mathbf{w}$. \added{The indicator function $\mathbb{1}_{\lbrace\theta_i <\frac{1}{4} \pi \rbrace}$ restricts the maximum angle to $45$ degrees, to limit diversions into neighboring tracts.} We note that the use of trilinear interpolation allowed us to make this threshold slightly stricter compared to our prior work \cite{Gruen:2021}.
+%
+Equation~(\ref{eq:probabilistic-selection}) assigns almost the same probability to directions with angles below 20 degrees, which coincides with the limited angular resolution of
+spherical deconvolution \cite{TOURNIER20071459}. 
 
 This iterative algorithm proceeds until we either reach a region with an overall white matter volume fraction below $0.3$, or the summed angle over the last $30$ mm is greater than
 $130$ degrees. This prevents streamlines from going back and forth. In the latter case,

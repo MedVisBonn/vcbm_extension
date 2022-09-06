@@ -1,15 +1,15 @@
 \section{Model Averaging and Selection}\label{sec:Models}
 
-Our first approach to uncertainty reduction in dMRI tractography (Fig. \ref{fig:base_overview}) addresses the model uncertainty that arises from having to select the rank $r$ in Eq.~(\ref{eq:low-rank}). Underestimating $r$ will miss important fiber directions, while overestimating it confounds the tracking with spurious directions and increases the variance of the true fiber estimates. We approach this choice using Bayesian model comparison in Section~\ref{sec:model-comparison}, and derive the model averaging and model selection approaches from it in Section~\ref{sec:computing-tracking-directions}.
+Our first approach to uncertainty reduction in dMRI tractography \added{(Fig. \ref{fig:base_overview})} addresses the model uncertainty that arises from having to select the rank $r$ in Eq.~(\ref{eq:low-rank}). Underestimating $r$ will miss important fiber directions, while overestimating it confounds the tracking with spurious directions and increases the variance of the true fiber estimates. We approach this choice using Bayesian model comparison in Section~\ref{sec:model-comparison}, and derive the model averaging and model selection approaches from it in Section~\ref{sec:computing-tracking-directions}.
 
 \subsection{Model Comparison in a Bayesian Framework}
 \label{sec:model-comparison}
 \begin{figure*}[t]
 	\centering
 	\includegraphics[width=\linewidth]{base_overview_scheme}
-	\caption{Computation of tracking directions via model averaging. For a given fODF $\mathcal{T}$, low-rank approximations with ranks $r \in \left\{ 1,2 , 3 \right\}$ are computed and their probabilities evaluated using the Bayesian framework described in Section \ref{sec:model-comparison}. The directions of the approximations are then aligned before an average is taken that minimizes the overall sum of angles between the resulting
+	\caption{\added{Computation of tracking directions via model averaging. For a given fODF $\mathcal{T}$, low-rank approximations with ranks $r \in \left\{ 1,2 , 3 \right\}$ are computed and their probabilities evaluated using the Bayesian framework described in Section \ref{sec:model-comparison}. The directions of the approximations are then aligned before an average is taken that minimizes the overall sum of angles between the resulting
 weighted means $\mathbf{v}_i$ and their corresponding $\mathbf{v}_i^{\left( r
-\right)}$. The final model is a sum of the three models weighted by posterior probability $p \left( \mathcal{T} \mid \mathcal{H}_r \right)$, as shown in Section \ref{sec:computing-tracking-directions}.}
+\right)}$. The final model is a sum of the three models weighted by posterior probability $p \left( \mathcal{T} \mid \mathcal{H}_r \right)$, as shown in Section \ref{sec:computing-tracking-directions}.}}
 	\label{fig:base_overview}
 \end{figure*}
 In Bayesian model comparison, we are interested in the
@@ -22,7 +22,8 @@ conditional probability, the posterior probability can be rewritten as
 	\right) p \left(  \mathcal{H}_r \right), 
 	\label{eq:Bayes}
 \end{align}
-where $p \left(  \mathcal{H}_r \right)$ is our prior belief that rank $r$ is
+where \added{the common normalizing factor can be omitted when taking ratios of $p \left( \mathcal{H}_r \mid \mathcal{T} \right)$ for different $r$, and}
+$p \left(  \mathcal{H}_r \right)$ is our prior belief that rank $r$ is
 suitable, without considering the fODF. Since literature values for the prevalence of different $r$ over the white matter vary  \cite{BEHRENS2007144,Jeurissen:2012, Schultz:MICCAI12}, we use a
 non-informative prior that assigns equal prior probability to the values of $r
 \in \left\{ 1,2,3 \right\}$. The case $r=0$ can be excluded since we limit
@@ -101,7 +102,7 @@ select the one that minimizes the overall sum of angles between the resulting
 weighted means $\mathbf{v}_i$ and their corresponding $\mathbf{v}_i^{\left( r
 \right)}$.
 
-Previous tractography algorithms that were based on low-rank tensor approximation \cite{Ankele:CARS2017} used a different strategy, that we refer to as \emph{model selection:} They determined an optimal rank $r \in \left\{ 1,\dots , 3 \right\}$ in each integration step and used the resulting set of
+Previous tractography algorithms that were based on low-rank tensor approximation \cite{Ankele:CARS2017} used a different strategy, that we refer to as \emph{model selection:} They determined an optimal rank $r \in \left\{ 1, \added{2}, 3 \right\}$ in each integration step and used the resulting set of
 directions $\mathbf{v}_i$ for tracking. In cases where several ranks have non-negligible probabilities, this introduces an uncertainty that model averaging aims to reduce. We include this approach
 as a baseline in our experiments. To enable a direct comparison, we select the model with the highest probability $p \left(
  \mathcal{H}_r \mid \mathcal{T} \right)$ according to the same Bayesian framework.

@@ -93,6 +93,13 @@
 \NewDocumentCommand{\rot}{O{45} O{1em} m}{\makebox[#2][l]{\rotatebox{#1}{#3}}}%
 \definecolor{lightgreen}{RGB}{144,238,144}
 \definecolor{lightred}{RGB}{255,204,203}
+
+% highlight new material
+\usepackage{xcolor}
+\providecolor{added}{rgb}{0,0,1}
+\newcommand{\added}[1]{{\color{added}{}#1}}
+%\newcommand{\added}[1]{#1}
+
 %\author[Submission ID 1025]
 %{\parbox{\textwidth}{\centering Submission ID 1025}\\{\parbox{\textwidth}{\centering ***}}}
  \author[J.~Grün et al.]

@@ -45,13 +45,14 @@ Wild bootstrapping uses model residuals to estimate noise. We combine it with th
 $\hat{\mathcal{T}}$ via Eq. (\ref{eq:sd-min}), and calculating the residual 
 \[ \hat{\varepsilon} = S - M\hat{\mathcal{T}} .\] 
 A new bootstrap realization is calculated by 
-\[ y^{*} = M\hat{\mathcal{T}}  + \hat{\varepsilon} v , \]
+\[ y^{*} = M\hat{\mathcal{T}}  + \hat{\varepsilon}\added{\odot} v , \]
 where $v$ denotes a random draw from the $n$ dimensional Rademacher distribution
-\[ f \left( \mathbf{k} \right) \coloneqq  \begin{cases} \nicefrac{1}{2} \text{ if }
+\[ f \left( \added{\mathbf{k}_i} \right) \coloneqq  \begin{cases} \nicefrac{1}{2} \text{ if }
 		\mathbf{k}_i=-1 \\
 		\nicefrac{1}{2} \text{ if } \mathbf{k}_i=1 \\
 		0 \text { otherwise } 
 \end{cases} \text{ for } i \in \left\{ 1\dots n \right\} . \]
+\added{and $\odot$ denotes component-wise multiplication.}
 
 This process is repeated $m$ times to create a sample of $m$ bootstraps. For each bootstrap realization, we fit a new fODF and compute its low-rank approximations.
 
@@ -133,13 +134,12 @@ Our main motivation for using model selection or averaging instead of always ext
 distribution to the grouped directions. The Watson distribution is defined as  \cite{jupp_mardia_1999}
 \begin{align*}
 	f : \mathbb{S}^2 & \longrightarrow  \mathbb{R}_+ \\
-	\mathbf{x} & \longmapsto  M \left( \frac{1}{2}, \frac{3}{2} , \kappa
-	\right)^{-1} \exp \left(  \kappa
+	\mathbf{x} & \longmapsto \added{\frac{1}{M \left( \frac{1}{2}, \frac{3}{2} , \kappa \right)}} \exp \left(  \kappa
 	\left( \mathbf{\mu}^T \mathbf{x} \right)^2 
 	\right) 	,  
 \end{align*}
 where $\kappa$ is the dispersion parameter, $\| \mathbf{\mu} \| = 1$ the
-mean direction and $M$ the confluent hypergeometric function. 
+mean direction, and \added{the normalizing factor involves the confluent hypergeometric function $M$ \cite{Kummer:1837}.}
 
 We use the Watson distribution for two reasons: First, it is antipodally symmetric,
 which fits the fact that in Eq.~(\ref{eq:low-rank}), directions $\pm \mathbf{v}$

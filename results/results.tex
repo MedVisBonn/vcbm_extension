@@ -7,7 +7,7 @@ isotropic with $145 \times 174 \times 145$ voxels and have been acquired with 90
 %
 We compare our results to reference tractographies which were published within the
 scope of the TractSeg paper \cite{WASSERTHAL2018239}. This reference data has been
-created by manually refining a segmented full brain fiber tractography. %For
+created by manually refining a segmented full brain fiber tractography. \added{Similar to TractSeg, we apply a variant of multi-shell multi-tissue deconvolution \cite{Jeurissen:2014,Ankele:CARS2017} that uses all available diffusion weighted images.}%For
 %more details, we refer to the original literature.
 
 All tests were performed on 12 randomly chosen subjects for which such reference tractographies
@@ -17,6 +17,8 @@ of the fiber bundle at the seed point. This should mimic a directional region of
 interest as it might be defined by an expert on brain anatomy
 \cite{Graumann2016}. We then apply the tracking process until we have as many
 streamlines as the reference tractography. This should guarantee a fair comparison between the different models.
+
+\added{Our comparison is between generic fiber tracking algorithms that can track from any given seed region. In contrast, bundle-specific approaches such as TractSeg are limited to reconstructing a predefined set of bundles, but have the benefit of tract-specific anatomical priors, which improve their accuracy.}
 
 \subsection{Qualitative Comparison}
 \begin{figure*}[t]
