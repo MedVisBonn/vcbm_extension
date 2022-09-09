@@ -1,13 +1,15 @@
 \section{Results}
 \label{sec:results}
 \subsection{Data}
+\label{sec:data}
 We evaluate the proposed methods on data from the Human
 Connectome Project (HCP) \cite{HCP}. The diffusion MR images have a resolution of $1.25$ mm
 isotropic with $145 \times 174 \times 145$ voxels and have been acquired with 90 gradient directions each at $b\approx\{1000,2000,3000\}\,\mathrm{s}/\mathrm{mm}^2$.
 %
 We compare our results to reference tractographies which were published within the
 scope of the TractSeg paper \cite{WASSERTHAL2018239}. This reference data has been
-created by manually refining a segmented full brain fiber tractography. \added{Similar to TractSeg, we apply a variant of multi-shell multi-tissue deconvolution \cite{Jeurissen:2014,Ankele:CARS2017} that uses all available diffusion weighted images.}%For
+created by manually refining a segmented full brain fiber tractography. \added{Similar to TractSeg, we apply a variant of multi-shell multi-tissue deconvolution \cite{Jeurissen:2014,Ankele:CARS2017} that uses all available diffusion weighted images. It also yields per-voxel esimates of white matter volume fractions, which we threshold at $0.3$ to obtain the white matter masks used in our analyses.
+}%For
 %more details, we refer to the original literature.
 
 All tests were performed on 12 randomly chosen subjects for which such reference tractographies
@@ -135,6 +137,7 @@ On the other hand, applying the bootstrap consensus makes the results from avera
 Fig.~\ref{fig:OR} provides qualitative results on another bundle, the optic radiation. Model selection~(f) leads to an incomplete reconstruction of the spread in the posterior part, which is again more fully sampled with model averaging. The bootstrap consensus further improves both models.
 
 \subsection{Quantitative Comparison}
+\label{sec:quantitative-results}
 
 For a quantitative evaluation, we reconstructed the corpus callosum (CC), the
 cingulum (CG), the corticospinal tract (CST), the inferior fronto-occipital (IFO)

@@ -69,6 +69,7 @@ use the relative magnitude of the corresponding low-rank approximation residual
 since a smaller residual from a rank-$r$ approximation should indicate a higher probability of $\mathcal{T}$ being a perturbation of a rank-$r$ tensor. Since many factors contribute to the magnitude of this residual, including measurement noise, fiber spread, and inaccuracies in the convolution kernel, we pragmatically model
 $p
 \left( \mathcal{T} \mid \mathcal{H}_r , \hat{\Theta}_r \right)$ with the computationally efficient Kumaraswamy Probability Density Function (PDF) \cite{Kumaraswamy1980}
+
 \begin{align}
 	f \left( x, a, b \right) \coloneqq ab x^{a-1} \left( 1- x^a
 	\right)^{b-1} \text{ for } x \in \left( 0,1 \right) \text{ and } a,b >
@@ -76,32 +77,18 @@ $p
 	\label{eq:Kumaraswamy}
 \end{align}
 which is defined on the correct interval $(0,1)$, and can be tuned to achieve
-the correct qualitative behavior of decreasing with increasing $\|
-\tilde{\mathcal{R}}^{\left( r \right)} \|$, at an empirically plausible slope.
+the correct qualitative behavior \added{of monotonically decreasing with increasing $\|
+  \tilde{\mathcal{R}}^{\left( r \right)} \|$ by setting $a=1, b>2$.}
 
-\begin{figure}[h]
+\begin{figure}
 	\centering
 	\includegraphics[width=\linewidth]{b_check}
-	\caption{\added{Relative frequency of the different ranks $\left\{ 1,
-				2,3 \right\}$ within a white matter mask 
-		depending on different $b$ values of Kumaraswamy PDF for a
-selection of the human connetome project patients. The lines denote the mean
-frequency over all subjects and the tube the minimum and maximum frequency
-within the subjects.}}
+	\caption{\added{Relative frequency of selecting ranks $\left\{ 1,
+              2,3 \right\}$ within a white matter mask based on the Kumaraswamy PDF with $a=1$ and different values of $b$. The lines indicate the mean over all subjects from Section~\ref{sec:data}, the tubes the minimum and maximum.}}
 	\label{fig:b}
 \end{figure}
 
-\added{Figure \ref{fig:b} shows the relative
-	frequency of different ranks over a selection of different patients from 
-the human connectome project depending on $b$. As it is expected smaller
-$b$ values do not penalize the relative errors strictly enough and yield a high
-amount of voxels containing the rank $1$ model, while a high $b$ value leads to a high amount of
-voxels containing the rank $3$ model. }
-As \added{further} illustrated in \cite{Gruen:2021}, setting $a=1$, $b=20$ leads to a fraction
-of two and three fiber voxels that matches estimates from the literature, and to
-the detection of single fiber voxels in regions that are widely assumed to
-contain a single dominant orientation.  
-
+\added{With increasing $b$, the probability decreases at steeper slopes. As illustrated in Figure~\ref{fig:b}, this favors modelling larger numbers of fibers, since that permits a reduction of fitting residuals. Thus, the choice of $b$ can be seen as determining how strong the support for a secondary or tertiary compartment needs to be so that it will be used for tracking. Having to make this decision is a source of uncertainty in all methods for crossing fiber tractography, and has contributed to the variability in literature values on the prevalence of two- and three-fiber voxels \cite{BEHRENS2007144,Jeurissen:2012, Schultz:MICCAI12}. In our experiments, we set $b=20$, which leads to values within the range of literature values. We expect that the normalization that results from deconvolving with subject-specific response functions \cite{Jeurissen:2014} and the normalization in Eq.~(\ref{eq:residual}) will allow for similar choices of $b$ across datasets. This is supported by the relatively narrow confidence intervals across subjects in Figure~\ref{fig:b}.}
 
 \subsection{Computing Tracking Directions from Alternative Models}
 \label{sec:computing-tracking-directions}

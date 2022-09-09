@@ -1,6 +1,7 @@
 \section{Crossing Fiber Tractography with Uncertainty Reduction}
 \label{sec:tracking}
 \subsection{Probabilistic Streamline-Based Tractography}
+\label{sec:tracking-details}
 
 Our work reduces the data and model uncertainty that affects local fiber directions. Despite this, the fundamental uncertainty that arises from partial volume effects remains, as discussed in Section~\ref{sec:related}: Even if multiple fiber directions were estimated with perfect accuracy, it remains  uncertain which of them should be followed in each step of the tracking. In regions where tracts fan out, there might even be multiple valid ways to continue them. Previous work used deterministic tracking with a branching mechanism to handle these situations \cite{Ankele:CARS2017}. In our work, we follow a probabilistic approach instead. However, its probabilistic nature is limited to deciding which of multiple fiber compartments should be followed next. Unlike most other probabilistic tractography methods \cite{BEHRENS2007144,Jones:2008}, it does not sample a distribution of fiber directions \emph{within} each fiber compartment, since this type of uncertainty is reduced by our bootstrap consensus.
 
@@ -9,7 +10,9 @@ integration\added{, which was sufficient to reconstruct even the curved part of 
 directions belong together during interpolation. Assuming
 smoothness between the voxels, we use the $r$ directions from the last
 interpolation step as initial group means $\bar{\mathbf{v}}_i$, $i \in \left\{ 1\dots r 
-\right\}$ and assign the vectors from all grid points that are involved in the current interpolation by minimizing the same cost function as in Eq.~(\ref{eq:matching-cost}). \added{If fewer than three vectors are available due to model selection, zero vectors replace the missing ones for the purpose of interpolation.} After all assignments have been made, we compute new group means from them and iterate the assignment once. To reduce the computational expense, we cache the final assignments, so that they only need to be computed once for each voxel through which we are tracking.
+\right\}$ and assign the vectors from all grid points that are involved in the current interpolation by minimizing the same cost function as in Eq.~(\ref{eq:matching-cost}). \added{If fewer than three vectors are available due to model selection, zero vectors replace the missing ones for the purpose of interpolation.} After all assignments have been made, we \added{re-orient all vectors to have a non-negative dot product with their current group mean,}  compute new group means from them, and iterate the assignment once. To reduce the computational expense, we cache the final assignments, so that they only need to be computed once for each voxel through which we are tracking.
+
+\added{To investigate how this matching step affects the stability of interpolation results, we rotated all vectors at all voxels independently and uniformly at random by up to 10~degrees, and computed the resulting change in tracking direction at 1000 randomly selected streamline vertices, drawn from the experiment in Section~\ref{sec:quantitative-results}. When interpolating the perturbed directions, but keeping the original correspondences, $95\%$ of the deviations were below $5.5^\circ$. Re-matching the perturbed direction increased this only slightly, to $6.3^\circ$. We conclude that ambiguous correspondences contribute relatively little to the overall uncertainty in tracking directions.}
 
 % \begin{figure}
 % 	\centering
