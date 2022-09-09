@@ -75,9 +75,33 @@ $p
 	0
 	\label{eq:Kumaraswamy}
 \end{align}
-which is defined on the correct interval $(0,1)$, and can be tuned to achieve the correct qualitative behavior of decreasing with increasing $\| \tilde{\mathcal{R}}^{\left( r \right)} \|$, at an empirically plausible slope.
+which is defined on the correct interval $(0,1)$, and can be tuned to achieve
+the correct qualitative behavior of decreasing with increasing $\|
+\tilde{\mathcal{R}}^{\left( r \right)} \|$, at an empirically plausible slope.
 
-As illustrated in \cite{Gruen:2021}, setting $a=1$, $b=20$ leads to a fraction of two and three fiber voxels that matches estimates from the literature, and to the detection of single fiber voxels in regions that are widely assumed to contain a single dominant orientation.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\linewidth]{b_check}
+	\caption{\added{Relative frequency of the different ranks $\left\{ 1,
+				2,3 \right\}$ within a white matter mask 
+		depending on different $b$ values of Kumaraswamy PDF for a
+selection of the human connetome project patients. The lines denote the mean
+frequency over all subjects and the tube the minimum and maximum frequency
+within the subjects.}}
+	\label{fig:b}
+\end{figure}
+
+\added{Figure \ref{fig:b} shows the relative
+	frequency of different ranks over a selection of different patients from 
+the human connectome project depending on $b$. As it is expected smaller
+$b$ values do not penalize the relative errors strictly enough and yield a high
+amount of voxels containing the rank $1$ model, while a high $b$ value leads to a high amount of
+voxels containing the rank $3$ model. }
+As \added{further} illustrated in \cite{Gruen:2021}, setting $a=1$, $b=20$ leads to a fraction
+of two and three fiber voxels that matches estimates from the literature, and to
+the detection of single fiber voxels in regions that are widely assumed to
+contain a single dominant orientation.  
+
 
 \subsection{Computing Tracking Directions from Alternative Models}
 \label{sec:computing-tracking-directions}

@@ -130,8 +130,10 @@ bootstrap.
 \subsection{Visualizing the Uncertainty in Fiber Directions}
 \label{sec:vis-uncertainty-reduction}
 
-Our main motivation for using model selection or averaging instead of always extracting the maximum number of fibers is that we expect it to reduce variance in the true fiber estimates. The clustering that we perform to compute the bootstrap consensus can be used to quantify and visualize this effect. To this end, we fit a Watson
-distribution to the grouped directions. The Watson distribution is defined as  \cite{jupp_mardia_1999}
+Our main motivation for using model selection or averaging instead of always
+extracting the maximum number of fibers is that we expect it to reduce variance
+in the true fiber estimates. The clustering that we perform to compute the
+bootstrap consensus can be used to quantify and visualize this effect.  The Watson distribution is defined as  \cite{jupp_mardia_1999}
 \begin{align*}
 	f : \mathbb{S}^2 & \longrightarrow  \mathbb{R}_+ \\
 	\mathbf{x} & \longmapsto \added{\frac{1}{M \left( \frac{1}{2}, \frac{3}{2} , \kappa \right)}} \exp \left(  \kappa
@@ -139,7 +141,10 @@ distribution to the grouped directions. The Watson distribution is defined as  \
 	\right) 	,  
 \end{align*}
 where $\kappa$ is the dispersion parameter, $\| \mathbf{\mu} \| = 1$ the
-mean direction, and \added{the normalizing factor involves the confluent hypergeometric function $M$ \cite{Kummer:1837}.}
+mean direction, and \added{the normalizing factor involves the confluent
+	hypergeometric function $M$ \cite{Kummer:1837}. To estimate the
+	dispersion $\kappa$ we used the maximum likelihood estimator, which
+allows to determine $\kappa$ by a newton optimization. \cite{jupp_mardia_1999}.}
 
 We use the Watson distribution for two reasons: First, it is antipodally symmetric,
 which fits the fact that in Eq.~(\ref{eq:low-rank}), directions $\pm \mathbf{v}$
