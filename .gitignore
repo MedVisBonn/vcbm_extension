@@ -1,3 +1,4 @@
+*.ipynb
 .ipynb_checkpoints/
 *.nrrd  
 ## Core latex/pdflatex auxiliary files:

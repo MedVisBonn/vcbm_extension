@@ -88,7 +88,20 @@ the correct qualitative behavior \added{of monotonically decreasing with increas
 	\label{fig:b}
 \end{figure}
 
-\added{With increasing $b$, the probability decreases at steeper slopes. As illustrated in Figure~\ref{fig:b}, this favors modelling larger numbers of fibers, since that permits a reduction of fitting residuals. Thus, the choice of $b$ can be seen as determining how strong the support for a secondary or tertiary compartment needs to be so that it will be used for tracking. Having to make this decision is a source of uncertainty in all methods for crossing fiber tractography, and has contributed to the variability in literature values on the prevalence of two- and three-fiber voxels \cite{BEHRENS2007144,Jeurissen:2012, Schultz:MICCAI12}. In our experiments, we set $b=20$, which leads to values within the range of literature values. We expect that the normalization that results from deconvolving with subject-specific response functions \cite{Jeurissen:2014} and the normalization in Eq.~(\ref{eq:residual}) will allow for similar choices of $b$ across datasets. This is supported by the relatively narrow confidence intervals across subjects in Figure~\ref{fig:b}.}
+\added{With increasing $b$, the probability decreases at steeper slopes. As
+illustrated in Figure~\ref{fig:b}, this favors modelling larger numbers of
+fibers, since that permits a reduction of fitting residuals. Thus, the choice of
+$b$ can be seen as determining how strong the support for a secondary or
+tertiary compartment needs to be so that it will be used for tracking. Having to
+make this decision is a source of uncertainty in all methods for crossing fiber
+tractography, and has contributed to the variability in literature values on the
+prevalence of two- and three-fiber voxels \cite{BEHRENS2007144,Jeurissen:2012,
+Schultz:MICCAI12}. In our experiments, we set $b=20$, which leads to values
+within the range of literature values. We expect that the normalization that
+results from deconvolving with subject-specific response functions
+\cite{Jeurissen:2014} and the normalization in Eq.~(\ref{eq:residual}) will
+allow for similar choices of $b$ across datasets. This is supported by the
+relatively narrow confidence intervals across subjects in Figure~\ref{fig:b}.}
 
 \subsection{Computing Tracking Directions from Alternative Models}
 \label{sec:computing-tracking-directions}
@@ -103,6 +116,15 @@ different $r$-fiber models. In other words, we have to re-order the directions f
 select the one that minimizes the overall sum of angles between the resulting
 weighted means $\mathbf{v}_i$ and their corresponding $\mathbf{v}_i^{\left( r
 \right)}$.
+
+\added{To investigate if new spurious directions are included by building the
+	average model, we have computed the distance between the main direction
+	of the average model to the closest direction of any of the low-rank models
+	within a white matter mask for a randomly chosen subject from the
+	experiment in Section \ref{sec:data}. In $95\%$ of all white matter
+	voxels the angle is below $1.8^{\circ}$. We conclude that this
+	does not introduce spurious directions, since we are well below the
+angular resolution of CSD \cite{Ankele:CARS2017}.} 
 
 Previous tractography algorithms that were based on low-rank tensor approximation \cite{Ankele:CARS2017} used a different strategy, that we refer to as \emph{model selection:} They determined an optimal rank $r \in \left\{ 1, \added{2}, 3 \right\}$ in each integration step and used the resulting set of
 directions $\mathbf{v}_i$ for tracking. In cases where several ranks have non-negligible probabilities, this introduces an uncertainty that model averaging aims to reduce. We include this approach
