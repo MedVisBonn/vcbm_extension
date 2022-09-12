@@ -117,14 +117,11 @@ select the one that minimizes the overall sum of angles between the resulting
 weighted means $\mathbf{v}_i$ and their corresponding $\mathbf{v}_i^{\left( r
 \right)}$.
 
-\added{To investigate if new spurious directions are included by building the
-	average model, we have computed the distance between the main direction
-	of the average model to the closest direction of any of the low-rank models
-	within a white matter mask for a randomly chosen subject from the
+\added{A potential objection against the idea of model averaging is that, in case multiple probable models should yield very dissimilar directions, averaging them might produce spurious directions that did not occur in any of the original models. Therefore, we computed the smallest distances between the main direction of the average model and the closest direction of the corresponding low-rank models
+	within the white matter mask of a randomly chosen subject from the
 	experiment in Section \ref{sec:data}. In $95\%$ of all white matter
-	voxels the angle is below $1.8^{\circ}$. We conclude that this
-	does not introduce spurious directions, since we are well below the
-angular resolution of CSD \cite{Ankele:CARS2017}.} 
+	voxels, that angle was below $1.8^{\circ}$. Since that is well below the
+        angular resolution of CSD \cite{Ankele:CARS2017}, we conclude that,  in practice, corresponding directions are similar enough that it is reasonable to average them.} 
 
 Previous tractography algorithms that were based on low-rank tensor approximation \cite{Ankele:CARS2017} used a different strategy, that we refer to as \emph{model selection:} They determined an optimal rank $r \in \left\{ 1, \added{2}, 3 \right\}$ in each integration step and used the resulting set of
 directions $\mathbf{v}_i$ for tracking. In cases where several ranks have non-negligible probabilities, this introduces an uncertainty that model averaging aims to reduce. We include this approach
