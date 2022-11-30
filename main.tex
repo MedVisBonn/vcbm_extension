@@ -17,8 +17,8 @@
 % \DC                     % uncomment for Doctoral Consortium
 %
 % --- for  CGF Journal
-\JournalSubmission    % uncomment for submission to Computer Graphics Forum
-%\JournalPaper         % uncomment for final version of Journal Paper
+%\JournalSubmission    % uncomment for submission to Computer Graphics Forum
+\JournalPaper         % uncomment for final version of Journal Paper
 %
 % --- for  CGF Journal: special issue
 % \SpecialIssueSubmission    % uncomment for submission to , special issue
@@ -97,12 +97,16 @@
 % highlight new material
 \usepackage{xcolor}
 \providecolor{added}{rgb}{0,0,1}
-\newcommand{\added}[1]{{\color{added}{}#1}}
-%\newcommand{\added}[1]{#1}
+%\newcommand{\added}[1]{{\color{added}{}#1}}
+\newcommand{\added}[1]{#1}
 
 %\author[Submission ID 1025]
 %{\parbox{\textwidth}{\centering Submission ID 1025}\\{\parbox{\textwidth}{\centering ***}}}
- \author[J.~Grün et al.]
+\author[J.~Grün et al.]
+% email addresses:
+% Johannes Gruen <jgruen@uni-bonn.de>
+% Gemma van der Voort <gemmavdvoort@gmail.com>
+% Thomas Schultz <schultz@cs.uni-bonn.de>
 {\parbox{\textwidth}{\centering J.~Gruen\orcid{0000-0002-9154-3929}, G.~van der Voort\orcid{0000-0003-1008-9160}, and T.~Schultz\orcid{0000-0002-1200-7248}
 	}
 	\\
@@ -114,7 +118,7 @@
 \maketitle
 \input{./abstract/abstract}
 \input{./intro/intro}
-\input{related/related}
+\input{./related/related}
 \input{./background/background}
 \input{./base/base.tex}
 \input{./theory/theory}
