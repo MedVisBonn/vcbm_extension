@@ -1,0 +1,28 @@
+\section{Related Work}\label{sec:related}
+\added{There is a substantial body of literature on algorithms for diffusion MRI tractography \cite{Jeurissen:2018}, and many of them were first introduced in visualization venues \cite{Weinstein:1999,Zhang:2003,Hlawitschka:2005,lowrank}. The visualization and reduction of various sources of uncertainty in the tractography pipeline has been a more recent focus of interest \cite{Brecheisen:2009,Brecheisen:2013,Schultz:SciVisBook2014,Wiens:2014,Siddiqui:2021,Gruen:2021}. These sources}
+%
+can broadly be categorised into measurement uncertainty,
+model uncertainty, parameter uncertainty, and partial voluming \cite{Schultz:SciVisBook2014, Schultz:NBM2018, Gillmann:STAR2021}.
+
+The impact of measurement
+uncertainty on the dMRI pipeline has been widely estimated with probabilistic tractography, based on Bayesian modeling \cite{BEHRENS2007144} or bootstrapping \cite{Jones:2008}. Instead of a single streamline per seed, this recovers distributions,
+which can be visualized using hyperstreamlines \cite{Jones:2005b,Jeurissen:2012, Wiens:2014}
+or confidence intervals \cite{Brecheisen:2013,Siddiqui:2021}. Our work explores a different use of bootstrapping, which performs uncertainty reduction by consolidating estimates from all bootstraps into a single consensus that is used for tracking.
+
+We refer to model uncertainty as the uncertainty which arises from the choice
+between several mathematical models to extract directions from the dMRI data
+\cite{Schultz:SciVisBook2014}. There exists a wide range of models to estimate
+fiber directions \cite{Panagiotaki:2012}, and they might lead to different
+results. \added{Comparative visualization has been used to investigate such differences \cite{Vos:2013,Schultz:EuroVis2013}.} There is no generally preferable model, since the suitability depends  on the dMRI acquisition scheme, as well as on
+the anatomical location \cite{Bretthorst:2004,Freidlin:2007}. Our current work significantly extends a recent workshop paper that investigated a special case of model uncertainty, focusing on the aspect of selecting a suitable voxel-specific fiber direction count \cite{Gruen:2021}. 
+
+Another type of uncertainty arises from parameter choices within the tracking algorithm itself, which for example control branching to reproduce fiber spread, or the termination of individual streamlines. Brecheisen et al.\ proposed a visual tool to systematically explore the impact of such parameters
+\cite{Brecheisen:2009}. \added{Since optimal settings depend on the specific tract, Takemura et al.\ developed an ensembling approach that selects streamlines from candidates that have been generated with different algorithms and parameters \cite{Takemura:2016}.}
+
+Finally, the partial volume effect is
+an important source of uncertainty in dMRI. It arises from the fact that the diameter of individual axons is orders of magnitude smaller than the spatial resolution of dMRI. Even when correctly accounting for cases in which axons cross \cite{Alexander:2001,BEHRENS2007144} or spread \cite{Kaden:2007} at a voxel level, situations in which two distinct tracts become locally aligned pose a fundamental difficulty for finding their correct continuation. This has been referred to as the bottleneck issue \cite{Schilling:2022}, and it contributes to the fact that, even though dMRI tractography quite successfully localizes true tracts in individual subjects, it tends to produce many false positives \cite{MaierHein:2017}. These have to be eliminated using prior anatomical knowledge, which can be represented implicitly using machine learning \cite{WASSERTHAL2018239}, or explicitly by defining regions of interest to include or exclude streamlines \cite{Wakana:2007}. Our work employs the latter approach.
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../main"
+%%% End:

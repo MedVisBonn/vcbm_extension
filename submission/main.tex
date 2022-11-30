@@ -1,0 +1,129 @@
+% ---------------------------------------------------------------------------
+% Author guideline and sample document for EG publication using LaTeX2e input
+% D.Fellner, v1.15, Dec 14, 2018
+
+\documentclass{egpubl}
+ 
+% --- for  Annual CONFERENCE
+% \ConferenceSubmission   % uncomment for Conference submission
+% \ConferencePaper        % uncomment for (final) Conference Paper
+% \STAR                   % uncomment for STAR contribution
+% \Tutorial               % uncomment for Tutorial contribution
+% \ShortPresentation      % uncomment for (final) Short Conference Presentation
+% \Areas                  % uncomment for Areas contribution
+% \MedicalPrize           % uncomment for Medical Prize contribution
+% \Education              % uncomment for Education contribution
+% \Poster                 % uncomment for Poster contribution
+% \DC                     % uncomment for Doctoral Consortium
+%
+% --- for  CGF Journal
+%\JournalSubmission    % uncomment for submission to Computer Graphics Forum
+\JournalPaper         % uncomment for final version of Journal Paper
+%
+% --- for  CGF Journal: special issue
+% \SpecialIssueSubmission    % uncomment for submission to , special issue
+% \SpecialIssuePaper         % uncomment for final version of Computer Graphics Forum, special issue
+%                          % EuroVis, SGP, Rendering, PG
+% --- for  EG Workshop Proceedings
+% \WsSubmission      % uncomment for submission to EG Workshop
+% \WsPaper           % uncomment for final version of EG Workshop contribution
+% \WsSubmissionJoint % for joint events, for example ICAT-EGVE
+% \WsPaperJoint      % for joint events, for example ICAT-EGVE
+% \Expressive        % for SBIM, CAe, NPAR
+% \DigitalHeritagePaper
+% \PaperL2P          % for events EG only asks for License to Publish
+
+% --- for EuroVis 
+% for full papers use \SpecialIssuePaper
+% \STAREurovis   % for EuroVis additional material 
+% \EuroVisPoster % for EuroVis additional material 
+% \EuroVisShort  % for EuroVis additional material
+
+% !! *please* don't change anything above
+% !! unless you REALLY know what you are doing
+% ------------------------------------------------------------------------
+\usepackage[T1]{fontenc}
+\usepackage{dfadobe}  
+
+%\usepackage{cite}  % comment out for biblatex with backend=biber
+% ---------------------------
+\biberVersion
+\BibtexOrBiblatex
+\usepackage[backend=biber,bibstyle=EG,citestyle=alphabetic,backref=true]{biblatex} 
+\addbibresource{test.bib}
+% ---------------------------  
+\electronicVersion
+\PrintedOrElectronic
+% for including postscript figures
+% mind: package option 'draft' will replace PS figure by a filename within a frame
+\ifpdf \usepackage[pdftex]{graphicx} \pdfcompresslevel=9
+\else \usepackage[dvips]{graphicx} \fi
+
+\usepackage{egweblnk} 
+% end of prologue
+\usepackage{amsmath}
+\usepackage{bbold}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{colortbl}
+\usepackage{multirow}
+\usepackage{subcaption}
+\usepackage{hhline}
+\usepackage{url}
+\usepackage{algorithm}
+%\graphicspath{{./images/}}
+\usepackage{algpseudocode}
+\usepackage{nicefrac}
+\usepackage{mathtools}
+\usepackage{tabularx}
+\usepackage{mathbbol}
+\DeclareMathOperator*{\sgn}{sgn}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\newcommand{\prob}[2]{\mathbf{#1}_{#2} \otimes \mathbf{#1}_{#2} \otimes \mathbf{#1}_{#2}
+\otimes \mathbf{#1}_{#2}}
+\def\cT {\mathcal{T}} 
+\def\cR {\mathcal{R}}
+\def\cO {\mathcal{O}}  
+\usepackage{booktabs} % http://ctan.org/pkg/booktabs
+\usepackage{xparse}
+\NewDocumentCommand{\rot}{O{45} O{1em} m}{\makebox[#2][l]{\rotatebox{#1}{#3}}}%
+\definecolor{lightgreen}{RGB}{144,238,144}
+\definecolor{lightred}{RGB}{255,204,203}
+
+% highlight new material
+\usepackage{xcolor}
+\providecolor{added}{rgb}{0,0,1}
+%\newcommand{\added}[1]{{\color{added}{}#1}}
+\newcommand{\added}[1]{#1}
+
+%\author[Submission ID 1025]
+%{\parbox{\textwidth}{\centering Submission ID 1025}\\{\parbox{\textwidth}{\centering ***}}}
+\author[J.~Grün et al.]
+% email addresses:
+% Johannes Gruen <jgruen@uni-bonn.de>
+% Gemma van der Voort <gemmavdvoort@gmail.com>
+% Thomas Schultz <schultz@cs.uni-bonn.de>
+{\parbox{\textwidth}{\centering J.~Gruen\orcid{0000-0002-9154-3929}, G.~van der Voort\orcid{0000-0003-1008-9160}, and T.~Schultz\orcid{0000-0002-1200-7248}
+	}
+	\\
+	{\parbox{\textwidth}{\centering University of Bonn, Bonn, Germany}}
+}
+\title{Model Averaging and Bootstrap Consensus Based Uncertainty Reduction in Diffusion MRI Tractography}
+
+\begin{document}
+\maketitle
+\input{./abstract}
+\input{./intro}
+\input{./related}
+\input{./background}
+\input{./base.tex}
+\input{./theory}
+\input{./tracking}
+\input{./results}
+\input{./conclusion}
+\printbibliography
+\end{document}
